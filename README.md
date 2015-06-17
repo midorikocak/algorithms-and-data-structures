@@ -2,6 +2,7 @@
 
 1. Create a new directory.
 2. Copy these files into the new directory.
+3. composer install
 
 ----
 
