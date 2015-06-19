@@ -1,0 +1,23 @@
+{
+  "name": "php-algorithms",
+  "version": "0.1.0",
+  "homepage": "http://www.mtkocak.com",
+  "authors": [
+    "Midori Koçak <mtkocak@gmail.com>"
+  ],
+  "description": "PHP Algorithms By Midori Kocak",
+  "keywords": [
+    "php",
+    "algorithms",
+    "data",
+    "structures"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

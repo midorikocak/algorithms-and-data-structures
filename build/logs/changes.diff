@@ -1,0 +1,240 @@
+--- src/DataStructureInterface.php
++++ PHP_CodeSniffer
+@@ -23,7 +23,7 @@
+ 
+     /**
+      *
+-     * @param unknown $value            
++     * @param unknown $value
+      */
+     public function add($value);
+ 
+@@ -33,26 +33,26 @@
+ 
+     /**
+      *
+-     * @param unknown $value            
++     * @param unknown $value
+      */
+     public function search($value);
+ 
+     /**
+      *
+-     * @param string $position            
++     * @param string $position
+      */
+-    public function delete($position = NULL);
++    public function delete($position = null);
+ 
+     /**
+      *
+-     * @param string $position            
+-     * @param unknown $value            
++     * @param string $position
++     * @param unknown $value
+      */
+-    public function setData($position = NULL, $value);
++    public function setData($position = null, $value);
+ 
+     /**
+      *
+-     * @param string $position            
++     * @param string $position
+      */
+-    public function getData($position = NULL);
++    public function getData($position = null);
+ }--- src/DataStructureNodeInterface.php
++++ PHP_CodeSniffer
+@@ -4,7 +4,7 @@
+ 
+ /**
+  * A node is the object that holds data.
+- * 
++ *
+  * @author mtkocak
+  * @see http://www.codediesel.com/php/linked-list-in-php/
+  *
+@@ -15,7 +15,7 @@
+     /**
+      * Returns data held in node.
+      *
+-     * We consider data as strings, but hence php is not strongly typed, we can 
++     * We consider data as strings, but hence php is not strongly typed, we can
+      * reuse this data as integer or etc.
+      *
+      * @return string--- src/SingleLinkedList.php
++++ PHP_CodeSniffer
+@@ -11,61 +11,63 @@
+     /* Total nodes in the list */
+     private $count;
+     
+-    function __construct(){
++    function __construct()
++    {
+         $this->init();
+     }
+     
+-    public function init(){
+-        $this->firstNode = NULL;
+-        $this->lastNode = NULL;
++    public function init()
++    {
++        $this->firstNode = null;
++        $this->lastNode = null;
+         $this->count = 0;
+     }
+     
+-    public function add($value){
++    public function add($value)
++    {
+         $newNode = new SingleLinkedListNode($value);
+         
+-        if($this->isEmpty()){
++        if ($this->isEmpty()) {
+             $this->firstNode = $newNode;
+             $this->lastNode = $newNode;
+             $this->count++;
+-        }
+-        else{
++        } else {
+             $this->lastNode->next = $newNode;
+             $lastNode = $newNode;
+             $this->count++;
+         }
+     }
+     
+-    public function get(){
+-        if(!$this->isEmpty()){
++    public function get()
++    {
++        if (!$this->isEmpty()) {
+             return $this->lastNode->readNode();
+-        }
+-        else
+-        {
++        } else {
+             return false;
+         }
+     }
+     
+-    public function isEmpty(){
++    public function isEmpty()
++    {
+         
+         // return ($this->firstNode == NULL); // Same as above. Better Readability
+-        if($this->firstNode == NULL){
++        if ($this->firstNode == null) {
+             return true;
+-        }
+-        else{
++        } else {
+             return false;
+         }
+     }
+ 
+     /**
+      */
+-    public function listAll(){
++    public function listAll()
++    {
+         
+         $listData = [];
+-        if($this->isEmpty()==false){
++        if ($this->isEmpty()==false) {
+             $current = &$this->firstNode;
+             var_dump($current);
+-            while($current->next !=NULL){
++            while ($current->next !=null) {
+                 array_push($listData, $current->readNode());
+                 $current = &$current->next;
+             }
+@@ -77,27 +79,33 @@
+     *
+     * @param unknown $value
+      */
+-     public function search($value){
++     public function search($value)
++     {
+          
+-     }
++        }
+     
+     /**
+     *
+     * @param string $position
+     */
+-    public function delete($position = NULL){}
++        public function delete($position = null)
++        {
++        }
+     
+     /**
+     *
+     * @param string $position
+     * @param unknown $value
+     */
+-    public function setData($position = NULL, $value){}
++        public function setData($position = null, $value)
++        {
++        }
+     
+     /**
+     *
+     * @param string $position
+     */
+-    public function getData($position = NULL){}
+-
++        public function getData($position = null)
++        {
++        }
+ }--- src/SingleLinkedListNode.php
++++ PHP_CodeSniffer
+@@ -13,7 +13,7 @@
+     function __construct($data)
+     {
+         $this->data = $data;
+-        $this->next = NULL;
++        $this->next = null;
+     }
+     
+     public function readNode()--- tests/SingleLinkedListTest.php
++++ PHP_CodeSniffer
+@@ -6,11 +6,13 @@
+ {
+     public $singleLinkedList;
+     
+-    public function setup(){
++    public function setup()
++    {
+         $this->singleLinkedList = new SingleLinkedList();
+     }
+     
+-    public function generateData(){
++    public function generateData()
++    {
+         return md5(time());
+     }
+     
+@@ -19,7 +21,7 @@
+         $data = $this->generateData();
+         $this->singleLinkedList->add($data);
+         $lastData = $this->singleLinkedList->get();
+-        $this->assertTrue($data,$lastData);
++        $this->assertTrue($data, $lastData);
+     }
+     
+     public function testAddAnotherData()
+@@ -29,12 +31,11 @@
+         $data = $this->generateData();
+         $this->singleLinkedList->add($data);
+         $lastData = $this->singleLinkedList->get();
+-        $this->assertTrue($data,$lastData);
++        $this->assertTrue($data, $lastData);
+     }
+     
+     public function testGetLastAddedData()
+     {
+         var_dump($this->singleLinkedList->listAll());
+     }
+-    
+ }

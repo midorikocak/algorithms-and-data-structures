@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pmd version="@project.version@" timestamp="2015-06-19T23:10:31+02:00">
+  <file name="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedList.php">
+    <violation beginline="34" endline="34" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3">
+      Avoid unused local variables such as '$lastNode'.
+    </violation>
+  </file>
+</pmd>

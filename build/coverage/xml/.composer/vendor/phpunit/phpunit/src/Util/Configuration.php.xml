@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
+  <file name="Configuration.php">
+    <totals>
+      <lines total="1075" comments="274" code="801" executable="543" executed="0" percent="0.00%"/>
+      <methods count="19" tested="0" percent="0.00%"/>
+      <functions count="0" tested="0" percent=""/>
+      <classes count="1" tested="0" percent="0.00%"/>
+      <traits count="0" tested="0" percent=""/>
+    </totals>
+    <class name="PHPUnit_Util_Configuration" start="146" executable="543" executed="0" crap="20022">
+      <package full="PHPUnit.Util" name="PHPUnit" sub="Util" category=""/>
+      <namespace name=""/>
+      <method name="__construct" signature="__construct($filename)" start="159" end="164" crap="2" executable="4" executed="0" coverage="0"/>
+      <method name="__clone" signature="__clone()" start="169" end="171" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="getInstance" signature="getInstance($filename)" start="180" end="198" crap="12" executable="11" executed="0" coverage="0"/>
+      <method name="getFilename" signature="getFilename()" start="206" end="209" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="getFilterConfiguration" signature="getFilterConfiguration()" start="217" end="284" crap="20" executable="42" executed="0" coverage="0"/>
+      <method name="getGroupConfiguration" signature="getGroupConfiguration()" start="292" end="308" crap="12" executable="10" executed="0" coverage="0"/>
+      <method name="getListenerConfiguration" signature="getListenerConfiguration()" start="316" end="354" crap="110" executable="29" executed="0" coverage="0"/>
+      <method name="getLoggingConfiguration" signature="getLoggingConfiguration()" start="361" end="409" crap="132" executable="35" executed="0" coverage="0"/>
+      <method name="getPHPConfiguration" signature="getPHPConfiguration()" start="417" end="464" crap="56" executable="36" executed="0" coverage="0"/>
+      <method name="handlePHPConfiguration" signature="handlePHPConfiguration()" start="471" end="527" crap="182" executable="44" executed="0" coverage="0"/>
+      <method name="getPHPUnitConfiguration" signature="getPHPUnitConfiguration()" start="535" end="737" crap="1056" executable="161" executed="0" coverage="0"/>
+      <method name="getSeleniumBrowserConfiguration" signature="getSeleniumBrowserConfiguration()" start="745" end="785" crap="30" executable="28" executed="0" coverage="0"/>
+      <method name="getTestSuiteConfiguration" signature="getTestSuiteConfiguration($testSuiteFilter = null)" start="793" end="816" crap="30" executable="15" executed="0" coverage="0"/>
+      <method name="getTestSuite" signature="getTestSuite(DOMElement $testSuiteNode, $testSuiteFilter = null)" start="823" end="934" crap="462" executable="70" executed="0" coverage="0"/>
+      <method name="getBoolean" signature="getBoolean($value, $default)" start="942" end="951" crap="12" executable="5" executed="0" coverage="0"/>
+      <method name="getInteger" signature="getInteger($value, $default)" start="959" end="966" crap="6" executable="3" executed="0" coverage="0"/>
+      <method name="readFilterDirectories" signature="readFilterDirectories($query)" start="973" end="1011" crap="42" executable="24" executed="0" coverage="0"/>
+      <method name="readFilterFiles" signature="readFilterFiles($query)" start="1018" end="1030" crap="12" executable="8" executed="0" coverage="0"/>
+      <method name="toAbsolutePath" signature="toAbsolutePath($path, $useIncludePath = false)" start="1038" end="1074" crap="110" executable="16" executed="0" coverage="0"/>
+    </class>
+  </file>
+</phpunit>

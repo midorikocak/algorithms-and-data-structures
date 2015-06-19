@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="PHP Algorithms Test Suite" tests="20" assertions="51" failures="0" errors="0" time="0.160062">
+    <testsuite name="AlgorithmsTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/AlgorithmsTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.003588">
+      <testcase name="testAlgorithmsHasCheese" class="AlgorithmsTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/AlgorithmsTest.php" line="7" assertions="1" time="0.003588"/>
+    </testsuite>
+    <testsuite name="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" tests="19" assertions="50" failures="0" errors="0" time="0.156473">
+      <testcase name="testAddData" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="20" assertions="1" time="0.005074"/>
+      <testcase name="testAddAnotherData" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="28" assertions="2" time="0.004173"/>
+      <testcase name="testListAll" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="38" assertions="1" time="0.003365"/>
+      <testcase name="testGetPosition" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="50" assertions="5" time="0.015954"/>
+      <testcase name="testGetFirstPosition" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="57" assertions="4" time="0.011245"/>
+      <testcase name="testGetLastPosition" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="64" assertions="5" time="0.015877"/>
+      <testcase name="testGetEmptyPosition" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="71" assertions="1" time="0.005999"/>
+      <testcase name="testSearchEmpty" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="75" assertions="1" time="0.005921"/>
+      <testcase name="testSearchFirst" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="80" assertions="1" time="0.006829"/>
+      <testcase name="testSearchLast" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="86" assertions="3" time="0.008920"/>
+      <testcase name="testSearchMiddle" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="93" assertions="2" time="0.007729"/>
+      <testcase name="testDeleteEmpty" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="100" assertions="1" time="0.005911"/>
+      <testcase name="testDeleteLastPosition" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="104" assertions="3" time="0.008654"/>
+      <testcase name="testDeleteLast" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="111" assertions="4" time="0.009591"/>
+      <testcase name="testDeleteMiddle" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="117" assertions="4" time="0.009199"/>
+      <testcase name="testSetDataEmpty" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="123" assertions="1" time="0.006104"/>
+      <testcase name="testSetDataLastPosition" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="128" assertions="3" time="0.007883"/>
+      <testcase name="testSetDataLast" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="134" assertions="4" time="0.009443"/>
+      <testcase name="testSetDataMiddle" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="141" assertions="4" time="0.008603"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

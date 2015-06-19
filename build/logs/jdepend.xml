@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PDepend>
+  <Packages>
+    <Package name="Mtkocak\Algorithms">
+      <Stats>
+        <TotalClasses>11</TotalClasses>
+        <ConcreteClasses>9</ConcreteClasses>
+        <AbstractClasses>2</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>0</Ce>
+        <A>0.18181818181818</A>
+        <I>0</I>
+        <D>0.81818181818182</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Algorithms.php">Algorithms</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/BinaryTree.php">LinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DoubleLinkedList.php">LinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DoubleLinkedListNode.php">LinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Queue.php">LinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedList.php">SingleLinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedListNode.php">SingleLinkedListNode</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Stack.php">LinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Tree.php">LinkedList</Class>
+      </ConcreteClasses>
+      <AbstractClasses>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DataStructureInterface.php">DataStructureInterface</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DataStructureNodeInterface.php">DataStructureNodeInterface</Class>
+      </AbstractClasses>
+      <DependsUpon/>
+      <UsedBy/>
+    </Package>
+  </Packages>
+  <Cycles/>
+</PDepend>

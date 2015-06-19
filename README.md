@@ -1,14 +1,11 @@
-#### Midori Open Source Template
+# Midori Data Structures And Algorithms using PHP
 
-1. Create a new directory.
-2. Copy these files into the new directory.
-3. composer install
+**Description**:  Data Structures and Algorithms preparation for technical interview. Hence I am a php person, I had to recreate these classes using PHP to repeat CS topics.
 
-----
-
-# Midori Open Source Template
-
-**Description**:  The open source PHP template I use in my projects thanks to [PHP Psr-4 Template](http://culttt.com/2014/05/07/create-psr-4-php-package/) and [Open Source Project Template](https://github.com/cfpb/open-source-project-template)
+Includes:
+ - Single Linked List
+ - Tests
+ - Other classes are not completed.
 
 Other things to include:
 
@@ -19,7 +16,9 @@ Other things to include:
 
 ## Installation
 
-Just composer install
+1. Create a new directory.
+2. Copy these files into the new directory.
+3. composer install
 
 ## Configuration
 
@@ -27,11 +26,11 @@ There is no configuration yet
 
 ## Usage
 
-You can use as a template for your open source PHP projects
+Study for your next big company interview.
 
 ## How to test the software
 
-just phpunit
+just build/phpunit
 
 ## Known issues
 

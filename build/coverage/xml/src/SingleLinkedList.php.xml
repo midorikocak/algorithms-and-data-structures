@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
+  <file name="SingleLinkedList.php">
+    <totals>
+      <lines total="103" comments="24" code="79" executable="33" executed="21" percent="63.64%"/>
+      <methods count="7" tested="3" percent="42.86%"/>
+      <functions count="0" tested="0" percent=""/>
+      <classes count="1" tested="0" percent="0.00%"/>
+      <traits count="0" tested="0" percent=""/>
+    </totals>
+    <class name="SingleLinkedList" start="3" executable="33" executed="21" crap="25.82">
+      <package full="" name="" sub="" category=""/>
+      <namespace name="Mtkocak\Algorithms"/>
+      <method name="__construct" signature="__construct()" start="14" end="16" crap="1" executable="2" executed="2" coverage="100"/>
+      <method name="init" signature="init()" start="18" end="22" crap="1" executable="4" executed="4" coverage="100"/>
+      <method name="add" signature="add($value)" start="24" end="37" crap="2.11" executable="10" executed="7" coverage="70"/>
+      <method name="get" signature="get()" start="39" end="47" crap="2.15" executable="3" executed="2" coverage="66.666666666667"/>
+      <method name="isEmpty" signature="isEmpty()" start="49" end="58" crap="2" executable="3" executed="3" coverage="100"/>
+      <method name="listAll" signature="listAll()" start="62" end="74" crap="6.09" executable="10" executed="3" coverage="30"/>
+      <method name="search" signature="search($value)" start="80" end="82" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="delete" signature="delete($position = NULL)" start="88" end="88" crap="1" executable="0" executed="0" coverage="100"/>
+      <method name="setData" signature="setData($position = NULL, $value)" start="95" end="95" crap="1" executable="0" executed="0" coverage="100"/>
+      <method name="getData" signature="getData($position = NULL)" start="101" end="101" crap="1" executable="0" executed="0" coverage="100"/>
+    </class>
+    <coverage>
+      <line nr="15">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+      </line>
+      <line nr="16">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+      </line>
+      <line nr="19">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+      </line>
+      <line nr="20">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+      </line>
+      <line nr="21">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+      </line>
+      <line nr="22">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+      </line>
+      <line nr="25">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+      </line>
+      <line nr="27">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+      </line>
+      <line nr="28">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+      </line>
+      <line nr="29">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+      </line>
+      <line nr="30">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+      </line>
+      <line nr="31">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+      </line>
+      <line nr="37">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+      </line>
+      <line nr="40">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+      </line>
+      <line nr="41">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+      </line>
+      <line nr="52">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+      </line>
+      <line nr="53">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+      </line>
+      <line nr="56">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+      </line>
+      <line nr="64">
+        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+      </line>
+      <line nr="65">
+        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+      </line>
+      <line nr="73">
+        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+      </line>
+    </coverage>
+  </file>
+</phpunit>

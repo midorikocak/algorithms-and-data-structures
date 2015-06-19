@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
+  <file name="Algorithms.php">
+    <totals>
+      <lines total="9" comments="0" code="9" executable="1" executed="1" percent="100.00%"/>
+      <methods count="1" tested="1" percent="100.00%"/>
+      <functions count="0" tested="0" percent=""/>
+      <classes count="1" tested="1" percent="100.00%"/>
+      <traits count="0" tested="0" percent=""/>
+    </totals>
+    <class name="Algorithms" start="3" executable="1" executed="1" crap="1">
+      <package full="" name="" sub="" category=""/>
+      <namespace name="Mtkocak\Algorithms"/>
+      <method name="hasCheese" signature="hasCheese($bool = true)" start="5" end="8" crap="1" executable="1" executed="1" coverage="100"/>
+    </class>
+    <coverage>
+      <line nr="7">
+        <covered by="AlgorithmsTest::testAlgorithmsHasCheese"/>
+      </line>
+    </coverage>
+  </file>
+</phpunit>
