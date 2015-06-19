@@ -64,9 +64,9 @@
       *
       * @return string--- src/SingleLinkedList.php
 +++ PHP_CodeSniffer
-@@ -11,61 +11,63 @@
-     /* Total nodes in the list */
-     private $count;
+@@ -13,27 +13,32 @@
+     
+     private $current;
      
 -    function __construct(){
 +    function __construct()
@@ -81,7 +81,40 @@
 +    {
 +        $this->firstNode = null;
 +        $this->lastNode = null;
+         $this->current = $this->firstNode;
          $this->count = 0;
+     }
+     
+-    public function current(){
++    public function current()
++    {
+         return $this->current;
+     }
+     
+-    public function next(){
++    public function next()
++    {
+         $this->current = $this->current->next;
+         return $this->current();
+     }
+     
+-    public function reset(){
++    public function reset()
++    {
+         $this->current = $this->firstNode;
+         return $this->current;
+     }
+@@ -41,22 +46,23 @@
+     
+     /**
+      * Single Linked List does not have a prev function, so we cannot use it.
+-     * 
++     *
+      */
+-    public function prev(){
++    public function prev()
++    {
+         return false;
      }
      
 -    public function add($value){
@@ -94,24 +127,49 @@
              $this->firstNode = $newNode;
              $this->lastNode = $newNode;
              $this->count++;
+             $this->current = $newNode;
 -        }
 -        else{
 +        } else {
              $this->lastNode->next = $newNode;
-             $lastNode = $newNode;
+             $this->lastNode = &$newNode;
              $this->count++;
+@@ -64,41 +70,36 @@
          }
      }
      
--    public function get(){
--        if(!$this->isEmpty()){
-+    public function get()
+-    public function getData($position = NULL){
+-        if(!$this->isEmpty() && !isset($position)){
++    public function getData($position = null)
 +    {
-+        if (!$this->isEmpty()) {
++        if (!$this->isEmpty() && !isset($position)) {
              return $this->lastNode->readNode();
 -        }
--        else
+-        elseif(!$this->isEmpty())
 -        {
++        } elseif (!$this->isEmpty()) {
+             $this->reset();
+             $currentPosition = 0;
+-            if($position == 0){
++            if ($position == 0) {
+                 return $this->current->readNode();
+             }
+-            while($position != $currentPosition)
+-            {
+-                if(($currentPosition+1)==$position){
++            while ($position != $currentPosition) {
++                if (($currentPosition+1)==$position) {
+                     return $this->current->next->readNode();
+-                }
+-                elseif($this->current->next != NULL)
+-                {
++                } elseif ($this->current->next != null) {
+                     $this->next();
+                     $currentPosition++;
+                 }
+             }
+-        }
+-        else{
 +        } else {
              return false;
          }
@@ -131,62 +189,189 @@
              return false;
          }
      }
- 
-     /**
-      */
--    public function listAll(){
-+    public function listAll()
-+    {
-         
-         $listData = [];
--        if($this->isEmpty()==false){
-+        if ($this->isEmpty()==false) {
-             $current = &$this->firstNode;
-             var_dump($current);
--            while($current->next !=NULL){
-+            while ($current->next !=null) {
-                 array_push($listData, $current->readNode());
-                 $current = &$current->next;
-             }
-@@ -77,27 +79,33 @@
+@@ -109,8 +110,7 @@
+     {
+         $listData = array();
+         $this->reset();
+-        while($this->current != NULL)
+-        {
++        while ($this->current != null) {
+             array_push($listData, $this->current->readNode());
+             $this->current = $this->current->next;
+         }
+@@ -121,25 +121,25 @@
      *
      * @param unknown $value
       */
 -     public function search($value){
 +     public function search($value)
 +     {
-          
--     }
+          $listData = array();
+          $this->reset();
+          $position = 0;
+-         if($this->isEmpty()){
+-             return false;
+-         }
++        if ($this->isEmpty()) {
++            return false;
 +        }
+          
+-         if($this->current->data == $value){
+-             return 0;
+-         }
+-         while($this->current->data != $value)
+-         {
+-             if($this->current->next->data==$value){
+-                  return $position+1;
+-             }
+-             $this->next();
+-             $position++;
+-         }
++        if ($this->current->data == $value) {
++            return 0;
++        }
++        while ($this->current->data != $value) {
++            if ($this->current->next->data==$value) {
++                 return $position+1;
++            }
++            $this->next();
++            $position++;
++        }
+          return false;
+      }
      
-     /**
+@@ -147,83 +147,72 @@
      *
      * @param string $position
      */
--    public function delete($position = NULL){}
+-    public function delete($position = NULL){
+-        if(!$this->isEmpty() && !isset($position)){
+-              $this->reset();
+-              while($this->current->next != NULL){
+-                  if($this->current->next->next == NULL){
+-                      $nextToDelete = $this->current->next;
+-                      unset($nextToDelete);
+-                      $this->lastNode = $this->current;
+-                      $this->current->next == NULL;
+-                      return true;
+-                  }
+-                  $this->next();
+-              }
+-        }
+-        elseif(!$this->isEmpty())
 +        public function delete($position = null)
-+        {
-+        }
+         {
+-            $this->reset();
+-            $currentPosition = 0;
+-            if($position == 0){
+-                $newFirstNode = $this->firstNode->next;
+-                unset($this->firstNode);
+-                $this->firstNode = $newFirstNode;
+-                return true;
+-            }
+-            while($position != $currentPosition)
+-            {
+-                if(($currentPosition+1)==$position){
+-                    $newNext = $this->current->next;
+-                    unset ($this->current);
++            if (!$this->isEmpty() && !isset($position)) {
++                  $this->reset();
++                while ($this->current->next != null) {
++                    if ($this->current->next->next == null) {
++                        $nextToDelete = $this->current->next;
++                        unset($nextToDelete);
++                        $this->lastNode = $this->current;
++                        $this->current->next == null;
++                        return true;
++                    }
++                    $this->next();
++                }
++            } elseif (!$this->isEmpty()) {
++                $this->reset();
++                $currentPosition = 0;
++                if ($position == 0) {
++                    $newFirstNode = $this->firstNode->next;
++                    unset($this->firstNode);
++                    $this->firstNode = $newFirstNode;
+                     return true;
+                 }
+-                elseif($this->current->next != NULL)
+-                {
+-                    $this->next();
+-                    $currentPosition++;
++                while ($position != $currentPosition) {
++                    if (($currentPosition+1)==$position) {
++                        $newNext = $this->current->next;
++                        unset ($this->current);
++                        return true;
++                    } elseif ($this->current->next != null) {
++                        $this->next();
++                        $currentPosition++;
++                    }
+                 }
++            } else {
++                return false;
+             }
+         }
+-        else{
+-            return false;
+-        } 
+-    }
      
      /**
      *
      * @param string $position
      * @param unknown $value
      */
--    public function setData($position = NULL, $value){}
-+        public function setData($position = null, $value)
-+        {
-+        }
-     
-     /**
-     *
-     * @param string $position
-     */
--    public function getData($position = NULL){}
+-    public function setData($value,$position = NULL){
+-        if(!$this->isEmpty() && !isset($position)){
+-            $this->lastNode->data = $value;
+-            return true;
+-        }
+-        elseif(!$this->isEmpty())
++        public function setData($value, $position = null)
+         {
+-            $this->reset();
+-            $currentPosition = 0;
+-            if($position == 0){
+-                $this->current->data = $value;
++            if (!$this->isEmpty() && !isset($position)) {
++                $this->lastNode->data = $value;
+                 return true;
+-            }
+-            while($position != $currentPosition)
+-            {
+-                if(($currentPosition+1)==$position){
+-                    $this->current->next->data = $value;
++            } elseif (!$this->isEmpty()) {
++                $this->reset();
++                $currentPosition = 0;
++                if ($position == 0) {
++                    $this->current->data = $value;
+                     return true;
+                 }
+-                elseif($this->current->next != NULL)
+-                {
+-                    $this->next();
+-                    $currentPosition++;
++                while ($position != $currentPosition) {
++                    if (($currentPosition+1)==$position) {
++                        $this->current->next->data = $value;
++                        return true;
++                    } elseif ($this->current->next != null) {
++                        $this->next();
++                        $currentPosition++;
++                    }
+                 }
++            } else {
++                return false;
+             }
+         }
+-        else{
+-            return false;
+-        }
+-    }
 -
-+        public function getData($position = null)
-+        {
-+        }
  }--- src/SingleLinkedListNode.php
 +++ PHP_CodeSniffer
 @@ -13,7 +13,7 @@
@@ -199,42 +384,153 @@
      
      public function readNode()--- tests/SingleLinkedListTest.php
 +++ PHP_CodeSniffer
-@@ -6,11 +6,13 @@
- {
-     public $singleLinkedList;
-     
--    public function setup(){
-+    public function setup()
+@@ -47,101 +47,117 @@
+         ];
+         $this->assertTrue($this->singleLinkedList->listAll() == $dataArray);
+     }
+-    public function testGetPosition(){
++    public function testGetPosition()
 +    {
-         $this->singleLinkedList = new SingleLinkedList();
+         $this->testAddAnotherData();
+         $dataToCheck = $this->singleLinkedList->getData();
+         $this->testAddAnotherData();
+-        $this->assertEquals($this->singleLinkedList->getData(1),$dataToCheck);
++        $this->assertEquals($this->singleLinkedList->getData(1), $dataToCheck);
      }
      
--    public function generateData(){
-+    public function generateData()
+-    public function testGetFirstPosition(){
++    public function testGetFirstPosition()
 +    {
-         return md5(time());
+         $this->testAddData();
+         $dataToCheck = $this->singleLinkedList->getData();
+         $this->testAddAnotherData();
+-        $this->assertEquals($this->singleLinkedList->getData(0),$dataToCheck);
++        $this->assertEquals($this->singleLinkedList->getData(0), $dataToCheck);
      }
      
-@@ -19,7 +21,7 @@
-         $data = $this->generateData();
-         $this->singleLinkedList->add($data);
-         $lastData = $this->singleLinkedList->get();
--        $this->assertTrue($data,$lastData);
-+        $this->assertTrue($data, $lastData);
+-    public function testGetLastPosition(){
++    public function testGetLastPosition()
++    {
+         $this->testAddAnotherData();
+         $this->testAddAnotherData();
+         $dataToCheck = $this->singleLinkedList->getData();
+-        $this->assertEquals($this->singleLinkedList->getData(3),$dataToCheck);
++        $this->assertEquals($this->singleLinkedList->getData(3), $dataToCheck);
      }
      
-     public function testAddAnotherData()
-@@ -29,12 +31,11 @@
-         $data = $this->generateData();
-         $this->singleLinkedList->add($data);
-         $lastData = $this->singleLinkedList->get();
--        $this->assertTrue($data,$lastData);
-+        $this->assertTrue($data, $lastData);
+-    public function testGetEmptyPosition(){
+-        $this->assertEquals($this->singleLinkedList->getData(1),NULL);
++    public function testGetEmptyPosition()
++    {
++        $this->assertEquals($this->singleLinkedList->getData(1), null);
      }
      
-     public function testGetLastAddedData()
-     {
-         var_dump($this->singleLinkedList->listAll());
+-    public function testSearchEmpty(){
++    public function testSearchEmpty()
++    {
+         $dataToSearch = $this->generateData();
+-        $this->assertEquals($this->singleLinkedList->search($dataToSearch),false);
++        $this->assertEquals($this->singleLinkedList->search($dataToSearch), false);
      }
--    
+     
+-    public function testSearchFirst(){
++    public function testSearchFirst()
++    {
+         $dataToSearch = $this->generateData();
+         $this->singleLinkedList->add($dataToSearch);
+-        $this->assertEquals($this->singleLinkedList->search($dataToSearch),0);
++        $this->assertEquals($this->singleLinkedList->search($dataToSearch), 0);
+     }
+     
+-    public function testSearchLast(){
++    public function testSearchLast()
++    {
+         $this->testAddAnotherData();
+         $dataToSearch = $this->generateData();
+         $this->singleLinkedList->add($dataToSearch);
+-        $this->assertEquals($this->singleLinkedList->search($dataToSearch),2);
++        $this->assertEquals($this->singleLinkedList->search($dataToSearch), 2);
+     }
+     
+-    public function testSearchMiddle(){
++    public function testSearchMiddle()
++    {
+         $this->testAddData();
+         $dataToSearch = $this->generateData();
+         $this->singleLinkedList->add($dataToSearch);
+-        $this->assertEquals($this->singleLinkedList->search($dataToSearch),1);
++        $this->assertEquals($this->singleLinkedList->search($dataToSearch), 1);
+     }
+     
+-    public function testDeleteEmpty(){
+-        $this->assertEquals($this->singleLinkedList->delete(3),false);
++    public function testDeleteEmpty()
++    {
++        $this->assertEquals($this->singleLinkedList->delete(3), false);
+     }
+     
+-    public function testDeleteLastPosition(){
++    public function testDeleteLastPosition()
++    {
+         $this->testAddAnotherData();
+         $dataToSearch = $this->generateData();
+         $this->singleLinkedList->add($dataToSearch);
+-        $this->assertEquals($this->singleLinkedList->delete(2),true);
++        $this->assertEquals($this->singleLinkedList->delete(2), true);
+     }
+     
+-    public function testDeleteLast(){
++    public function testDeleteLast()
++    {
+         $this->testAddData();
+         $this->testAddAnotherData();
+-        $this->assertEquals($this->singleLinkedList->delete(),true);
++        $this->assertEquals($this->singleLinkedList->delete(), true);
+     }
+     
+-    public function testDeleteMiddle(){
++    public function testDeleteMiddle()
++    {
+         $this->testAddData();
+         $this->testAddAnotherData();
+-        $this->assertEquals($this->singleLinkedList->delete(1),true);
++        $this->assertEquals($this->singleLinkedList->delete(1), true);
+     }
+     
+-    public function testSetDataEmpty(){
++    public function testSetDataEmpty()
++    {
+         $dataToSet = $this->generateData();
+-        $this->assertEquals($this->singleLinkedList->setData($dataToSet),false);
++        $this->assertEquals($this->singleLinkedList->setData($dataToSet), false);
+     }
+     
+-    public function testSetDataLastPosition(){
++    public function testSetDataLastPosition()
++    {
+         $this->testAddAnotherData();
+         $dataToSet = $this->generateData();
+-        $this->assertEquals($this->singleLinkedList->setData(1,$dataToSet),true);
++        $this->assertEquals($this->singleLinkedList->setData(1, $dataToSet), true);
+     }
+     
+-    public function testSetDataLast(){
++    public function testSetDataLast()
++    {
+         $this->testAddData();
+         $this->testAddAnotherData();
+         $dataToSet = $this->generateData();
+-        $this->assertEquals($this->singleLinkedList->setData($dataToSet),true);
++        $this->assertEquals($this->singleLinkedList->setData($dataToSet), true);
+     }
+     
+-    public function testSetDataMiddle(){
++    public function testSetDataMiddle()
++    {
+         $this->testAddData();
+         $this->testAddAnotherData();
+         $dataToSet = $this->generateData();
+-        $this->assertEquals($this->singleLinkedList->setData($dataToSet,1),true);
++        $this->assertEquals($this->singleLinkedList->setData($dataToSet, 1), true);
+     }
  }

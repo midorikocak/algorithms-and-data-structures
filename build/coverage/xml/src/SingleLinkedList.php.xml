@@ -2,115 +2,782 @@
 <phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
   <file name="SingleLinkedList.php">
     <totals>
-      <lines total="103" comments="24" code="79" executable="33" executed="21" percent="63.64%"/>
-      <methods count="7" tested="3" percent="42.86%"/>
+      <lines total="229" comments="24" code="205" executable="121" executed="103" percent="85.12%"/>
+      <methods count="13" tested="8" percent="61.54%"/>
       <functions count="0" tested="0" percent=""/>
       <classes count="1" tested="0" percent="0.00%"/>
       <traits count="0" tested="0" percent=""/>
     </totals>
-    <class name="SingleLinkedList" start="3" executable="33" executed="21" crap="25.82">
+    <class name="SingleLinkedList" start="3" executable="121" executed="103" crap="49.09">
       <package full="" name="" sub="" category=""/>
       <namespace name="Mtkocak\Algorithms"/>
-      <method name="__construct" signature="__construct()" start="14" end="16" crap="1" executable="2" executed="2" coverage="100"/>
-      <method name="init" signature="init()" start="18" end="22" crap="1" executable="4" executed="4" coverage="100"/>
-      <method name="add" signature="add($value)" start="24" end="37" crap="2.11" executable="10" executed="7" coverage="70"/>
-      <method name="get" signature="get()" start="39" end="47" crap="2.15" executable="3" executed="2" coverage="66.666666666667"/>
-      <method name="isEmpty" signature="isEmpty()" start="49" end="58" crap="2" executable="3" executed="3" coverage="100"/>
-      <method name="listAll" signature="listAll()" start="62" end="74" crap="6.09" executable="10" executed="3" coverage="30"/>
-      <method name="search" signature="search($value)" start="80" end="82" crap="2" executable="1" executed="0" coverage="0"/>
-      <method name="delete" signature="delete($position = NULL)" start="88" end="88" crap="1" executable="0" executed="0" coverage="100"/>
-      <method name="setData" signature="setData($position = NULL, $value)" start="95" end="95" crap="1" executable="0" executed="0" coverage="100"/>
-      <method name="getData" signature="getData($position = NULL)" start="101" end="101" crap="1" executable="0" executed="0" coverage="100"/>
+      <method name="__construct" signature="__construct()" start="16" end="18" crap="1" executable="2" executed="2" coverage="100"/>
+      <method name="init" signature="init()" start="20" end="25" crap="1" executable="5" executed="5" coverage="100"/>
+      <method name="current" signature="current()" start="27" end="29" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="next" signature="next()" start="31" end="34" crap="1" executable="2" executed="2" coverage="100"/>
+      <method name="reset" signature="reset()" start="36" end="39" crap="1" executable="2" executed="2" coverage="100"/>
+      <method name="prev" signature="prev()" start="46" end="48" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="add" signature="add($value)" start="50" end="65" crap="2" executable="12" executed="12" coverage="100"/>
+      <method name="getData" signature="getData($position = NULL)" start="67" end="93" crap="8.09" executable="18" executed="16" coverage="88.888888888889"/>
+      <method name="isEmpty" signature="isEmpty()" start="95" end="104" crap="2" executable="3" executed="3" coverage="100"/>
+      <method name="listAll" signature="listAll()" start="108" end="118" crap="2" executable="7" executed="7" coverage="100"/>
+      <method name="search" signature="search($value)" start="124" end="144" crap="5.01" executable="14" executed="13" coverage="92.857142857143"/>
+      <method name="delete" signature="delete($position = NULL)" start="150" end="191" crap="10.95" executable="33" executed="26" coverage="78.787878787879"/>
+      <method name="setData" signature="setData($value,$position = NULL)" start="198" end="227" crap="10.37" executable="21" executed="14" coverage="66.666666666667"/>
     </class>
     <coverage>
-      <line nr="15">
+      <line nr="17">
         <covered by="SingleLinkedListTest::testAddData"/>
         <covered by="SingleLinkedListTest::testAddAnotherData"/>
-        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testGetEmptyPosition"/>
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteEmpty"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataEmpty"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
       </line>
-      <line nr="16">
+      <line nr="18">
         <covered by="SingleLinkedListTest::testAddData"/>
         <covered by="SingleLinkedListTest::testAddAnotherData"/>
-        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
-      </line>
-      <line nr="19">
-        <covered by="SingleLinkedListTest::testAddData"/>
-        <covered by="SingleLinkedListTest::testAddAnotherData"/>
-        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
-      </line>
-      <line nr="20">
-        <covered by="SingleLinkedListTest::testAddData"/>
-        <covered by="SingleLinkedListTest::testAddAnotherData"/>
-        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testGetEmptyPosition"/>
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteEmpty"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataEmpty"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
       </line>
       <line nr="21">
         <covered by="SingleLinkedListTest::testAddData"/>
         <covered by="SingleLinkedListTest::testAddAnotherData"/>
-        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testGetEmptyPosition"/>
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteEmpty"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataEmpty"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
       </line>
       <line nr="22">
         <covered by="SingleLinkedListTest::testAddData"/>
         <covered by="SingleLinkedListTest::testAddAnotherData"/>
-        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testGetEmptyPosition"/>
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteEmpty"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataEmpty"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="23">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testGetEmptyPosition"/>
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteEmpty"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataEmpty"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="24">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testGetEmptyPosition"/>
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteEmpty"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataEmpty"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
       </line>
       <line nr="25">
         <covered by="SingleLinkedListTest::testAddData"/>
         <covered by="SingleLinkedListTest::testAddAnotherData"/>
-      </line>
-      <line nr="27">
-        <covered by="SingleLinkedListTest::testAddData"/>
-        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testGetEmptyPosition"/>
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteEmpty"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataEmpty"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
       </line>
       <line nr="28">
-        <covered by="SingleLinkedListTest::testAddData"/>
-        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
       </line>
-      <line nr="29">
-        <covered by="SingleLinkedListTest::testAddData"/>
-        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+      <line nr="32">
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
       </line>
-      <line nr="30">
-        <covered by="SingleLinkedListTest::testAddData"/>
-        <covered by="SingleLinkedListTest::testAddAnotherData"/>
-      </line>
-      <line nr="31">
-        <covered by="SingleLinkedListTest::testAddData"/>
-        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+      <line nr="33">
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
       </line>
       <line nr="37">
-        <covered by="SingleLinkedListTest::testAddData"/>
-        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
       </line>
-      <line nr="40">
-        <covered by="SingleLinkedListTest::testAddData"/>
-        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+      <line nr="38">
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
       </line>
-      <line nr="41">
+      <line nr="51">
         <covered by="SingleLinkedListTest::testAddData"/>
         <covered by="SingleLinkedListTest::testAddAnotherData"/>
-      </line>
-      <line nr="52">
-        <covered by="SingleLinkedListTest::testAddData"/>
-        <covered by="SingleLinkedListTest::testAddAnotherData"/>
-        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
       </line>
       <line nr="53">
         <covered by="SingleLinkedListTest::testAddData"/>
         <covered by="SingleLinkedListTest::testAddAnotherData"/>
-        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="54">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="55">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
       </line>
       <line nr="56">
         <covered by="SingleLinkedListTest::testAddData"/>
         <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
       </line>
-      <line nr="64">
-        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+      <line nr="57">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="58">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="60">
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="61">
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="62">
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="63">
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
       </line>
       <line nr="65">
-        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="68">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testGetEmptyPosition"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="69">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="71">
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testGetEmptyPosition"/>
       </line>
       <line nr="73">
-        <covered by="SingleLinkedListTest::testGetLastAddedData"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+      </line>
+      <line nr="74">
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+      </line>
+      <line nr="75">
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+      </line>
+      <line nr="76">
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+      </line>
+      <line nr="78">
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+      </line>
+      <line nr="80">
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+      </line>
+      <line nr="81">
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+      </line>
+      <line nr="83">
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+      </line>
+      <line nr="85">
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+      </line>
+      <line nr="86">
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+      </line>
+      <line nr="87">
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+      </line>
+      <line nr="88">
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+      </line>
+      <line nr="91">
+        <covered by="SingleLinkedListTest::testGetEmptyPosition"/>
+      </line>
+      <line nr="98">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testGetEmptyPosition"/>
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteEmpty"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataEmpty"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="99">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testGetEmptyPosition"/>
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteEmpty"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataEmpty"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="102">
+        <covered by="SingleLinkedListTest::testAddData"/>
+        <covered by="SingleLinkedListTest::testAddAnotherData"/>
+        <covered by="SingleLinkedListTest::testListAll"/>
+        <covered by="SingleLinkedListTest::testGetPosition"/>
+        <covered by="SingleLinkedListTest::testGetFirstPosition"/>
+        <covered by="SingleLinkedListTest::testGetLastPosition"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="110">
+        <covered by="SingleLinkedListTest::testListAll"/>
+      </line>
+      <line nr="111">
+        <covered by="SingleLinkedListTest::testListAll"/>
+      </line>
+      <line nr="112">
+        <covered by="SingleLinkedListTest::testListAll"/>
+      </line>
+      <line nr="114">
+        <covered by="SingleLinkedListTest::testListAll"/>
+      </line>
+      <line nr="115">
+        <covered by="SingleLinkedListTest::testListAll"/>
+      </line>
+      <line nr="116">
+        <covered by="SingleLinkedListTest::testListAll"/>
+      </line>
+      <line nr="117">
+        <covered by="SingleLinkedListTest::testListAll"/>
+      </line>
+      <line nr="125">
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+      </line>
+      <line nr="126">
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+      </line>
+      <line nr="127">
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+      </line>
+      <line nr="128">
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+      </line>
+      <line nr="129">
+        <covered by="SingleLinkedListTest::testSearchEmpty"/>
+      </line>
+      <line nr="132">
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+      </line>
+      <line nr="133">
+        <covered by="SingleLinkedListTest::testSearchFirst"/>
+      </line>
+      <line nr="135">
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+      </line>
+      <line nr="137">
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+      </line>
+      <line nr="138">
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+        <covered by="SingleLinkedListTest::testSearchMiddle"/>
+      </line>
+      <line nr="140">
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+      </line>
+      <line nr="141">
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+      </line>
+      <line nr="142">
+        <covered by="SingleLinkedListTest::testSearchLast"/>
+      </line>
+      <line nr="151">
+        <covered by="SingleLinkedListTest::testDeleteEmpty"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+      </line>
+      <line nr="152">
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+      </line>
+      <line nr="153">
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+      </line>
+      <line nr="154">
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+      </line>
+      <line nr="155">
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+      </line>
+      <line nr="156">
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+      </line>
+      <line nr="157">
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+      </line>
+      <line nr="158">
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+      </line>
+      <line nr="159">
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+      </line>
+      <line nr="161">
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+      </line>
+      <line nr="162">
+        <covered by="SingleLinkedListTest::testDeleteLast"/>
+      </line>
+      <line nr="164">
+        <covered by="SingleLinkedListTest::testDeleteEmpty"/>
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+      </line>
+      <line nr="166">
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+      </line>
+      <line nr="167">
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+      </line>
+      <line nr="168">
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+      </line>
+      <line nr="174">
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+      </line>
+      <line nr="176">
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+      </line>
+      <line nr="177">
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+      </line>
+      <line nr="178">
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+      </line>
+      <line nr="179">
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+        <covered by="SingleLinkedListTest::testDeleteMiddle"/>
+      </line>
+      <line nr="181">
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+      </line>
+      <line nr="183">
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+      </line>
+      <line nr="184">
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+      </line>
+      <line nr="185">
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+      </line>
+      <line nr="186">
+        <covered by="SingleLinkedListTest::testDeleteLastPosition"/>
+      </line>
+      <line nr="189">
+        <covered by="SingleLinkedListTest::testDeleteEmpty"/>
+      </line>
+      <line nr="199">
+        <covered by="SingleLinkedListTest::testSetDataEmpty"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="200">
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+      </line>
+      <line nr="201">
+        <covered by="SingleLinkedListTest::testSetDataLast"/>
+      </line>
+      <line nr="203">
+        <covered by="SingleLinkedListTest::testSetDataEmpty"/>
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="205">
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="206">
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="207">
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="208">
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+      </line>
+      <line nr="209">
+        <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
+      </line>
+      <line nr="211">
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="213">
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="214">
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="215">
+        <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+      </line>
+      <line nr="225">
+        <covered by="SingleLinkedListTest::testSetDataEmpty"/>
       </line>
     </coverage>
   </file>

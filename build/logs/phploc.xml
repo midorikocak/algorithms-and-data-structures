@@ -2,14 +2,14 @@
 <phploc>
   <directories>1</directories>
   <files>13</files>
-  <loc>324</loc>
-  <lloc>72</lloc>
-  <llocClasses>44</llocClasses>
-  <llocFunctions>14</llocFunctions>
+  <loc>557</loc>
+  <lloc>182</lloc>
+  <llocClasses>98</llocClasses>
+  <llocFunctions>70</llocFunctions>
   <llocGlobal>14</llocGlobal>
   <cloc>79</cloc>
-  <ccn>5</ccn>
-  <ccnMethods>5</ccnMethods>
+  <ccn>30</ccn>
+  <ccnMethods>30</ccnMethods>
   <interfaces>2</interfaces>
   <traits>0</traits>
   <classes>9</classes>
@@ -18,31 +18,31 @@
   <functions>0</functions>
   <namedFunctions>0</namedFunctions>
   <anonymousFunctions>0</anonymousFunctions>
-  <methods>27</methods>
-  <publicMethods>27</publicMethods>
+  <methods>30</methods>
+  <publicMethods>30</publicMethods>
   <nonPublicMethods>0</nonPublicMethods>
-  <nonStaticMethods>27</nonStaticMethods>
+  <nonStaticMethods>30</nonStaticMethods>
   <staticMethods>0</staticMethods>
   <constants>0</constants>
   <classConstants>0</classConstants>
   <globalConstants>0</globalConstants>
   <testClasses>2</testClasses>
-  <testMethods>4</testMethods>
-  <ccnByLloc>0.069444444444444</ccnByLloc>
-  <ccnByNom>1.1851851851852</ccnByNom>
-  <llocByNoc>4.8888888888889</llocByNoc>
-  <llocByNom>1.6296296296296</llocByNom>
+  <testMethods>20</testMethods>
+  <ccnByLloc>0.16483516483516</ccnByLloc>
+  <ccnByNom>2</ccnByNom>
+  <llocByNoc>10.888888888889</llocByNoc>
+  <llocByNom>3.2666666666667</llocByNom>
   <llocByNof>0</llocByNof>
-  <methodCalls>18</methodCalls>
+  <methodCalls>108</methodCalls>
   <staticMethodCalls>0</staticMethodCalls>
-  <instanceMethodCalls>18</instanceMethodCalls>
-  <attributeAccesses>23</attributeAccesses>
+  <instanceMethodCalls>108</instanceMethodCalls>
+  <attributeAccesses>103</attributeAccesses>
   <staticAttributeAccesses>0</staticAttributeAccesses>
-  <instanceAttributeAccesses>23</instanceAttributeAccesses>
+  <instanceAttributeAccesses>103</instanceAttributeAccesses>
   <globalAccesses>0</globalAccesses>
   <globalVariableAccesses>0</globalVariableAccesses>
   <superGlobalVariableAccesses>0</superGlobalVariableAccesses>
   <globalConstantAccesses>0</globalConstantAccesses>
   <namespaces>1</namespaces>
-  <ncloc>245</ncloc>
+  <ncloc>478</ncloc>
 </phploc>
