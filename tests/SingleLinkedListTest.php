@@ -128,7 +128,7 @@ class SingleLinkedListTest extends PHPUnit_Framework_TestCase
     public function testSetDataLastPosition(){
         $this->testAddAnotherData();
         $dataToSet = $this->generateData();
-        $this->assertEquals($this->singleLinkedList->setData(1,$dataToSet),true);
+        $this->assertEquals($this->singleLinkedList->setData($dataToSet,1),true);
     }
     
     public function testSetDataLast(){

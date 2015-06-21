@@ -3,6 +3,26 @@
   <project name="/Users/mtkocak/Desktop/php-algorithms">
     <tests>
       <test name="AlgorithmsTest::testAlgorithmsHasCheese" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testAddData" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testAddAnotherData" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testListAll" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testGoToPosition" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testGetPosition" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testGetFirstPosition" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testGetLastPosition" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testGetEmptyPosition" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testSearchEmpty" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testSearchFirst" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testSearchLast" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testSearchMiddle" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testDeleteEmpty" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testDeleteLastPosition" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testDeleteLast" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testDeleteMiddle" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testSetDataEmpty" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testSetDataLastPosition" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testSetDataLast" size="small" result="0" status="PASSED"/>
+      <test name="doubleLinkedListTest::testSetDataMiddle" size="small" result="0" status="PASSED"/>
       <test name="SingleLinkedListTest::testAddData" size="small" result="0" status="PASSED"/>
       <test name="SingleLinkedListTest::testAddAnotherData" size="small" result="0" status="PASSED"/>
       <test name="SingleLinkedListTest::testListAll" size="small" result="0" status="PASSED"/>
@@ -25,18 +45,18 @@
     </tests>
     <directory name="/Users/mtkocak/Desktop/php-algorithms">
       <totals>
-        <lines total="618" comments="102" code="516" executable="126" executed="108" percent="85.71%"/>
-        <methods count="16" tested="11" percent="68.75%"/>
+        <lines total="865" comments="147" code="718" executable="236" executed="209" percent="88.56%"/>
+        <methods count="32" tested="24" percent="75.00%"/>
         <functions count="0" tested="0" percent=""/>
-        <classes count="4" tested="3" percent="75.00%"/>
+        <classes count="6" tested="4" percent="66.67%"/>
         <traits count="0" tested="0" percent=""/>
       </totals>
       <directory name="src">
         <totals>
-          <lines total="343" comments="79" code="264" executable="126" executed="108" percent="85.71%"/>
-          <methods count="16" tested="11" percent="68.75%"/>
+          <lines total="590" comments="124" code="466" executable="236" executed="209" percent="88.56%"/>
+          <methods count="32" tested="24" percent="75.00%"/>
           <functions count="0" tested="0" percent=""/>
-          <classes count="3" tested="2" percent="66.67%"/>
+          <classes count="5" tested="3" percent="60.00%"/>
           <traits count="0" tested="0" percent=""/>
         </totals>
         <file name="Algorithms.php" href="src/Algorithms.php.xml">
@@ -66,9 +86,18 @@
             <traits count="0" tested="0" percent=""/>
           </totals>
         </file>
+        <file name="DoubleLinkedListNode.php" href="src/DoubleLinkedListNode.php.xml">
+          <totals>
+            <lines total="24" comments="3" code="21" executable="5" executed="5" percent="100.00%"/>
+            <methods count="2" tested="2" percent="100.00%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="1" percent="100.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+        </file>
         <file name="SingleLinkedList.php" href="src/SingleLinkedList.php.xml">
           <totals>
-            <lines total="229" comments="24" code="205" executable="121" executed="103" percent="85.12%"/>
+            <lines total="226" comments="23" code="203" executable="121" executed="101" percent="83.47%"/>
             <methods count="13" tested="8" percent="61.54%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="0" percent="0.00%"/>
@@ -81,6 +110,15 @@
             <methods count="2" tested="2" percent="100.00%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="1" percent="100.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+        </file>
+        <file name="doubleLinkedList.php" href="src/doubleLinkedList.php.xml">
+          <totals>
+            <lines total="226" comments="43" code="183" executable="105" executed="98" percent="93.33%"/>
+            <methods count="14" tested="11" percent="78.57%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="0" percent="0.00%"/>
             <traits count="0" tested="0" percent=""/>
           </totals>
         </file>
@@ -112,9 +150,18 @@
           <traits count="0" tested="0" percent=""/>
         </totals>
       </file>
+      <file name="DoubleLinkedListNode.php" href="src/DoubleLinkedListNode.php.xml">
+        <totals>
+          <lines total="24" comments="3" code="21" executable="5" executed="5" percent="100.00%"/>
+          <methods count="2" tested="2" percent="100.00%"/>
+          <functions count="0" tested="0" percent=""/>
+          <classes count="1" tested="1" percent="100.00%"/>
+          <traits count="0" tested="0" percent=""/>
+        </totals>
+      </file>
       <file name="SingleLinkedList.php" href="src/SingleLinkedList.php.xml">
         <totals>
-          <lines total="229" comments="24" code="205" executable="121" executed="103" percent="85.12%"/>
+          <lines total="226" comments="23" code="203" executable="121" executed="101" percent="83.47%"/>
           <methods count="13" tested="8" percent="61.54%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>
@@ -127,6 +174,15 @@
           <methods count="2" tested="2" percent="100.00%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="1" percent="100.00%"/>
+          <traits count="0" tested="0" percent=""/>
+        </totals>
+      </file>
+      <file name="doubleLinkedList.php" href="src/doubleLinkedList.php.xml">
+        <totals>
+          <lines total="226" comments="43" code="183" executable="105" executed="98" percent="93.33%"/>
+          <methods count="14" tested="11" percent="78.57%"/>
+          <functions count="0" tested="0" percent=""/>
+          <classes count="1" tested="0" percent="0.00%"/>
           <traits count="0" tested="0" percent=""/>
         </totals>
       </file>

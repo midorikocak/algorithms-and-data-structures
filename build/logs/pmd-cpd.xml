@@ -1,2 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd-cpd/>
+<pmd-cpd>
+  <duplication lines="41" tokens="72">
+    <file path="/Users/mtkocak/Desktop/php-algorithms/src/DoubleLinkedList.php" line="4"/>
+    <file path="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedList.php" line="3"/>
+    <codefragment>class DoubleLinkedList implements DataStructureInterface
+{
+    /* Link to the first node in the list */
+    private $firstNode;
+    
+    /* Link to the last node in the list */
+    private $lastNode;
+
+    private $current;
+
+    function __construct()
+    {
+        $this-&gt;init();
+    }
+
+    public function init()
+    {
+        $this-&gt;firstNode = NULL;
+        $this-&gt;lastNode = NULL;
+        $this-&gt;current = $this-&gt;firstNode;
+        $this-&gt;count = 0;
+    }
+
+    public function current()
+    {
+        return $this-&gt;current;
+    }
+
+    public function next()
+    {
+        $this-&gt;current = $this-&gt;current-&gt;next;
+        return $this-&gt;current();
+    }
+
+    public function reset()
+    {
+        $this-&gt;current = $this-&gt;firstNode;
+        return $this-&gt;current;
+    }
+
+    public function prev()
+</codefragment>
+  </duplication>
+</pmd-cpd>

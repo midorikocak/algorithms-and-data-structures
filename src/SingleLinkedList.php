@@ -8,9 +8,6 @@ class SingleLinkedList implements DataStructureInterface
     /* Link to the last node in the list */
     private $lastNode;
     
-    /* Total nodes in the list */
-    private $count;
-    
     private $current;
     
     function __construct(){

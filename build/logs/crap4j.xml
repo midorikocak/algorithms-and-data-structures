@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2015-06-20 01:37:09</timestamp>
+  <timestamp>2015-06-21 17:10:15</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>19</methodCount>
+    <methodCount>35</methodCount>
     <crapMethodCount>0</crapMethodCount>
     <crapLoad>0</crapLoad>
-    <totalCrap>63.42</totalCrap>
+    <totalCrap>109.27</totalCrap>
     <crapMethodPercent>0</crapMethodPercent>
   </stats>
   <methods>
@@ -17,6 +17,28 @@
       <methodName>hasCheese</methodName>
       <methodSignature>hasCheese($bool = true)</methodSignature>
       <fullMethod>hasCheese($bool = true)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedListNode</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct($data)</methodSignature>
+      <fullMethod>__construct($data)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedListNode</className>
+      <methodName>readNode</methodName>
+      <methodSignature>readNode()</methodSignature>
+      <fullMethod>readNode()</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -160,9 +182,9 @@
       <methodName>setData</methodName>
       <methodSignature>setData($value,$position = NULL)</methodSignature>
       <fullMethod>setData($value,$position = NULL)</fullMethod>
-      <crap>10.37</crap>
+      <crap>13.04</crap>
       <complexity>8</complexity>
-      <coverage>66.67</coverage>
+      <coverage>57.14</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -184,6 +206,160 @@
       <fullMethod>readNode()</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct()</methodSignature>
+      <fullMethod>__construct()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>init</methodName>
+      <methodSignature>init()</methodSignature>
+      <fullMethod>init()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>current</methodName>
+      <methodSignature>current()</methodSignature>
+      <fullMethod>current()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>next</methodName>
+      <methodSignature>next()</methodSignature>
+      <fullMethod>next()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>reset</methodName>
+      <methodSignature>reset()</methodSignature>
+      <fullMethod>reset()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>prev</methodName>
+      <methodSignature>prev()</methodSignature>
+      <fullMethod>prev()</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>add</methodName>
+      <methodSignature>add($value)</methodSignature>
+      <fullMethod>add($value)</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>goToPosition</methodName>
+      <methodSignature>goToPosition($position)</methodSignature>
+      <fullMethod>goToPosition($position)</fullMethod>
+      <crap>6</crap>
+      <complexity>6</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>getData</methodName>
+      <methodSignature>getData($position = NULL)</methodSignature>
+      <fullMethod>getData($position = NULL)</fullMethod>
+      <crap>5</crap>
+      <complexity>5</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>isEmpty</methodName>
+      <methodSignature>isEmpty()</methodSignature>
+      <fullMethod>isEmpty()</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>listAll</methodName>
+      <methodSignature>listAll()</methodSignature>
+      <fullMethod>listAll()</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>search</methodName>
+      <methodSignature>search($value, $node = null, $position = null)</methodSignature>
+      <fullMethod>search($value, $node = null, $position = null)</fullMethod>
+      <crap>7.12</crap>
+      <complexity>7</complexity>
+      <coverage>86.67</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>delete</methodName>
+      <methodSignature>delete($position = NULL)</methodSignature>
+      <fullMethod>delete($position = NULL)</fullMethod>
+      <crap>5.06</crap>
+      <complexity>5</complexity>
+      <coverage>86.96</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>DoubleLinkedList</className>
+      <methodName>setData</methodName>
+      <methodSignature>setData($value, $position = NULL)</methodSignature>
+      <fullMethod>setData($value, $position = NULL)</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>

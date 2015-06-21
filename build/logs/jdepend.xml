@@ -3,20 +3,22 @@
   <Packages>
     <Package name="Mtkocak\Algorithms">
       <Stats>
-        <TotalClasses>11</TotalClasses>
-        <ConcreteClasses>9</ConcreteClasses>
+        <TotalClasses>13</TotalClasses>
+        <ConcreteClasses>11</ConcreteClasses>
         <AbstractClasses>2</AbstractClasses>
         <Ca>0</Ca>
         <Ce>0</Ce>
-        <A>0.18181818181818</A>
+        <A>0.15384615384615</A>
         <I>0</I>
-        <D>0.81818181818182</D>
+        <D>0.84615384615385</D>
       </Stats>
       <ConcreteClasses>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Algorithms.php">Algorithms</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/BinaryTree.php">LinkedList</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DoubleLinkedList.php">LinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DoubleLinkedList.php">DoubleLinkedList</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DoubleLinkedListNode.php">LinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DoubleLinkedListNode.php">DoubleLinkedListNode</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Queue.php">LinkedList</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedList.php">SingleLinkedList</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedListNode.php">SingleLinkedListNode</Class>

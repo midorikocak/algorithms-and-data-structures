@@ -1,6 +1,6 @@
-# Midori Data Structures And Algorithms using PHP
+# Data Structures And Algorithms using PHP
 
-**Description**:  Data Structures and Algorithms preparation for technical interview. Hence I am a php person, I had to recreate these classes using PHP to repeat CS topics.
+**Description**: Data Structures and Algorithms preparation for technical interview. Hence I am a php person, I had to recreate these classes using PHP to repeat CS topics.
 
 Includes:
  - Single Linked List

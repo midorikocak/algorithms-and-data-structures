@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<pmd version="@project.version@" timestamp="2015-06-20T01:37:07+02:00">
+<pmd version="@project.version@" timestamp="2015-06-21T17:10:13+02:00">
   <file name="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedList.php">
-    <violation beginline="125" endline="125" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3">
+    <violation beginline="122" endline="122" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3">
       Avoid unused local variables such as '$listData'.
     </violation>
-    <violation beginline="150" endline="191" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="Mtkocak\Algorithms" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="SingleLinkedList" method="delete" priority="3">
+    <violation beginline="147" endline="188" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="Mtkocak\Algorithms" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="SingleLinkedList" method="delete" priority="3">
       The method delete() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.
     </violation>
-    <violation beginline="177" endline="177" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3">
+    <violation beginline="174" endline="174" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3">
       Avoid unused local variables such as '$newNext'.
     </violation>
   </file>

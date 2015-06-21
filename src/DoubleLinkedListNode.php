@@ -1,9 +1,24 @@
 <?php namespace Mtkocak\Algorithms;
 
-class LinkedList implements DataStructureInterface
+class DoubleLinkedListNode implements DataStructureNodeInterface
 {
-    public function hasCheese($bool = true)
+    /* Data to hold */
+    public $data;
+    
+    /* Link to next node */
+    public $next;
+    
+    
+    /* Node constructor */
+    function __construct($data)
     {
-        return $bool;
+        $this->data = $data;
+        $this->next = NULL;
+        $this->prev = NULL;
+    }
+    
+    public function readNode()
+    {
+        return $this->data;
     }
 }
