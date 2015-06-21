@@ -4,6 +4,7 @@
 
 Includes:
  - Single Linked List
+ - Double Linked List
  - Tests
  - Other classes are not completed.
 
