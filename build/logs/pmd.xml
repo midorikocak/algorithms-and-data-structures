@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<pmd version="@project.version@" timestamp="2015-06-21T17:10:13+02:00">
+<pmd version="@project.version@" timestamp="2015-06-22T16:14:04+02:00">
   <file name="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedList.php">
     <violation beginline="122" endline="122" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3">
       Avoid unused local variables such as '$listData'.

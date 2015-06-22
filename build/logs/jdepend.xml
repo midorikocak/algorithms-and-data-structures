@@ -3,27 +3,29 @@
   <Packages>
     <Package name="Mtkocak\Algorithms">
       <Stats>
-        <TotalClasses>13</TotalClasses>
-        <ConcreteClasses>11</ConcreteClasses>
+        <TotalClasses>15</TotalClasses>
+        <ConcreteClasses>13</ConcreteClasses>
         <AbstractClasses>2</AbstractClasses>
         <Ca>0</Ca>
         <Ce>0</Ce>
-        <A>0.15384615384615</A>
+        <A>0.13333333333333</A>
         <I>0</I>
-        <D>0.84615384615385</D>
+        <D>0.86666666666667</D>
       </Stats>
       <ConcreteClasses>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Algorithms.php">Algorithms</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/BinaryTree.php">LinkedList</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DoubleLinkedList.php">LinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/BinaryTreeNode.php">LinkedList</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DoubleLinkedList.php">DoubleLinkedList</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DoubleLinkedListNode.php">LinkedList</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DoubleLinkedListNode.php">DoubleLinkedListNode</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Queue.php">LinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Queue.php">Queue</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedList.php">SingleLinkedList</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedListNode.php">SingleLinkedListNode</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Stack.php">LinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Stack.php">Stack</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Tree.php">LinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/TreeNode.php">LinkedList</Class>
       </ConcreteClasses>
       <AbstractClasses>
         <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DataStructureInterface.php">DataStructureInterface</Class>

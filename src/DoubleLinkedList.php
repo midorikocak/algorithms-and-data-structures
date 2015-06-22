@@ -15,6 +15,10 @@ class DoubleLinkedList implements DataStructureInterface
     {
         $this->init();
     }
+    
+    function __toString(){
+        return print_r($this->listAll(),true);
+    }
 
     public function init()
     {

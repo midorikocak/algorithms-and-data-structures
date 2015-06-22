@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phploc>
   <directories>1</directories>
-  <files>14</files>
-  <loc>944</loc>
-  <lloc>328</lloc>
-  <llocClasses>171</llocClasses>
-  <llocFunctions>141</llocFunctions>
-  <llocGlobal>16</llocGlobal>
-  <cloc>120</cloc>
-  <ccn>56</ccn>
-  <ccnMethods>56</ccnMethods>
+  <files>18</files>
+  <loc>1476</loc>
+  <lloc>519</lloc>
+  <llocClasses>255</llocClasses>
+  <llocFunctions>242</llocFunctions>
+  <llocGlobal>22</llocGlobal>
+  <cloc>177</cloc>
+  <ccn>89</ccn>
+  <ccnMethods>89</ccnMethods>
   <interfaces>2</interfaces>
   <traits>0</traits>
-  <classes>9</classes>
+  <classes>11</classes>
   <abstractClasses>0</abstractClasses>
-  <concreteClasses>9</concreteClasses>
+  <concreteClasses>11</concreteClasses>
   <functions>0</functions>
   <namedFunctions>0</namedFunctions>
   <anonymousFunctions>0</anonymousFunctions>
-  <methods>44</methods>
-  <publicMethods>44</publicMethods>
+  <methods>63</methods>
+  <publicMethods>63</publicMethods>
   <nonPublicMethods>0</nonPublicMethods>
-  <nonStaticMethods>44</nonStaticMethods>
+  <nonStaticMethods>63</nonStaticMethods>
   <staticMethods>0</staticMethods>
   <constants>0</constants>
   <classConstants>0</classConstants>
   <globalConstants>0</globalConstants>
-  <testClasses>3</testClasses>
-  <testMethods>40</testMethods>
-  <ccnByLloc>0.17073170731707</ccnByLloc>
-  <ccnByNom>2.2727272727273</ccnByNom>
-  <llocByNoc>19</llocByNoc>
-  <llocByNom>3.8863636363636</llocByNom>
+  <testClasses>5</testClasses>
+  <testMethods>67</testMethods>
+  <ccnByLloc>0.17148362235067</ccnByLloc>
+  <ccnByNom>2.4126984126984</ccnByNom>
+  <llocByNoc>23.181818181818</llocByNoc>
+  <llocByNom>4.047619047619</llocByNom>
   <llocByNof>0</llocByNof>
-  <methodCalls>218</methodCalls>
+  <methodCalls>355</methodCalls>
   <staticMethodCalls>0</staticMethodCalls>
-  <instanceMethodCalls>218</instanceMethodCalls>
-  <attributeAccesses>199</attributeAccesses>
+  <instanceMethodCalls>355</instanceMethodCalls>
+  <attributeAccesses>291</attributeAccesses>
   <staticAttributeAccesses>0</staticAttributeAccesses>
-  <instanceAttributeAccesses>199</instanceAttributeAccesses>
+  <instanceAttributeAccesses>291</instanceAttributeAccesses>
   <globalAccesses>0</globalAccesses>
   <globalVariableAccesses>0</globalVariableAccesses>
   <superGlobalVariableAccesses>0</superGlobalVariableAccesses>
   <globalConstantAccesses>0</globalConstantAccesses>
   <namespaces>1</namespaces>
-  <ncloc>824</ncloc>
+  <ncloc>1299</ncloc>
 </phploc>

@@ -16,6 +16,12 @@
     </class>
     <coverage>
       <line nr="15">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+        <covered by="QueueTest::testListAll"/>
+        <covered by="QueueTest::testGetData"/>
+        <covered by="QueueTest::testDeleteLast"/>
+        <covered by="QueueTest::testSetDataLast"/>
         <covered by="SingleLinkedListTest::testAddData"/>
         <covered by="SingleLinkedListTest::testAddAnotherData"/>
         <covered by="SingleLinkedListTest::testListAll"/>
@@ -31,8 +37,29 @@
         <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
         <covered by="SingleLinkedListTest::testSetDataLast"/>
         <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+        <covered by="StackTest::testListAll"/>
+        <covered by="StackTest::testGetPosition"/>
+        <covered by="StackTest::testGetFirstPosition"/>
+        <covered by="StackTest::testGetLastPosition"/>
+        <covered by="StackTest::testSearchFirst"/>
+        <covered by="StackTest::testSearchLast"/>
+        <covered by="StackTest::testSearchMiddle"/>
+        <covered by="StackTest::testDeleteLastPosition"/>
+        <covered by="StackTest::testDeleteLast"/>
+        <covered by="StackTest::testDeleteMiddle"/>
+        <covered by="StackTest::testSetDataLastPosition"/>
+        <covered by="StackTest::testSetDataLast"/>
+        <covered by="StackTest::testSetDataMiddle"/>
       </line>
       <line nr="16">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+        <covered by="QueueTest::testListAll"/>
+        <covered by="QueueTest::testGetData"/>
+        <covered by="QueueTest::testDeleteLast"/>
+        <covered by="QueueTest::testSetDataLast"/>
         <covered by="SingleLinkedListTest::testAddData"/>
         <covered by="SingleLinkedListTest::testAddAnotherData"/>
         <covered by="SingleLinkedListTest::testListAll"/>
@@ -48,8 +75,29 @@
         <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
         <covered by="SingleLinkedListTest::testSetDataLast"/>
         <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+        <covered by="StackTest::testListAll"/>
+        <covered by="StackTest::testGetPosition"/>
+        <covered by="StackTest::testGetFirstPosition"/>
+        <covered by="StackTest::testGetLastPosition"/>
+        <covered by="StackTest::testSearchFirst"/>
+        <covered by="StackTest::testSearchLast"/>
+        <covered by="StackTest::testSearchMiddle"/>
+        <covered by="StackTest::testDeleteLastPosition"/>
+        <covered by="StackTest::testDeleteLast"/>
+        <covered by="StackTest::testDeleteMiddle"/>
+        <covered by="StackTest::testSetDataLastPosition"/>
+        <covered by="StackTest::testSetDataLast"/>
+        <covered by="StackTest::testSetDataMiddle"/>
       </line>
       <line nr="17">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+        <covered by="QueueTest::testListAll"/>
+        <covered by="QueueTest::testGetData"/>
+        <covered by="QueueTest::testDeleteLast"/>
+        <covered by="QueueTest::testSetDataLast"/>
         <covered by="SingleLinkedListTest::testAddData"/>
         <covered by="SingleLinkedListTest::testAddAnotherData"/>
         <covered by="SingleLinkedListTest::testListAll"/>
@@ -65,8 +113,29 @@
         <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
         <covered by="SingleLinkedListTest::testSetDataLast"/>
         <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+        <covered by="StackTest::testListAll"/>
+        <covered by="StackTest::testGetPosition"/>
+        <covered by="StackTest::testGetFirstPosition"/>
+        <covered by="StackTest::testGetLastPosition"/>
+        <covered by="StackTest::testSearchFirst"/>
+        <covered by="StackTest::testSearchLast"/>
+        <covered by="StackTest::testSearchMiddle"/>
+        <covered by="StackTest::testDeleteLastPosition"/>
+        <covered by="StackTest::testDeleteLast"/>
+        <covered by="StackTest::testDeleteMiddle"/>
+        <covered by="StackTest::testSetDataLastPosition"/>
+        <covered by="StackTest::testSetDataLast"/>
+        <covered by="StackTest::testSetDataMiddle"/>
       </line>
       <line nr="21">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+        <covered by="QueueTest::testListAll"/>
+        <covered by="QueueTest::testGetData"/>
+        <covered by="QueueTest::testDeleteLast"/>
+        <covered by="QueueTest::testSetDataLast"/>
         <covered by="SingleLinkedListTest::testAddData"/>
         <covered by="SingleLinkedListTest::testAddAnotherData"/>
         <covered by="SingleLinkedListTest::testListAll"/>
@@ -81,6 +150,10 @@
         <covered by="SingleLinkedListTest::testSetDataLastPosition"/>
         <covered by="SingleLinkedListTest::testSetDataLast"/>
         <covered by="SingleLinkedListTest::testSetDataMiddle"/>
+        <covered by="StackTest::testListAll"/>
+        <covered by="StackTest::testSearchFirst"/>
+        <covered by="StackTest::testSearchLast"/>
+        <covered by="StackTest::testSearchMiddle"/>
       </line>
     </coverage>
   </file>
