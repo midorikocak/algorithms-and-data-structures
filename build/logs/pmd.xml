@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<pmd version="@project.version@" timestamp="2015-06-22T16:14:04+02:00">
+<pmd version="@project.version@" timestamp="2015-06-23T01:13:39+02:00">
   <file name="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedList.php">
     <violation beginline="122" endline="122" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3">
       Avoid unused local variables such as '$listData'.
@@ -9,6 +9,11 @@
     </violation>
     <violation beginline="174" endline="174" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3">
       Avoid unused local variables such as '$newNext'.
+    </violation>
+  </file>
+  <file name="/Users/mtkocak/Desktop/php-algorithms/src/Tree.php">
+    <violation beginline="4" endline="227" rule="ExcessiveClassComplexity" ruleset="Code Size Rules" package="Mtkocak\Algorithms" externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveclasscomplexity" class="Tree" priority="3">
+      The class Tree has an overall complexity of 52 which is very high. The configured complexity threshold is 50.
     </violation>
   </file>
 </pmd>

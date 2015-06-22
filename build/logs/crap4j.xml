@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2015-06-22 16:14:07</timestamp>
+  <timestamp>2015-06-23 01:13:42</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>54</methodCount>
-    <crapMethodCount>0</crapMethodCount>
-    <crapLoad>0</crapLoad>
-    <totalCrap>164</totalCrap>
-    <crapMethodPercent>0</crapMethodPercent>
+    <methodCount>71</methodCount>
+    <crapMethodCount>1</crapMethodCount>
+    <crapLoad>6</crapLoad>
+    <totalCrap>274.23</totalCrap>
+    <crapMethodPercent>1.41</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -570,6 +570,193 @@
       <crap>8.01</crap>
       <complexity>8</complexity>
       <coverage>94.44</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct()</methodSignature>
+      <fullMethod>__construct()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>init</methodName>
+      <methodSignature>init()</methodSignature>
+      <fullMethod>init()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>add</methodName>
+      <methodSignature>add($value, $position = null)</methodSignature>
+      <fullMethod>add($value, $position = null)</fullMethod>
+      <crap>6.25</crap>
+      <complexity>5</complexity>
+      <coverage>63.16</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>getNodeByPosition</methodName>
+      <methodSignature>getNodeByPosition($position = null)</methodSignature>
+      <fullMethod>getNodeByPosition($position = null)</fullMethod>
+      <crap>6.13</crap>
+      <complexity>6</complexity>
+      <coverage>84.62</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>goToLastSibling</methodName>
+      <methodSignature>goToLastSibling(TreeNode $node)</methodSignature>
+      <fullMethod>goToLastSibling(TreeNode $node)</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>goToLastChild</methodName>
+      <methodSignature>goToLastChild(TreeNode $node)</methodSignature>
+      <fullMethod>goToLastChild(TreeNode $node)</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>goToLastNumberedSibling</methodName>
+      <methodSignature>goToLastNumberedSibling(TreeNode $node, $number)</methodSignature>
+      <fullMethod>goToLastNumberedSibling(TreeNode $node, $number)</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>goToLastNumberedChild</methodName>
+      <methodSignature>goToLastNumberedChild(TreeNode $node, $number)</methodSignature>
+      <fullMethod>goToLastNumberedChild(TreeNode $node, $number)</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>getData</methodName>
+      <methodSignature>getData($position = null)</methodSignature>
+      <fullMethod>getData($position = null)</fullMethod>
+      <crap>42</crap>
+      <complexity>6</complexity>
+      <coverage>0</coverage>
+      <crapLoad>6</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>isEmpty</methodName>
+      <methodSignature>isEmpty()</methodSignature>
+      <fullMethod>isEmpty()</fullMethod>
+      <crap>2.15</crap>
+      <complexity>2</complexity>
+      <coverage>66.67</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>traverse</methodName>
+      <methodSignature>traverse(TreeNode $subtree,$position = null)</methodSignature>
+      <fullMethod>traverse(TreeNode $subtree,$position = null)</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>listAll</methodName>
+      <methodSignature>listAll()</methodSignature>
+      <fullMethod>listAll()</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>delete</methodName>
+      <methodSignature>delete($position = null)</methodSignature>
+      <fullMethod>delete($position = null)</fullMethod>
+      <crap>4.37</crap>
+      <complexity>4</complexity>
+      <coverage>71.43</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>setData</methodName>
+      <methodSignature>setData($value, $position = null)</methodSignature>
+      <fullMethod>setData($value, $position = null)</fullMethod>
+      <crap>7.33</crap>
+      <complexity>6</complexity>
+      <coverage>66.67</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>Tree</className>
+      <methodName>search</methodName>
+      <methodSignature>search($value)</methodSignature>
+      <fullMethod>search($value)</fullMethod>
+      <crap>6</crap>
+      <complexity>6</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>TreeNode</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct($data)</methodSignature>
+      <fullMethod>__construct($data)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\Algorithms</package>
+      <className>TreeNode</className>
+      <methodName>readNode</methodName>
+      <methodSignature>readNode()</methodSignature>
+      <fullMethod>readNode()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>

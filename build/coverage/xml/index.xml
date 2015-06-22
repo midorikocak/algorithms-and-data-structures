@@ -69,21 +69,32 @@
       <test name="StackTest::testSetDataLastPosition" size="small" result="0" status="PASSED"/>
       <test name="StackTest::testSetDataLast" size="small" result="0" status="PASSED"/>
       <test name="StackTest::testSetDataMiddle" size="small" result="0" status="PASSED"/>
+      <test name="TreeTest::testGoToLastSibling" size="small" result="0" status="PASSED"/>
+      <test name="TreeTest::testGoToLastNumberedSibling" size="small" result="0" status="PASSED"/>
+      <test name="TreeTest::testGoToLastChild" size="small" result="0" status="PASSED"/>
+      <test name="TreeTest::testGoToLastNumberedChild" size="small" result="0" status="PASSED"/>
+      <test name="TreeTest::testGetNodeByPositionZero" size="small" result="0" status="PASSED"/>
+      <test name="TreeTest::testAddData" size="small" result="0" status="PASSED"/>
+      <test name="TreeTest::testAddChildren" size="small" result="0" status="PASSED"/>
+      <test name="TreeTest::testListAll" size="small" result="0" status="PASSED"/>
+      <test name="TreeTest::testSearch" size="small" result="0" status="PASSED"/>
+      <test name="TreeTest::testDelete" size="small" result="0" status="PASSED"/>
+      <test name="TreeTest::testSetDataEmpty" size="small" result="0" status="PASSED"/>
     </tests>
     <directory name="/Users/mtkocak/Desktop/php-algorithms">
       <totals>
-        <lines total="1157" comments="208" code="949" executable="370" executed="333" percent="90.00%"/>
-        <methods count="51" tested="36" percent="70.59%"/>
+        <lines total="1409" comments="233" code="1176" executable="483" executed="405" percent="83.85%"/>
+        <methods count="68" tested="45" percent="66.18%"/>
         <functions count="0" tested="0" percent=""/>
-        <classes count="8" tested="4" percent="50.00%"/>
+        <classes count="10" tested="5" percent="50.00%"/>
         <traits count="0" tested="0" percent=""/>
       </totals>
       <directory name="src">
         <totals>
-          <lines total="882" comments="185" code="697" executable="370" executed="333" percent="90.00%"/>
-          <methods count="51" tested="36" percent="70.59%"/>
+          <lines total="1134" comments="210" code="924" executable="483" executed="405" percent="83.85%"/>
+          <methods count="68" tested="45" percent="66.18%"/>
           <functions count="0" tested="0" percent=""/>
-          <classes count="7" tested="3" percent="42.86%"/>
+          <classes count="9" tested="4" percent="44.44%"/>
           <traits count="0" tested="0" percent=""/>
         </totals>
         <file name="Algorithms.php" href="src/Algorithms.php.xml">
@@ -167,6 +178,24 @@
             <traits count="0" tested="0" percent=""/>
           </totals>
         </file>
+        <file name="Tree.php" href="src/Tree.php.xml">
+          <totals>
+            <lines total="227" comments="23" code="204" executable="108" executed="67" percent="62.04%"/>
+            <methods count="15" tested="7" percent="46.67%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="0" percent="0.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+        </file>
+        <file name="TreeNode.php" href="src/TreeNode.php.xml">
+          <totals>
+            <lines total="25" comments="2" code="23" executable="5" executed="5" percent="100.00%"/>
+            <methods count="2" tested="2" percent="100.00%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="1" percent="100.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+        </file>
       </directory>
       <file name="Algorithms.php" href="src/Algorithms.php.xml">
         <totals>
@@ -246,6 +275,24 @@
           <methods count="9" tested="5" percent="55.56%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>
+          <traits count="0" tested="0" percent=""/>
+        </totals>
+      </file>
+      <file name="Tree.php" href="src/Tree.php.xml">
+        <totals>
+          <lines total="227" comments="23" code="204" executable="108" executed="67" percent="62.04%"/>
+          <methods count="15" tested="7" percent="46.67%"/>
+          <functions count="0" tested="0" percent=""/>
+          <classes count="1" tested="0" percent="0.00%"/>
+          <traits count="0" tested="0" percent=""/>
+        </totals>
+      </file>
+      <file name="TreeNode.php" href="src/TreeNode.php.xml">
+        <totals>
+          <lines total="25" comments="2" code="23" executable="5" executed="5" percent="100.00%"/>
+          <methods count="2" tested="2" percent="100.00%"/>
+          <functions count="0" tested="0" percent=""/>
+          <classes count="1" tested="1" percent="100.00%"/>
           <traits count="0" tested="0" percent=""/>
         </totals>
       </file>
