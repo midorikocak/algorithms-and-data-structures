@@ -83,16 +83,16 @@
     </tests>
     <directory name="/Users/mtkocak/Desktop/php-algorithms">
       <totals>
-        <lines total="1409" comments="233" code="1176" executable="483" executed="405" percent="83.85%"/>
-        <methods count="68" tested="45" percent="66.18%"/>
+        <lines total="1419" comments="243" code="1176" executable="482" executed="422" percent="87.55%"/>
+        <methods count="68" tested="47" percent="69.12%"/>
         <functions count="0" tested="0" percent=""/>
         <classes count="10" tested="5" percent="50.00%"/>
         <traits count="0" tested="0" percent=""/>
       </totals>
       <directory name="src">
         <totals>
-          <lines total="1134" comments="210" code="924" executable="483" executed="405" percent="83.85%"/>
-          <methods count="68" tested="45" percent="66.18%"/>
+          <lines total="1144" comments="220" code="924" executable="482" executed="422" percent="87.55%"/>
+          <methods count="68" tested="47" percent="69.12%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="9" tested="4" percent="44.44%"/>
           <traits count="0" tested="0" percent=""/>
@@ -180,8 +180,8 @@
         </file>
         <file name="Tree.php" href="src/Tree.php.xml">
           <totals>
-            <lines total="227" comments="23" code="204" executable="108" executed="67" percent="62.04%"/>
-            <methods count="15" tested="7" percent="46.67%"/>
+            <lines total="237" comments="33" code="204" executable="107" executed="84" percent="78.50%"/>
+            <methods count="15" tested="9" percent="60.00%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="0" percent="0.00%"/>
             <traits count="0" tested="0" percent=""/>
@@ -280,8 +280,8 @@
       </file>
       <file name="Tree.php" href="src/Tree.php.xml">
         <totals>
-          <lines total="227" comments="23" code="204" executable="108" executed="67" percent="62.04%"/>
-          <methods count="15" tested="7" percent="46.67%"/>
+          <lines total="237" comments="33" code="204" executable="107" executed="84" percent="78.50%"/>
+          <methods count="15" tested="9" percent="60.00%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>
           <traits count="0" tested="0" percent=""/>

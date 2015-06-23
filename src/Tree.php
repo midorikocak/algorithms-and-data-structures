@@ -27,8 +27,8 @@ class Tree implements DataStructureInterface
         // if this is empty, add value as root
         if ($this->isEmpty()) {
             $this->root = $newNode;
-        }        // if this is not empty and no position add children to root
-        elseif (! isset($position)) {
+        } // if this is not empty and no position add children to root
+elseif (! isset($position)) {
             if ($this->root->children == NULL) {
                 $this->root->children = $newNode;
                 return true;
@@ -131,26 +131,37 @@ class Tree implements DataStructureInterface
         }
     }
 
-    public function traverse(TreeNode $subtree,$position = null)
+    public function traverse(TreeNode $subtree, $degree = null)
     {
-           $array = [];
-           $array[$position]['value']= $subtree->readNode();
-           // array[0][1] array[0][2] array[0][3] First degree of children
-           if($subtree->children!=null)
-           {
-               $subtree = $subtree->children;
-               $array[$position] = $this->traverse($subtree,++$position);
-           }
-           if($subtree->right!=null){
-               $right = 1;
-               $current=$subtree;
-               while($current){
-                   $array[$position][$right]['value'] = $current->readNode();
-                   $current=$current->right;
-                   $right++;
-               }
-           }
-           return $array;
+        // if 0 is root. else get position and increase when going right
+        
+        // go to first child array[0][1]['value']
+        
+        // are there other children? go to right array[0][2] array[0][3] ...
+        
+        // go recursively each node's children if they have children.
+        
+        // array[0][1][1]['value'] => '1.1';
+        
+        // a children counter when going right array[1] array[2] ... and append to parent using recursion
+        
+        $array = [];
+        $current = $subtree;
+        if(isset($degree))
+        {
+            $siblings = 0;
+        }else{
+            $siblings = 1;
+        }
+        while ($current) {
+            if ($current->children != null) {
+                $array[$siblings] = $this->traverse($current->children);
+            }
+            $array[$siblings]['value'] = $current->readNode();
+            $siblings++;
+            $current = $current->right;
+        }
+        return $array;
     }
 
     /**
@@ -163,7 +174,7 @@ class Tree implements DataStructureInterface
      */
     public function listAll()
     {
-        return var_dump($this->traverse($this->root,0));
+        return $this->traverse($this->root, 0);
     }
 
     public function delete($position = null)
@@ -171,7 +182,7 @@ class Tree implements DataStructureInterface
         if (! $this->isEmpty() && isset($position)) {
             $nodeToDelete = $this->getNodeByPosition($position);
             if ($nodeToDelete != NULL) {
-                unset ($nodeToDelete);
+                unset($nodeToDelete);
                 return true;
             }
         }
@@ -186,8 +197,8 @@ class Tree implements DataStructureInterface
         if (! $this->isEmpty() && isset($position)) {
             $nodeToSetData = $this->getNodeByPosition($position);
             if ($nodeToSetData != NULL) {
-                 $nodeToSetData->data = $value;
-                 return true;
+                $nodeToSetData->data = $value;
+                return true;
             }
         }
         return false;
@@ -198,28 +209,27 @@ class Tree implements DataStructureInterface
         $position = 0;
         $subtree = $this->root;
         $array = [];
-        $array[$position]['value']= $subtree->readNode();
-        if($subtree->readNode() == $value);
+        $array[$position]['value'] = $subtree->readNode();
+        if ($subtree->readNode() == $value);
         {
             return true;
         }
         // array[0][1] array[0][2] array[0][3] First degree of children
-        if($subtree->children!=null)
-        {
+        if ($subtree->children != null) {
             $subtree = $subtree->children;
-            $array[$position] = $this->traverse($subtree,++$position);
+            $array[$position] = $this->traverse($subtree, ++ $position);
         }
-        if($subtree->right!=null){
+        if ($subtree->right != null) {
             $right = 1;
-            $current=$subtree;
-            while($current){
+            $current = $subtree;
+            while ($current) {
                 $array[$position][$right]['value'] = $current->readNode();
-                if($current->readNode() == $value);
+                if ($current->readNode() == $value);
                 {
                     return true;
                 }
-                $current=$current->right;
-                $right++;
+                $current = $current->right;
+                $right ++;
             }
         }
         return $array;

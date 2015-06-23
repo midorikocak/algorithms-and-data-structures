@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2015-06-23 01:13:42</timestamp>
+  <timestamp>2015-06-23 16:32:21</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>71</methodCount>
     <crapMethodCount>1</crapMethodCount>
     <crapLoad>6</crapLoad>
-    <totalCrap>274.23</totalCrap>
+    <totalCrap>257.23</totalCrap>
     <crapMethodPercent>1.41</crapMethodPercent>
   </stats>
   <methods>
@@ -686,11 +686,11 @@
       <package>Mtkocak\Algorithms</package>
       <className>Tree</className>
       <methodName>traverse</methodName>
-      <methodSignature>traverse(TreeNode $subtree,$position = null)</methodSignature>
-      <fullMethod>traverse(TreeNode $subtree,$position = null)</fullMethod>
-      <crap>20</crap>
+      <methodSignature>traverse(TreeNode $subtree, $degree = null)</methodSignature>
+      <fullMethod>traverse(TreeNode $subtree, $degree = null)</fullMethod>
+      <crap>4</crap>
       <complexity>4</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -699,9 +699,9 @@
       <methodName>listAll</methodName>
       <methodSignature>listAll()</methodSignature>
       <fullMethod>listAll()</fullMethod>
-      <crap>2</crap>
+      <crap>1</crap>
       <complexity>1</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>

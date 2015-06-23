@@ -798,14 +798,13 @@
      }
  
      /**
-@@ -27,9 +27,9 @@
-         // if this is empty, add value as root
+@@ -28,8 +28,8 @@
          if ($this->isEmpty()) {
              $this->root = $newNode;
--        }        // if this is not empty and no position add children to root
-+        } // if this is not empty and no position add children to root
-         elseif (! isset($position)) {
+         } // if this is not empty and no position add children to root
+-elseif (! isset($position)) {
 -            if ($this->root->children == NULL) {
++        elseif (! isset($position)) {
 +            if ($this->root->children == null) {
                  $this->root->children = $newNode;
                  return true;
@@ -828,7 +827,7 @@
                  return $nodeToGetData->readNode();
              }
          }
-@@ -124,32 +124,31 @@
+@@ -124,7 +124,7 @@
  
      public function isEmpty()
      {
@@ -837,97 +836,52 @@
              return true;
          } else {
              return false;
+@@ -147,10 +147,9 @@
+         
+         $array = [];
+         $current = $subtree;
+-        if(isset($degree))
+-        {
++        if (isset($degree)) {
+             $siblings = 0;
+-        }else{
++        } else {
+             $siblings = 1;
          }
-     }
- 
--    public function traverse(TreeNode $subtree,$position = null)
-+    public function traverse(TreeNode $subtree, $position = null)
-     {
-            $array = [];
-            $array[$position]['value']= $subtree->readNode();
-            // array[0][1] array[0][2] array[0][3] First degree of children
--           if($subtree->children!=null)
--           {
--               $subtree = $subtree->children;
--               $array[$position] = $this->traverse($subtree,++$position);
--           }
--           if($subtree->right!=null){
--               $right = 1;
--               $current=$subtree;
--               while($current){
--                   $array[$position][$right]['value'] = $current->readNode();
--                   $current=$current->right;
--                   $right++;
--               }
--           }
-+        if ($subtree->children!=null) {
-+            $subtree = $subtree->children;
-+            $array[$position] = $this->traverse($subtree, ++$position);
-+        }
-+        if ($subtree->right!=null) {
-+            $right = 1;
-+            $current=$subtree;
-+            while ($current) {
-+                $array[$position][$right]['value'] = $current->readNode();
-+                $current=$current->right;
-+                $right++;
-+            }
-+        }
-            return $array;
-     }
- 
-@@ -163,14 +162,14 @@
-      */
-     public function listAll()
-     {
--        return var_dump($this->traverse($this->root,0));
-+        return var_dump($this->traverse($this->root, 0));
-     }
- 
-     public function delete($position = null)
+         while ($current) {
+@@ -181,7 +180,7 @@
      {
          if (! $this->isEmpty() && isset($position)) {
              $nodeToDelete = $this->getNodeByPosition($position);
 -            if ($nodeToDelete != NULL) {
 +            if ($nodeToDelete != null) {
-                 unset ($nodeToDelete);
+                 unset($nodeToDelete);
                  return true;
              }
-@@ -185,7 +184,7 @@
+@@ -196,7 +195,7 @@
          }
          if (! $this->isEmpty() && isset($position)) {
              $nodeToSetData = $this->getNodeByPosition($position);
 -            if ($nodeToSetData != NULL) {
 +            if ($nodeToSetData != null) {
-                  $nodeToSetData->data = $value;
-                  return true;
+                 $nodeToSetData->data = $value;
+                 return true;
              }
-@@ -199,22 +198,23 @@
+@@ -210,7 +209,8 @@
          $subtree = $this->root;
          $array = [];
-         $array[$position]['value']= $subtree->readNode();
--        if($subtree->readNode() == $value);
+         $array[$position]['value'] = $subtree->readNode();
+-        if ($subtree->readNode() == $value);
 +        if ($subtree->readNode() == $value) {
 +        }
          {
              return true;
          }
-         // array[0][1] array[0][2] array[0][3] First degree of children
--        if($subtree->children!=null)
--        {
-+        if ($subtree->children!=null) {
-             $subtree = $subtree->children;
--            $array[$position] = $this->traverse($subtree,++$position);
-+            $array[$position] = $this->traverse($subtree, ++$position);
-         }
--        if($subtree->right!=null){
-+        if ($subtree->right!=null) {
-             $right = 1;
-             $current=$subtree;
--            while($current){
-+            while ($current) {
+@@ -224,7 +224,8 @@
+             $current = $subtree;
+             while ($current) {
                  $array[$position][$right]['value'] = $current->readNode();
--                if($current->readNode() == $value);
+-                if ($current->readNode() == $value);
 +                if ($current->readNode() == $value) {
 +                }
                  {
@@ -1462,95 +1416,4 @@
 -        $this->assertEquals($this->stack->setData($dataToSet,1),true);
 +        $this->assertEquals($this->stack->setData($dataToSet, 1), true);
      }
- }--- tests/TreeTest.php
-+++ PHP_CodeSniffer
-@@ -31,30 +31,35 @@
-         return $data;
-     }
-     
--    public function testGoToLastSibling(){
-+    public function testGoToLastSibling()
-+    {
-         
--    $lastSiblingToCheck = $this->tree->goToLastSibling($this->tree->root->children);
--    $this->assertTrue($lastSiblingToCheck->readNode() == 4);
-+        $lastSiblingToCheck = $this->tree->goToLastSibling($this->tree->root->children);
-+        $this->assertTrue($lastSiblingToCheck->readNode() == 4);
-     }
-     
--    public function testGoToLastNumberedSibling(){
-+    public function testGoToLastNumberedSibling()
-+    {
-         $lastNumberedSiblingToCheckValue = $this->tree->root->children->right->right->readNode();
--        $lastNumberedSiblingToCheck = $this->tree->goToLastNumberedSibling($this->tree->root->children,3);
-+        $lastNumberedSiblingToCheck = $this->tree->goToLastNumberedSibling($this->tree->root->children, 3);
-         $this->assertTrue($lastNumberedSiblingToCheck->readNode() == $lastNumberedSiblingToCheckValue);
-     }
-     
-     
--    public function testGoToLastChild(){
-+    public function testGoToLastChild()
-+    {
-         $lastChildrenToCheck = $this->tree->goToLastChild($this->tree->root);
-         $this->assertTrue($lastChildrenToCheck->readNode() == '1.1.1');
-     }
-     
--    public function testGoToLastNumberedChild(){
--        $lastChildrenToCheck = $this->tree->goToLastNumberedChild($this->tree->root,3);
-+    public function testGoToLastNumberedChild()
-+    {
-+        $lastChildrenToCheck = $this->tree->goToLastNumberedChild($this->tree->root, 3);
-         $this->assertTrue($lastChildrenToCheck->readNode() == '1.1.1');
-     }
-     
--    public function testGetNodeByPositionZero(){
-+    public function testGetNodeByPositionZero()
-+    {
-         $node = $this->tree->getNodeByPosition('1.2.1');
-         
-         $this->assertTrue('1.2.1' == $node->readNode());
-@@ -73,7 +78,7 @@
-     {
-         $this->testAddData();
-         $anotherData = $this->generateData();
--        $this->tree->add($anotherData,'1');
-+        $this->tree->add($anotherData, '1');
-         $lastData = $this->tree->goToLastSibling($this->tree->root->children);
-     
-         $this->assertTrue($anotherData == $lastData->readNode());
-@@ -84,25 +89,27 @@
-         $firstData = $this->generateData();
-         $secondData = $this->generateData();
-         $this->tree->add($firstData);
--        $this->tree->add($secondData,'1');
-+        $this->tree->add($secondData, '1');
-         //print_r($this->tree);
-         //print_r($this->tree->listAll());
-     }
-     
--    public function testSearch(){
-+    public function testSearch()
-+    {
-         $dataToSearch = $this->generateData();
-         $this->tree->add($dataToSearch);
--        $this->assertEquals($this->tree->search($dataToSearch),true);
-+        $this->assertEquals($this->tree->search($dataToSearch), true);
-     }
-     
--    public function testDelete(){
--        $this->assertEquals($this->tree->delete(3),true);
-+    public function testDelete()
-+    {
-+        $this->assertEquals($this->tree->delete(3), true);
-     }
-     
- 
-     
--    public function testSetDataEmpty(){
--        $this->assertEquals($this->tree->setData('new value','3'),true);
-+    public function testSetDataEmpty()
-+    {
-+        $this->assertEquals($this->tree->setData('new value', '3'), true);
-     }
--
  }
