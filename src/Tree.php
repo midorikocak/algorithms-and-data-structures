@@ -147,7 +147,7 @@ elseif (! isset($position)) {
         
         $array = [];
         $current = $subtree;
-        if(isset($degree))
+        if(isset($degree) && $degree == 0)
         {
             $siblings = 0;
         }else{
@@ -204,34 +204,13 @@ elseif (! isset($position)) {
         return false;
     }
 
+    
+    /**
+     * TODO: need to update with new traverse function
+     * @see \Mtkocak\Algorithms\DataStructureInterface::search()
+     */
     public function search($value)
     {
-        $position = 0;
-        $subtree = $this->root;
-        $array = [];
-        $array[$position]['value'] = $subtree->readNode();
-        if ($subtree->readNode() == $value);
-        {
-            return true;
-        }
-        // array[0][1] array[0][2] array[0][3] First degree of children
-        if ($subtree->children != null) {
-            $subtree = $subtree->children;
-            $array[$position] = $this->traverse($subtree, ++ $position);
-        }
-        if ($subtree->right != null) {
-            $right = 1;
-            $current = $subtree;
-            while ($current) {
-                $array[$position][$right]['value'] = $current->readNode();
-                if ($current->readNode() == $value);
-                {
-                    return true;
-                }
-                $current = $current->right;
-                $right ++;
-            }
-        }
-        return $array;
+        return true;
     }
 }
