@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
+  <file name="BinaryTree.php">
+    <totals>
+      <lines total="203" comments="25" code="178" executable="121" executed="25" percent="20.66%"/>
+      <methods count="10" tested="3" percent="30.00%"/>
+      <functions count="0" tested="0" percent=""/>
+      <classes count="1" tested="0" percent="0.00%"/>
+      <traits count="0" tested="0" percent=""/>
+    </totals>
+    <class name="BinaryTree" start="6" executable="121" executed="25" crap="1150.20">
+      <package full="" name="" sub="" category=""/>
+      <namespace name="Mtkocak\DataStructures"/>
+      <method name="root" signature="root(TreeNodeInterface $node = NULL)" start="11" end="22" crap="3.03" executable="7" executed="6" coverage="85.714285714286"/>
+      <method name="__construct" signature="__construct()" start="24" end="27" crap="1" executable="2" executed="2" coverage="100"/>
+      <method name="add" signature="add($value)" start="29" end="29" crap="1" executable="0" executed="0" coverage="100"/>
+      <method name="delete" signature="delete(TreeNodeInterface $node)" start="31" end="31" crap="1" executable="0" executed="0" coverage="100"/>
+      <method name="predecessor" signature="predecessor(TreeNodeInterface $node)" start="38" end="51" crap="12" executable="8" executed="0" coverage="0"/>
+      <method name="successor" signature="successor(TreeNodeInterface $node)" start="53" end="66" crap="12" executable="8" executed="0" coverage="0"/>
+      <method name="isEmpty" signature="isEmpty()" start="68" end="75" crap="2" executable="3" executed="3" coverage="100"/>
+      <method name="search" signature="search($value)" start="77" end="77" crap="1" executable="0" executed="0" coverage="100"/>
+      <method name="breadthFirst" signature="breadthFirst(TreeNodeInterface $node = null)" start="79" end="104" crap="30" executable="19" executed="0" coverage="0"/>
+      <method name="depthFirsth" signature="depthFirsth(TreeNodeInterface $node = null, $mode)" start="107" end="144" crap="156" executable="32" executed="0" coverage="0"/>
+      <method name="inOrder" signature="inOrder(TreeNodeInterface $node = null)" start="146" end="163" crap="5" executable="14" executed="14" coverage="100"/>
+      <method name="postOrder" signature="postOrder(TreeNodeInterface $node = null)&#10;    &#10;    // first print self, recursive" start="165" end="183" crap="30" executable="14" executed="0" coverage="0"/>
+      <method name="preOrder" signature="preOrder(TreeNodeInterface $node = null)" start="185" end="202" crap="30" executable="14" executed="0" coverage="0"/>
+    </class>
+    <coverage>
+      <line nr="13">
+        <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="14">
+        <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="17">
+        <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="19">
+        <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="20">
+        <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="22">
+        <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="26">
+        <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="27">
+        <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="70">
+        <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="71">
+        <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="73">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="148">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="149">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="150">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="151">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="152">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="153">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="154">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="155">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="156">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="157">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="158">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="159">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="160">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+      <line nr="162">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+      </line>
+    </coverage>
+  </file>
+</phpunit>

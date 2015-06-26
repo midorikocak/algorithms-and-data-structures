@@ -1,569 +1,408 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2015-06-23 16:35:12</timestamp>
+  <timestamp>2015-06-26 21:35:13</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>122</methodCount>
-    <crapMethodCount>26</crapMethodCount>
-    <crapLoad>474</crapLoad>
-    <totalCrap>23321.23</totalCrap>
-    <crapMethodPercent>21.31</crapMethodPercent>
+    <methodCount>75</methodCount>
+    <crapMethodCount>6</crapMethodCount>
+    <crapLoad>44</crapLoad>
+    <totalCrap>653.38</totalCrap>
+    <crapMethodPercent>8</crapMethodPercent>
   </stats>
   <methods>
     <method>
-      <package>global</package>
-      <className>PHPUnit_TextUI_Command</className>
-      <methodName>main</methodName>
-      <methodSignature>main($exit = true)</methodSignature>
-      <fullMethod>main($exit = true)</fullMethod>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinarySearchTree</className>
+      <methodName>add</methodName>
+      <methodSignature>add($value)</methodSignature>
+      <fullMethod>add($value)</fullMethod>
+      <crap>7.14</crap>
+      <complexity>7</complexity>
+      <coverage>85.71</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinarySearchTree</className>
+      <methodName>validate</methodName>
+      <methodSignature>validate()</methodSignature>
+      <fullMethod>validate()</fullMethod>
       <crap>2</crap>
       <complexity>1</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>global</package>
-      <className>PHPUnit_TextUI_Command</className>
-      <methodName>run</methodName>
-      <methodSignature>run(array $argv, $exit = true)</methodSignature>
-      <fullMethod>run(array $argv, $exit = true)</fullMethod>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinarySearchTree</className>
+      <methodName>delete</methodName>
+      <methodSignature>delete(TreeNodeInterface $node)</methodSignature>
+      <fullMethod>delete(TreeNodeInterface $node)</fullMethod>
+      <crap>132</crap>
+      <complexity>11</complexity>
+      <coverage>0</coverage>
+      <crapLoad>11</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinarySearchTree</className>
+      <methodName>deleteValue</methodName>
+      <methodSignature>deleteValue($value)</methodSignature>
+      <fullMethod>deleteValue($value)</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinarySearchTree</className>
+      <methodName>search</methodName>
+      <methodSignature>search($value)</methodSignature>
+      <fullMethod>search($value)</fullMethod>
+      <crap>7.1</crap>
+      <complexity>6</complexity>
+      <coverage>68.75</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinarySearchTreeNode</className>
+      <methodName>validate</methodName>
+      <methodSignature>validate()</methodSignature>
+      <fullMethod>validate()</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
+      <coverage>0</coverage>
+      <crapLoad>5</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTree</className>
+      <methodName>root</methodName>
+      <methodSignature>root(TreeNodeInterface $node = NULL)</methodSignature>
+      <fullMethod>root(TreeNodeInterface $node = NULL)</fullMethod>
+      <crap>3.03</crap>
+      <complexity>3</complexity>
+      <coverage>85.71</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTree</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct()</methodSignature>
+      <fullMethod>__construct()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTree</className>
+      <methodName>add</methodName>
+      <methodSignature>add($value)</methodSignature>
+      <fullMethod>add($value)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTree</className>
+      <methodName>delete</methodName>
+      <methodSignature>delete(TreeNodeInterface $node)</methodSignature>
+      <fullMethod>delete(TreeNodeInterface $node)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTree</className>
+      <methodName>predecessor</methodName>
+      <methodSignature>predecessor(TreeNodeInterface $node)</methodSignature>
+      <fullMethod>predecessor(TreeNodeInterface $node)</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTree</className>
+      <methodName>successor</methodName>
+      <methodSignature>successor(TreeNodeInterface $node)</methodSignature>
+      <fullMethod>successor(TreeNodeInterface $node)</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTree</className>
+      <methodName>isEmpty</methodName>
+      <methodSignature>isEmpty()</methodSignature>
+      <fullMethod>isEmpty()</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTree</className>
+      <methodName>search</methodName>
+      <methodSignature>search($value)</methodSignature>
+      <fullMethod>search($value)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTree</className>
+      <methodName>breadthFirst</methodName>
+      <methodSignature>breadthFirst(TreeNodeInterface $node = null)</methodSignature>
+      <fullMethod>breadthFirst(TreeNodeInterface $node = null)</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
+      <coverage>0</coverage>
+      <crapLoad>5</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTree</className>
+      <methodName>depthFirsth</methodName>
+      <methodSignature>depthFirsth(TreeNodeInterface $node = null, $mode)</methodSignature>
+      <fullMethod>depthFirsth(TreeNodeInterface $node = null, $mode)</fullMethod>
       <crap>156</crap>
       <complexity>12</complexity>
       <coverage>0</coverage>
       <crapLoad>12</crapLoad>
     </method>
     <method>
-      <package>global</package>
-      <className>PHPUnit_TextUI_Command</className>
-      <methodName>createRunner</methodName>
-      <methodSignature>createRunner()</methodSignature>
-      <fullMethod>createRunner()</fullMethod>
-      <crap>2</crap>
-      <complexity>1</complexity>
-      <coverage>0</coverage>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTree</className>
+      <methodName>inOrder</methodName>
+      <methodSignature>inOrder(TreeNodeInterface $node = null)</methodSignature>
+      <fullMethod>inOrder(TreeNodeInterface $node = null)</fullMethod>
+      <crap>5</crap>
+      <complexity>5</complexity>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>global</package>
-      <className>PHPUnit_TextUI_Command</className>
-      <methodName>handleArguments</methodName>
-      <methodSignature>handleArguments(array $argv)</methodSignature>
-      <fullMethod>handleArguments(array $argv)</fullMethod>
-      <crap>10920</crap>
-      <complexity>104</complexity>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTree</className>
+      <methodName>postOrder</methodName>
+      <methodSignature>postOrder(TreeNodeInterface $node = null)
+    
+    // first print self, recursive</methodSignature>
+      <fullMethod>postOrder(TreeNodeInterface $node = null)
+    
+    // first print self, recursive</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
       <coverage>0</coverage>
-      <crapLoad>107</crapLoad>
+      <crapLoad>5</crapLoad>
     </method>
     <method>
-      <package>global</package>
-      <className>PHPUnit_TextUI_Command</className>
-      <methodName>handleLoader</methodName>
-      <methodSignature>handleLoader($loaderClass, $loaderFile = '')</methodSignature>
-      <fullMethod>handleLoader($loaderClass, $loaderFile = '')</fullMethod>
-      <crap>72</crap>
-      <complexity>8</complexity>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTree</className>
+      <methodName>preOrder</methodName>
+      <methodSignature>preOrder(TreeNodeInterface $node = null)</methodSignature>
+      <fullMethod>preOrder(TreeNodeInterface $node = null)</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
       <coverage>0</coverage>
-      <crapLoad>8</crapLoad>
+      <crapLoad>5</crapLoad>
     </method>
     <method>
-      <package>global</package>
-      <className>PHPUnit_TextUI_Command</className>
-      <methodName>handlePrinter</methodName>
-      <methodSignature>handlePrinter($printerClass, $printerFile = '')</methodSignature>
-      <fullMethod>handlePrinter($printerClass, $printerFile = '')</fullMethod>
-      <crap>110</crap>
-      <complexity>10</complexity>
-      <coverage>0</coverage>
-      <crapLoad>10</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_TextUI_Command</className>
-      <methodName>handleBootstrap</methodName>
-      <methodSignature>handleBootstrap($filename)</methodSignature>
-      <fullMethod>handleBootstrap($filename)</fullMethod>
-      <crap>6</crap>
-      <complexity>2</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_TextUI_Command</className>
-      <methodName>handleSelfUpdate</methodName>
-      <methodSignature>handleSelfUpdate()</methodSignature>
-      <fullMethod>handleSelfUpdate()</fullMethod>
-      <crap>20</crap>
-      <complexity>4</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_TextUI_Command</className>
-      <methodName>showHelp</methodName>
-      <methodSignature>showHelp()</methodSignature>
-      <fullMethod>showHelp()</fullMethod>
-      <crap>6</crap>
-      <complexity>2</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_TextUI_Command</className>
-      <methodName>handleCustomTestSuite</methodName>
-      <methodSignature>handleCustomTestSuite()</methodSignature>
-      <fullMethod>handleCustomTestSuite()</fullMethod>
-      <crap>2</crap>
-      <complexity>1</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_TextUI_Command</className>
-      <methodName>printVersionString</methodName>
-      <methodSignature>printVersionString()</methodSignature>
-      <fullMethod>printVersionString()</fullMethod>
-      <crap>6</crap>
-      <complexity>2</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_TextUI_Command</className>
-      <methodName>showError</methodName>
-      <methodSignature>showError($message)</methodSignature>
-      <fullMethod>showError($message)</fullMethod>
-      <crap>2</crap>
-      <complexity>1</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTreeNode</className>
       <methodName>__construct</methodName>
-      <methodSignature>__construct($filename)</methodSignature>
-      <fullMethod>__construct($filename)</fullMethod>
-      <crap>2</crap>
-      <complexity>1</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>__clone</methodName>
-      <methodSignature>__clone()</methodSignature>
-      <fullMethod>__clone()</fullMethod>
-      <crap>2</crap>
-      <complexity>1</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>getInstance</methodName>
-      <methodSignature>getInstance($filename)</methodSignature>
-      <fullMethod>getInstance($filename)</fullMethod>
-      <crap>12</crap>
-      <complexity>3</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>getFilename</methodName>
-      <methodSignature>getFilename()</methodSignature>
-      <fullMethod>getFilename()</fullMethod>
-      <crap>2</crap>
-      <complexity>1</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>getFilterConfiguration</methodName>
-      <methodSignature>getFilterConfiguration()</methodSignature>
-      <fullMethod>getFilterConfiguration()</fullMethod>
-      <crap>20</crap>
-      <complexity>4</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>getGroupConfiguration</methodName>
-      <methodSignature>getGroupConfiguration()</methodSignature>
-      <fullMethod>getGroupConfiguration()</fullMethod>
-      <crap>12</crap>
-      <complexity>3</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>getListenerConfiguration</methodName>
-      <methodSignature>getListenerConfiguration()</methodSignature>
-      <fullMethod>getListenerConfiguration()</fullMethod>
-      <crap>110</crap>
-      <complexity>10</complexity>
-      <coverage>0</coverage>
-      <crapLoad>10</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>getLoggingConfiguration</methodName>
-      <methodSignature>getLoggingConfiguration()</methodSignature>
-      <fullMethod>getLoggingConfiguration()</fullMethod>
-      <crap>132</crap>
-      <complexity>11</complexity>
-      <coverage>0</coverage>
-      <crapLoad>11</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>getPHPConfiguration</methodName>
-      <methodSignature>getPHPConfiguration()</methodSignature>
-      <fullMethod>getPHPConfiguration()</fullMethod>
-      <crap>56</crap>
-      <complexity>7</complexity>
-      <coverage>0</coverage>
-      <crapLoad>7</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>handlePHPConfiguration</methodName>
-      <methodSignature>handlePHPConfiguration()</methodSignature>
-      <fullMethod>handlePHPConfiguration()</fullMethod>
-      <crap>182</crap>
-      <complexity>13</complexity>
-      <coverage>0</coverage>
-      <crapLoad>13</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>getPHPUnitConfiguration</methodName>
-      <methodSignature>getPHPUnitConfiguration()</methodSignature>
-      <fullMethod>getPHPUnitConfiguration()</fullMethod>
-      <crap>1056</crap>
-      <complexity>32</complexity>
-      <coverage>0</coverage>
-      <crapLoad>33</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>getSeleniumBrowserConfiguration</methodName>
-      <methodSignature>getSeleniumBrowserConfiguration()</methodSignature>
-      <fullMethod>getSeleniumBrowserConfiguration()</fullMethod>
-      <crap>30</crap>
-      <complexity>5</complexity>
-      <coverage>0</coverage>
-      <crapLoad>5</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>getTestSuiteConfiguration</methodName>
-      <methodSignature>getTestSuiteConfiguration($testSuiteFilter = null)</methodSignature>
-      <fullMethod>getTestSuiteConfiguration($testSuiteFilter = null)</fullMethod>
-      <crap>30</crap>
-      <complexity>5</complexity>
-      <coverage>0</coverage>
-      <crapLoad>5</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>getTestSuite</methodName>
-      <methodSignature>getTestSuite(DOMElement $testSuiteNode, $testSuiteFilter = null)</methodSignature>
-      <fullMethod>getTestSuite(DOMElement $testSuiteNode, $testSuiteFilter = null)</fullMethod>
-      <crap>462</crap>
-      <complexity>21</complexity>
-      <coverage>0</coverage>
-      <crapLoad>22</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>getBoolean</methodName>
-      <methodSignature>getBoolean($value, $default)</methodSignature>
-      <fullMethod>getBoolean($value, $default)</fullMethod>
-      <crap>12</crap>
-      <complexity>3</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>getInteger</methodName>
-      <methodSignature>getInteger($value, $default)</methodSignature>
-      <fullMethod>getInteger($value, $default)</fullMethod>
-      <crap>6</crap>
-      <complexity>2</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>readFilterDirectories</methodName>
-      <methodSignature>readFilterDirectories($query)</methodSignature>
-      <fullMethod>readFilterDirectories($query)</fullMethod>
-      <crap>42</crap>
-      <complexity>6</complexity>
-      <coverage>0</coverage>
-      <crapLoad>6</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>readFilterFiles</methodName>
-      <methodSignature>readFilterFiles($query)</methodSignature>
-      <fullMethod>readFilterFiles($query)</fullMethod>
-      <crap>12</crap>
-      <complexity>3</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Configuration</className>
-      <methodName>toAbsolutePath</methodName>
-      <methodSignature>toAbsolutePath($path, $useIncludePath = false)</methodSignature>
-      <fullMethod>toAbsolutePath($path, $useIncludePath = false)</fullMethod>
-      <crap>110</crap>
-      <complexity>10</complexity>
-      <coverage>0</coverage>
-      <crapLoad>10</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Fileloader</className>
-      <methodName>checkAndLoad</methodName>
-      <methodSignature>checkAndLoad($filename)</methodSignature>
-      <fullMethod>checkAndLoad($filename)</fullMethod>
-      <crap>12</crap>
-      <complexity>3</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Fileloader</className>
-      <methodName>load</methodName>
-      <methodSignature>load($filename)</methodSignature>
-      <fullMethod>load($filename)</fullMethod>
-      <crap>12</crap>
-      <complexity>3</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Getopt</className>
-      <methodName>getopt</methodName>
-      <methodSignature>getopt(array $args, $short_options, $long_options = null)</methodSignature>
-      <fullMethod>getopt(array $args, $short_options, $long_options = null)</fullMethod>
-      <crap>210</crap>
-      <complexity>14</complexity>
-      <coverage>0</coverage>
-      <crapLoad>14</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Getopt</className>
-      <methodName>parseShortOption</methodName>
-      <methodSignature>parseShortOption($arg, $short_options, &amp;$opts, &amp;$args)</methodSignature>
-      <fullMethod>parseShortOption($arg, $short_options, &amp;$opts, &amp;$args)</fullMethod>
-      <crap>132</crap>
-      <complexity>11</complexity>
-      <coverage>0</coverage>
-      <crapLoad>11</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_Getopt</className>
-      <methodName>parseLongOption</methodName>
-      <methodSignature>parseLongOption($arg, $long_options, &amp;$opts, &amp;$args)</methodSignature>
-      <fullMethod>parseLongOption($arg, $long_options, &amp;$opts, &amp;$args)</fullMethod>
-      <crap>182</crap>
-      <complexity>13</complexity>
-      <coverage>0</coverage>
-      <crapLoad>13</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_XML</className>
-      <methodName>prepareString</methodName>
-      <methodSignature>prepareString($string)</methodSignature>
-      <fullMethod>prepareString($string)</fullMethod>
-      <crap>2</crap>
-      <complexity>1</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_XML</className>
-      <methodName>loadFile</methodName>
-      <methodSignature>loadFile($filename, $isHtml = false, $xinclude = false, $strict = false)</methodSignature>
-      <fullMethod>loadFile($filename, $isHtml = false, $xinclude = false, $strict = false)</fullMethod>
-      <crap>6</crap>
-      <complexity>2</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_XML</className>
-      <methodName>load</methodName>
-      <methodSignature>load($actual, $isHtml = false, $filename = '', $xinclude = false, $strict = false)</methodSignature>
-      <fullMethod>load($actual, $isHtml = false, $filename = '', $xinclude = false, $strict = false)</fullMethod>
-      <crap>210</crap>
-      <complexity>14</complexity>
-      <coverage>0</coverage>
-      <crapLoad>14</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_XML</className>
-      <methodName>nodeToText</methodName>
-      <methodSignature>nodeToText(DOMNode $node)</methodSignature>
-      <fullMethod>nodeToText(DOMNode $node)</fullMethod>
-      <crap>12</crap>
-      <complexity>3</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_XML</className>
-      <methodName>removeCharacterDataNodes</methodName>
-      <methodSignature>removeCharacterDataNodes(DOMNode $node)</methodSignature>
-      <fullMethod>removeCharacterDataNodes(DOMNode $node)</fullMethod>
-      <crap>20</crap>
-      <complexity>4</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_XML</className>
-      <methodName>xmlToVariable</methodName>
-      <methodSignature>xmlToVariable(DOMElement $element)</methodSignature>
-      <fullMethod>xmlToVariable(DOMElement $element)</fullMethod>
-      <crap>182</crap>
-      <complexity>13</complexity>
-      <coverage>0</coverage>
-      <crapLoad>13</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_XML</className>
-      <methodName>assertValidKeys</methodName>
-      <methodSignature>assertValidKeys(array $hash, array $validKeys)</methodSignature>
-      <fullMethod>assertValidKeys(array $hash, array $validKeys)</fullMethod>
-      <crap>72</crap>
-      <complexity>8</complexity>
-      <coverage>0</coverage>
-      <crapLoad>8</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_XML</className>
-      <methodName>convertSelectToTag</methodName>
-      <methodSignature>convertSelectToTag($selector, $content = true)</methodSignature>
-      <fullMethod>convertSelectToTag($selector, $content = true)</fullMethod>
-      <crap>462</crap>
-      <complexity>21</complexity>
-      <coverage>0</coverage>
-      <crapLoad>22</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_XML</className>
-      <methodName>cssSelect</methodName>
-      <methodSignature>cssSelect($selector, $content, $actual, $isHtml = true)</methodSignature>
-      <fullMethod>cssSelect($selector, $content, $actual, $isHtml = true)</fullMethod>
-      <crap>2</crap>
-      <complexity>1</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_XML</className>
-      <methodName>findNodes</methodName>
-      <methodSignature>findNodes(DOMDocument $dom, array $options, $isHtml = true)</methodSignature>
-      <fullMethod>findNodes(DOMDocument $dom, array $options, $isHtml = true)</fullMethod>
-      <crap>7832</crap>
-      <complexity>88</complexity>
-      <coverage>0</coverage>
-      <crapLoad>91</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_XML</className>
-      <methodName>getDescendants</methodName>
-      <methodSignature>getDescendants(DOMNode $node)</methodSignature>
-      <fullMethod>getDescendants(DOMNode $node)</fullMethod>
-      <crap>42</crap>
-      <complexity>6</complexity>
-      <coverage>0</coverage>
-      <crapLoad>6</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_XML</className>
-      <methodName>getElementsByCaseInsensitiveTagName</methodName>
-      <methodSignature>getElementsByCaseInsensitiveTagName(DOMDocument $dom, $tag)</methodSignature>
-      <fullMethod>getElementsByCaseInsensitiveTagName(DOMDocument $dom, $tag)</fullMethod>
-      <crap>6</crap>
-      <complexity>2</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>PHPUnit_Util_XML</className>
-      <methodName>getNodeText</methodName>
-      <methodSignature>getNodeText(DOMNode $node)</methodSignature>
-      <fullMethod>getNodeText(DOMNode $node)</fullMethod>
-      <crap>30</crap>
-      <complexity>5</complexity>
-      <coverage>0</coverage>
-      <crapLoad>5</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Algorithms</className>
-      <methodName>hasCheese</methodName>
-      <methodSignature>hasCheese($bool = true)</methodSignature>
-      <fullMethod>hasCheese($bool = true)</fullMethod>
+      <methodSignature>__construct($data)</methodSignature>
+      <fullMethod>__construct($data)</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>Mtkocak\Algorithms</package>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTreeNode</className>
+      <methodName>left</methodName>
+      <methodSignature>left(TreeNodeInterface $node = NULL)</methodSignature>
+      <fullMethod>left(TreeNodeInterface $node = NULL)</fullMethod>
+      <crap>3.04</crap>
+      <complexity>3</complexity>
+      <coverage>83.33</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTreeNode</className>
+      <methodName>right</methodName>
+      <methodSignature>right(TreeNodeInterface $node = NULL)</methodSignature>
+      <fullMethod>right(TreeNodeInterface $node = NULL)</fullMethod>
+      <crap>3.04</crap>
+      <complexity>3</complexity>
+      <coverage>83.33</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTreeNode</className>
+      <methodName>get</methodName>
+      <methodSignature>get()</methodSignature>
+      <fullMethod>get()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>BinaryTreeNode</className>
+      <methodName>set</methodName>
+      <methodSignature>set($value)</methodSignature>
+      <fullMethod>set($value)</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
       <className>DoubleLinkedList</className>
+      <methodName>push</methodName>
+      <methodSignature>push($value)</methodSignature>
+      <fullMethod>push($value)</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>DoubleLinkedList</className>
+      <methodName>pop</methodName>
+      <methodSignature>pop()</methodSignature>
+      <fullMethod>pop()</fullMethod>
+      <crap>2.01</crap>
+      <complexity>2</complexity>
+      <coverage>88.89</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>DoubleLinkedList</className>
+      <methodName>add</methodName>
+      <methodSignature>add($value)</methodSignature>
+      <fullMethod>add($value)</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>DoubleLinkedList</className>
+      <methodName>insertAfter</methodName>
+      <methodSignature>insertAfter($key, $value)</methodSignature>
+      <fullMethod>insertAfter($key, $value)</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>DoubleLinkedList</className>
+      <methodName>insertBefore</methodName>
+      <methodSignature>insertBefore($key, $value)</methodSignature>
+      <fullMethod>insertBefore($key, $value)</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>DoubleLinkedList</className>
+      <methodName>delete</methodName>
+      <methodSignature>delete()</methodSignature>
+      <fullMethod>delete()</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>DoubleLinkedListNode</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct($data)</methodSignature>
+      <fullMethod>__construct($data)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>DoubleLinkedListNode</className>
+      <methodName>get</methodName>
+      <methodSignature>get()</methodSignature>
+      <fullMethod>get()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>DoubleLinkedListNode</className>
+      <methodName>set</methodName>
+      <methodSignature>set($value)</methodSignature>
+      <fullMethod>set($value)</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>DoubleLinkedListNode</className>
+      <methodName>next</methodName>
+      <methodSignature>next(DataStructureNode $node = NULL)</methodSignature>
+      <fullMethod>next(DataStructureNode $node = NULL)</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>DoubleLinkedListNode</className>
+      <methodName>prev</methodName>
+      <methodSignature>prev(DataStructureNode $node = NULL)</methodSignature>
+      <fullMethod>prev(DataStructureNode $node = NULL)</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
       <methodName>__construct</methodName>
       <methodSignature>__construct()</methodSignature>
       <fullMethod>__construct()</fullMethod>
@@ -573,41 +412,41 @@
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
-      <methodName>__toString</methodName>
-      <methodSignature>__toString()</methodSignature>
-      <fullMethod>__toString()</fullMethod>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>top</methodName>
+      <methodSignature>top(DataStructureNode $node = NULL)</methodSignature>
+      <fullMethod>top(DataStructureNode $node = NULL)</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>bottom</methodName>
+      <methodSignature>bottom(DataStructureNode $node = NULL)</methodSignature>
+      <fullMethod>bottom(DataStructureNode $node = NULL)</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>current</methodName>
+      <methodSignature>current()</methodSignature>
+      <fullMethod>current()</fullMethod>
       <crap>2</crap>
       <complexity>1</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
-      <methodName>init</methodName>
-      <methodSignature>init()</methodSignature>
-      <fullMethod>init()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
-      <methodName>current</methodName>
-      <methodSignature>current()</methodSignature>
-      <fullMethod>current()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
       <methodName>next</methodName>
       <methodSignature>next()</methodSignature>
       <fullMethod>next()</fullMethod>
@@ -617,19 +456,8 @@
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
-      <methodName>reset</methodName>
-      <methodSignature>reset()</methodSignature>
-      <fullMethod>reset()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
       <methodName>prev</methodName>
       <methodSignature>prev()</methodSignature>
       <fullMethod>prev()</fullMethod>
@@ -639,686 +467,345 @@
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
-      <methodName>add</methodName>
-      <methodSignature>add($value)</methodSignature>
-      <fullMethod>add($value)</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>rewind</methodName>
+      <methodSignature>rewind()</methodSignature>
+      <fullMethod>rewind()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
-      <methodName>goToPosition</methodName>
-      <methodSignature>goToPosition($position)</methodSignature>
-      <fullMethod>goToPosition($position)</fullMethod>
-      <crap>6</crap>
-      <complexity>6</complexity>
-      <coverage>100</coverage>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>count</methodName>
+      <methodSignature>count()</methodSignature>
+      <fullMethod>count()</fullMethod>
+      <crap>3.43</crap>
+      <complexity>3</complexity>
+      <coverage>63.64</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
-      <methodName>getData</methodName>
-      <methodSignature>getData($position = NULL)</methodSignature>
-      <fullMethod>getData($position = NULL)</fullMethod>
-      <crap>5</crap>
-      <complexity>5</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
-      <methodName>isEmpty</methodName>
-      <methodSignature>isEmpty()</methodSignature>
-      <fullMethod>isEmpty()</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
       <methodName>listAll</methodName>
-      <methodSignature>listAll()</methodSignature>
-      <fullMethod>listAll()</fullMethod>
+      <methodSignature>listAll(DataStructureNode $node = NULL)</methodSignature>
+      <fullMethod>listAll(DataStructureNode $node = NULL)</fullMethod>
       <crap>4</crap>
       <complexity>4</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
-      <methodName>search</methodName>
-      <methodSignature>search($value, $node = null, $position = null)</methodSignature>
-      <fullMethod>search($value, $node = null, $position = null)</fullMethod>
-      <crap>7.12</crap>
-      <complexity>7</complexity>
-      <coverage>86.67</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
-      <methodName>delete</methodName>
-      <methodSignature>delete($position = NULL)</methodSignature>
-      <fullMethod>delete($position = NULL)</fullMethod>
-      <crap>5.06</crap>
-      <complexity>5</complexity>
-      <coverage>86.96</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedList</className>
-      <methodName>setData</methodName>
-      <methodSignature>setData($value, $position = NULL)</methodSignature>
-      <fullMethod>setData($value, $position = NULL)</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedListNode</className>
-      <methodName>__construct</methodName>
-      <methodSignature>__construct($data)</methodSignature>
-      <fullMethod>__construct($data)</fullMethod>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>push</methodName>
+      <methodSignature>push($value)</methodSignature>
+      <fullMethod>push($value)</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>DoubleLinkedListNode</className>
-      <methodName>readNode</methodName>
-      <methodSignature>readNode()</methodSignature>
-      <fullMethod>readNode()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Queue</className>
-      <methodName>__construct</methodName>
-      <methodSignature>__construct()</methodSignature>
-      <fullMethod>__construct()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Queue</className>
-      <methodName>init</methodName>
-      <methodSignature>init()</methodSignature>
-      <fullMethod>init()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Queue</className>
-      <methodName>add</methodName>
-      <methodSignature>add($value,$position = null)</methodSignature>
-      <fullMethod>add($value,$position = null)</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Queue</className>
-      <methodName>getData</methodName>
-      <methodSignature>getData($position = null)</methodSignature>
-      <fullMethod>getData($position = null)</fullMethod>
-      <crap>2.06</crap>
-      <complexity>2</complexity>
-      <coverage>75</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Queue</className>
-      <methodName>isEmpty</methodName>
-      <methodSignature>isEmpty()</methodSignature>
-      <fullMethod>isEmpty()</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Queue</className>
-      <methodName>listAll</methodName>
-      <methodSignature>listAll()</methodSignature>
-      <fullMethod>listAll()</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Queue</className>
-      <methodName>delete</methodName>
-      <methodSignature>delete($position = null)</methodSignature>
-      <fullMethod>delete($position = null)</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Queue</className>
-      <methodName>setData</methodName>
-      <methodSignature>setData($value,$position = null)</methodSignature>
-      <fullMethod>setData($value,$position = null)</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Queue</className>
-      <methodName>search</methodName>
-      <methodSignature>search($value)</methodSignature>
-      <fullMethod>search($value)</fullMethod>
-      <crap>2</crap>
-      <complexity>1</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedList</className>
-      <methodName>__construct</methodName>
-      <methodSignature>__construct()</methodSignature>
-      <fullMethod>__construct()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedList</className>
-      <methodName>init</methodName>
-      <methodSignature>init()</methodSignature>
-      <fullMethod>init()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedList</className>
-      <methodName>current</methodName>
-      <methodSignature>current()</methodSignature>
-      <fullMethod>current()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedList</className>
-      <methodName>next</methodName>
-      <methodSignature>next()</methodSignature>
-      <fullMethod>next()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedList</className>
-      <methodName>reset</methodName>
-      <methodSignature>reset()</methodSignature>
-      <fullMethod>reset()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedList</className>
-      <methodName>prev</methodName>
-      <methodSignature>prev()</methodSignature>
-      <fullMethod>prev()</fullMethod>
-      <crap>2</crap>
-      <complexity>1</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedList</className>
-      <methodName>add</methodName>
-      <methodSignature>add($value)</methodSignature>
-      <fullMethod>add($value)</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedList</className>
-      <methodName>getData</methodName>
-      <methodSignature>getData($position = NULL)</methodSignature>
-      <fullMethod>getData($position = NULL)</fullMethod>
-      <crap>8.09</crap>
-      <complexity>8</complexity>
-      <coverage>88.89</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedList</className>
-      <methodName>isEmpty</methodName>
-      <methodSignature>isEmpty()</methodSignature>
-      <fullMethod>isEmpty()</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedList</className>
-      <methodName>listAll</methodName>
-      <methodSignature>listAll()</methodSignature>
-      <fullMethod>listAll()</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedList</className>
-      <methodName>search</methodName>
-      <methodSignature>search($value)</methodSignature>
-      <fullMethod>search($value)</fullMethod>
-      <crap>5.01</crap>
-      <complexity>5</complexity>
-      <coverage>92.86</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedList</className>
-      <methodName>delete</methodName>
-      <methodSignature>delete($position = NULL)</methodSignature>
-      <fullMethod>delete($position = NULL)</fullMethod>
-      <crap>10.95</crap>
-      <complexity>10</complexity>
-      <coverage>78.79</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedList</className>
-      <methodName>setData</methodName>
-      <methodSignature>setData($value,$position = NULL)</methodSignature>
-      <fullMethod>setData($value,$position = NULL)</fullMethod>
-      <crap>13.04</crap>
-      <complexity>8</complexity>
-      <coverage>57.14</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedListNode</className>
-      <methodName>__construct</methodName>
-      <methodSignature>__construct($data)</methodSignature>
-      <fullMethod>__construct($data)</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>SingleLinkedListNode</className>
-      <methodName>readNode</methodName>
-      <methodSignature>readNode()</methodSignature>
-      <fullMethod>readNode()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Stack</className>
-      <methodName>__construct</methodName>
-      <methodSignature>__construct()</methodSignature>
-      <fullMethod>__construct()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Stack</className>
-      <methodName>init</methodName>
-      <methodSignature>init()</methodSignature>
-      <fullMethod>init()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Stack</className>
-      <methodName>isEmpty</methodName>
-      <methodSignature>isEmpty()</methodSignature>
-      <fullMethod>isEmpty()</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Stack</className>
-      <methodName>add</methodName>
-      <methodSignature>add($value)</methodSignature>
-      <fullMethod>add($value)</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Stack</className>
-      <methodName>listAll</methodName>
-      <methodSignature>listAll()</methodSignature>
-      <fullMethod>listAll()</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Stack</className>
-      <methodName>search</methodName>
-      <methodSignature>search($value)</methodSignature>
-      <fullMethod>search($value)</fullMethod>
-      <crap>4.01</crap>
-      <complexity>4</complexity>
-      <coverage>90.91</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Stack</className>
-      <methodName>delete</methodName>
-      <methodSignature>delete($position = NULL)</methodSignature>
-      <fullMethod>delete($position = NULL)</fullMethod>
-      <crap>7.01</crap>
-      <complexity>7</complexity>
-      <coverage>94.74</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Stack</className>
-      <methodName>setData</methodName>
-      <methodSignature>setData($value, $position = NULL)</methodSignature>
-      <fullMethod>setData($value, $position = NULL)</fullMethod>
-      <crap>7.64</crap>
-      <complexity>7</complexity>
-      <coverage>76.47</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Stack</className>
-      <methodName>getData</methodName>
-      <methodSignature>getData($position = NULL)</methodSignature>
-      <fullMethod>getData($position = NULL)</fullMethod>
-      <crap>8.01</crap>
-      <complexity>8</complexity>
-      <coverage>94.44</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>__construct</methodName>
-      <methodSignature>__construct()</methodSignature>
-      <fullMethod>__construct()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>init</methodName>
-      <methodSignature>init()</methodSignature>
-      <fullMethod>init()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>add</methodName>
-      <methodSignature>add($value, $position = null)</methodSignature>
-      <fullMethod>add($value, $position = null)</fullMethod>
-      <crap>6.25</crap>
-      <complexity>5</complexity>
-      <coverage>63.16</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>getNodeByPosition</methodName>
-      <methodSignature>getNodeByPosition($position = null)</methodSignature>
-      <fullMethod>getNodeByPosition($position = null)</fullMethod>
-      <crap>6.13</crap>
-      <complexity>6</complexity>
-      <coverage>84.62</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>goToLastSibling</methodName>
-      <methodSignature>goToLastSibling(TreeNode $node)</methodSignature>
-      <fullMethod>goToLastSibling(TreeNode $node)</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>goToLastChild</methodName>
-      <methodSignature>goToLastChild(TreeNode $node)</methodSignature>
-      <fullMethod>goToLastChild(TreeNode $node)</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>goToLastNumberedSibling</methodName>
-      <methodSignature>goToLastNumberedSibling(TreeNode $node, $number)</methodSignature>
-      <fullMethod>goToLastNumberedSibling(TreeNode $node, $number)</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>goToLastNumberedChild</methodName>
-      <methodSignature>goToLastNumberedChild(TreeNode $node, $number)</methodSignature>
-      <fullMethod>goToLastNumberedChild(TreeNode $node, $number)</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>getData</methodName>
-      <methodSignature>getData($position = null)</methodSignature>
-      <fullMethod>getData($position = null)</fullMethod>
-      <crap>42</crap>
-      <complexity>6</complexity>
-      <coverage>0</coverage>
-      <crapLoad>6</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>isEmpty</methodName>
-      <methodSignature>isEmpty()</methodSignature>
-      <fullMethod>isEmpty()</fullMethod>
-      <crap>2.15</crap>
-      <complexity>2</complexity>
-      <coverage>66.67</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>traverse</methodName>
-      <methodSignature>traverse(TreeNode $subtree, $degree = null)</methodSignature>
-      <fullMethod>traverse(TreeNode $subtree, $degree = null)</fullMethod>
-      <crap>5</crap>
-      <complexity>5</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>listAll</methodName>
-      <methodSignature>listAll()</methodSignature>
-      <fullMethod>listAll()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>delete</methodName>
-      <methodSignature>delete($position = null)</methodSignature>
-      <fullMethod>delete($position = null)</fullMethod>
-      <crap>4.37</crap>
-      <complexity>4</complexity>
-      <coverage>71.43</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>setData</methodName>
-      <methodSignature>setData($value, $position = null)</methodSignature>
-      <fullMethod>setData($value, $position = null)</fullMethod>
-      <crap>7.33</crap>
-      <complexity>6</complexity>
-      <coverage>66.67</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>Tree</className>
-      <methodName>search</methodName>
-      <methodSignature>search($value)</methodSignature>
-      <fullMethod>search($value)</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>TreeNode</className>
-      <methodName>__construct</methodName>
-      <methodSignature>__construct($data)</methodSignature>
-      <fullMethod>__construct($data)</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Mtkocak\Algorithms</package>
-      <className>TreeNode</className>
-      <methodName>readNode</methodName>
-      <methodSignature>readNode()</methodSignature>
-      <fullMethod>readNode()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>global</package>
-      <className>ComposerAutoloaderInit41f19e391228bbfbb73db3c63f957969</className>
-      <methodName>loadClassLoader</methodName>
-      <methodSignature>loadClassLoader($class)</methodSignature>
-      <fullMethod>loadClassLoader($class)</fullMethod>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>key</methodName>
+      <methodSignature>key()</methodSignature>
+      <fullMethod>key()</fullMethod>
       <crap>6</crap>
       <complexity>2</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>global</package>
-      <className>ComposerAutoloaderInit41f19e391228bbfbb73db3c63f957969</className>
-      <methodName>getLoader</methodName>
-      <methodSignature>getLoader()</methodSignature>
-      <fullMethod>getLoader()</fullMethod>
-      <crap>42</crap>
-      <complexity>6</complexity>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>pop</methodName>
+      <methodSignature>pop()</methodSignature>
+      <fullMethod>pop()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>add</methodName>
+      <methodSignature>add($value)</methodSignature>
+      <fullMethod>add($value)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>insertAfter</methodName>
+      <methodSignature>insertAfter($key, $value)</methodSignature>
+      <fullMethod>insertAfter($key, $value)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>insertBefore</methodName>
+      <methodSignature>insertBefore($key, $value)</methodSignature>
+      <fullMethod>insertBefore($key, $value)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>delete</methodName>
+      <methodSignature>delete()</methodSignature>
+      <fullMethod>delete()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>isEmpty</methodName>
+      <methodSignature>isEmpty()</methodSignature>
+      <fullMethod>isEmpty()</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Queue</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct()</methodSignature>
+      <fullMethod>__construct()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Queue</className>
+      <methodName>enqueue</methodName>
+      <methodSignature>enqueue($value)</methodSignature>
+      <fullMethod>enqueue($value)</fullMethod>
+      <crap>2.11</crap>
+      <complexity>2</complexity>
+      <coverage>70</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Queue</className>
+      <methodName>dequeue</methodName>
+      <methodSignature>dequeue()</methodSignature>
+      <fullMethod>dequeue()</fullMethod>
+      <crap>8.12</crap>
+      <complexity>5</complexity>
+      <coverage>50</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Queue</className>
+      <methodName>peek</methodName>
+      <methodSignature>peek()</methodSignature>
+      <fullMethod>peek()</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
       <coverage>0</coverage>
-      <crapLoad>6</crapLoad>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Queue</className>
+      <methodName>isEmpty</methodName>
+      <methodSignature>isEmpty()</methodSignature>
+      <fullMethod>isEmpty()</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>SingleLinkedList</className>
+      <methodName>push</methodName>
+      <methodSignature>push($value)</methodSignature>
+      <fullMethod>push($value)</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>SingleLinkedList</className>
+      <methodName>pop</methodName>
+      <methodSignature>pop()</methodSignature>
+      <fullMethod>pop()</fullMethod>
+      <crap>5</crap>
+      <complexity>5</complexity>
+      <coverage>95.45</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>SingleLinkedList</className>
+      <methodName>add</methodName>
+      <methodSignature>add($value)</methodSignature>
+      <fullMethod>add($value)</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>SingleLinkedList</className>
+      <methodName>insertAfter</methodName>
+      <methodSignature>insertAfter($key, $value)</methodSignature>
+      <fullMethod>insertAfter($key, $value)</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>SingleLinkedList</className>
+      <methodName>insertBefore</methodName>
+      <methodSignature>insertBefore($key, $value)</methodSignature>
+      <fullMethod>insertBefore($key, $value)</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>SingleLinkedList</className>
+      <methodName>delete</methodName>
+      <methodSignature>delete()</methodSignature>
+      <fullMethod>delete()</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>SingleLinkedListNode</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct($data)</methodSignature>
+      <fullMethod>__construct($data)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>SingleLinkedListNode</className>
+      <methodName>get</methodName>
+      <methodSignature>get()</methodSignature>
+      <fullMethod>get()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>SingleLinkedListNode</className>
+      <methodName>set</methodName>
+      <methodSignature>set($value)</methodSignature>
+      <fullMethod>set($value)</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>SingleLinkedListNode</className>
+      <methodName>next</methodName>
+      <methodSignature>next(DataStructureNode $node = NULL)</methodSignature>
+      <fullMethod>next(DataStructureNode $node = NULL)</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Stack</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct()</methodSignature>
+      <fullMethod>__construct()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Stack</className>
+      <methodName>isEmpty</methodName>
+      <methodSignature>isEmpty()</methodSignature>
+      <fullMethod>isEmpty()</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Stack</className>
+      <methodName>push</methodName>
+      <methodSignature>push($value)</methodSignature>
+      <fullMethod>push($value)</fullMethod>
+      <crap>2.35</crap>
+      <complexity>2</complexity>
+      <coverage>55.56</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Stack</className>
+      <methodName>pop</methodName>
+      <methodSignature>pop()</methodSignature>
+      <fullMethod>pop()</fullMethod>
+      <crap>2.01</crap>
+      <complexity>2</complexity>
+      <coverage>85.71</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Stack</className>
+      <methodName>peek</methodName>
+      <methodSignature>peek()</methodSignature>
+      <fullMethod>peek()</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>PhpParser</package>

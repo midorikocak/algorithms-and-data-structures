@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
+  <file name="Stack.php">
+    <totals>
+      <lines total="54" comments="0" code="54" executable="23" executed="17" percent="73.91%"/>
+      <methods count="5" tested="2" percent="40.00%"/>
+      <functions count="0" tested="0" percent=""/>
+      <classes count="1" tested="0" percent="0.00%"/>
+      <traits count="0" tested="0" percent=""/>
+    </totals>
+    <class name="Stack" start="4" executable="23" executed="17" crap="9.14">
+      <package full="" name="" sub="" category=""/>
+      <namespace name="Mtkocak\DataStructures"/>
+      <method name="__construct" signature="__construct()" start="9" end="13" crap="1" executable="3" executed="3" coverage="100"/>
+      <method name="isEmpty" signature="isEmpty()" start="15" end="22" crap="2" executable="3" executed="3" coverage="100"/>
+      <method name="push" signature="push($value)" start="24" end="37" crap="2.35" executable="9" executed="5" coverage="55.555555555556"/>
+      <method name="pop" signature="pop()" start="39" end="49" crap="2.01" executable="7" executed="6" coverage="85.714285714286"/>
+      <method name="peek" signature="peek()" start="51" end="53" crap="2" executable="1" executed="0" coverage="0"/>
+    </class>
+    <coverage>
+      <line nr="11">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="12">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="13">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="17">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="18">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="20">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="25">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="26">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="27">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="28">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="29">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="40">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="41">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="42">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="43">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="44">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+      <line nr="45">
+        <covered by="StackTest::testAddData"/>
+        <covered by="StackTest::testAddAnotherData"/>
+      </line>
+    </coverage>
+  </file>
+</phpunit>

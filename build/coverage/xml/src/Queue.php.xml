@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
+  <file name="Queue.php">
+    <totals>
+      <lines total="63" comments="3" code="60" executable="35" executed="22" percent="62.86%"/>
+      <methods count="5" tested="2" percent="40.00%"/>
+      <functions count="0" tested="0" percent=""/>
+      <classes count="1" tested="0" percent="0.00%"/>
+      <traits count="0" tested="0" percent=""/>
+    </totals>
+    <class name="Queue" start="3" executable="35" executed="22" crap="17.20">
+      <package full="" name="" sub="" category=""/>
+      <namespace name="Mtkocak\DataStructures"/>
+      <method name="__construct" signature="__construct()" start="9" end="12" crap="1" executable="3" executed="3" coverage="100"/>
+      <method name="enqueue" signature="enqueue($value)" start="14" end="25" crap="2.11" executable="10" executed="7" coverage="70"/>
+      <method name="dequeue" signature="dequeue()" start="27" end="49" crap="8.12" executable="18" executed="9" coverage="50"/>
+      <method name="peek" signature="peek()" start="51" end="53" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="isEmpty" signature="isEmpty()" start="55" end="62" crap="2" executable="3" executed="3" coverage="100"/>
+    </class>
+    <coverage>
+      <line nr="10">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="11">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="12">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="15">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="16">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="17">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="18">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="19">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="20">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="25">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="28">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="29">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="30">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="31">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="32">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="33">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="34">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="35">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="36">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="56">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="57">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+      <line nr="60">
+        <covered by="QueueTest::testAddData"/>
+        <covered by="QueueTest::testAddAnotherData"/>
+      </line>
+    </coverage>
+  </file>
+</phpunit>

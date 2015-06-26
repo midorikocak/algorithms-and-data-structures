@@ -1,116 +1,63 @@
-<?php namespace Mtkocak\Algorithms;
+<?php namespace Mtkocak\DataStructures;
 
-class Queue implements DataStructureInterface
+class Queue
 {
     /* The pointer in a queue always points to last element  */
-    private $pointer;
+    private $head;
+    private $tail;
     
     function __construct(){
-        $this->init();
+        $this->head = NULL;
+        $this->tail = NULL;
     }
     
-    public function init(){
-        $this->pointer = NULL;
-    }
-    
-    public function add($value,$position = null){
+    public function enqueue($value){
         $newNode = new SingleLinkedListNode($value);
-        
-        if($this->isEmpty()){
-            $this->pointer = $newNode;
-        }
-        else{
-            $oldLastNode = $this->pointer;
-            $this->pointer = $newNode;
-            $newNode->next = $oldLastNode;
-            return true;
+        if($this->isEmpty())
+        {
+            $this->head = $newNode;
+            $this->tail = $newNode;
+        }else{
+            $currentHead = $this->head;
+            $newNode->next($currentHead);
+            $this->head($newNode);
         }
     }
     
-    public function getData($position = null){
-        if(!$this->isEmpty())
-        {
-            return $this->pointer->readNode();
+    public function dequeue(){
+        $nodeToDelete = $this->tail;
+        if(!$this->isEmpty()){
+            $value = $nodeToDelete->get();
+            $current = $this->head;
+            if($current->next()==NULL){
+                $this->tail = NULL;
+                $this->head = NULL;
+                unset($nodeToDelete);
+                return $value;
+            }
+            while($current){
+                // element before last
+                if($current->next()->next()==NULL){
+                    $this->tail = $current;
+                    unset($nodeToDelete);
+                    return $value;
+                }
+                $current = $current->next();
+            }
         }
-        else{
-            return false;
-        }
+        return false;
+    }
+    
+    public function peek(){
+        return $this->head->get();
     }
     
     public function isEmpty(){
-        if($this->pointer == NULL){
+        if($this->head == NULL){
             return true;
         }
         else{
             return false;
         }
     }
-
-    /**
-     */
-    public function listAll()
-    {
-        $listData = [];
-        $currentNode = $this->pointer;
-        if(!$this->isEmpty())
-        {
-            while($currentNode){
-                array_push($listData, $currentNode->readNode());
-                $currentNode = $currentNode->next;
-            }
-        }
-        return $listData;
-    }
-    
-    
-    /**
-    *
-    * @param string $position
-    */
-    public function delete($position = null){
-        if(!$this->isEmpty())
-        {
-            $nodeToDelete = $this->pointer;
-            $this->pointer = $this->pointer->next;
-            unset($nodeToDelete);
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-    
-    /**
-    *
-    * @param string $position
-    * @param unknown $value
-    */
-    public function setData($value,$position = null){
-        if(!$this->isEmpty())
-        {
-            $nodeToChange = $this->pointer;
-            
-            // at node we should implement getter and setter methods for better encapsulation
-            $nodeToChange->data = $nodeToChange;
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-    
-	/**
-	 * Not implemented because to have a basic queue structure.
-	 * 
-	 * TODO: Need to remove it from interface
-	 * 
-     * @see \Mtkocak\Algorithms\DataStructureInterface::search()
-     */
-    public function search($value)
-    {
-        // TODO Auto-generated method stub
-        
-    }
-
-
 }

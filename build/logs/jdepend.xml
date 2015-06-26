@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PDepend>
   <Packages>
-    <Package name="Mtkocak\Algorithms">
+    <Package name="Mtkocak\DataStructures">
       <Stats>
-        <TotalClasses>15</TotalClasses>
-        <ConcreteClasses>13</ConcreteClasses>
-        <AbstractClasses>2</AbstractClasses>
+        <TotalClasses>21</TotalClasses>
+        <ConcreteClasses>11</ConcreteClasses>
+        <AbstractClasses>10</AbstractClasses>
         <Ca>0</Ca>
-        <Ce>0</Ce>
-        <A>0.13333333333333</A>
-        <I>0</I>
-        <D>0.86666666666667</D>
+        <Ce>1</Ce>
+        <A>0.47619047619048</A>
+        <I>1</I>
+        <D>0.47619047619048</D>
       </Stats>
       <ConcreteClasses>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Algorithms.php">Algorithms</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/BinaryTree.php">LinkedList</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/BinaryTreeNode.php">BineryTreeNode</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DoubleLinkedList.php">DoubleLinkedList</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DoubleLinkedListNode.php">DoubleLinkedListNode</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Queue.php">Queue</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Searching.php">Algorithms</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedList.php">SingleLinkedList</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedListNode.php">SingleLinkedListNode</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Sorting.php">Algorithms</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Stack.php">Stack</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/Tree.php">Tree</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/TreeNode.php">TreeNode</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/BinarySearchTree.php">BinarySearchTree</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/BinarySearchTreeNode.php">BinarySearchTreeNode</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/BinaryTreeNode.php">BinaryTreeNode</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DoubleLinkedList.php">DoubleLinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DoubleLinkedListNode.php">DoubleLinkedListNode</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Queue.php">Queue</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/SingleLinkedList.php">SingleLinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/SingleLinkedListNode.php">SingleLinkedListNode</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Stack.php">Stack</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Tree.php">Tree</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/TreeNode.php">TreeNode</Class>
       </ConcreteClasses>
       <AbstractClasses>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DataStructureInterface.php">DataStructureInterface</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-algorithms/src/DataStructureNodeInterface.php">DataStructureNodeInterface</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/BinaryTree.php">BinaryTree</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DataStructure.php">DataStructure</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DataStructureIterator.php">DataStructureIterator</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DataStructureNode.php">DataStructureNode</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/LinkedList.php">LinkedList</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Listable.php">Listable</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Searchable.php">Searchable</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Traversable.php">Traversable</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/TreeInterface.php">TreeInterface</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/TreeNodeInterface.php">TreeNodeInterface</Class>
       </AbstractClasses>
-      <DependsUpon/>
+      <DependsUpon>
+        <Package></Package>
+      </DependsUpon>
       <UsedBy/>
     </Package>
   </Packages>

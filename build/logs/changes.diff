@@ -1,6 +1,175 @@
+--- src/BinarySearchTree.php
++++ PHP_CodeSniffer
+@@ -11,14 +11,14 @@
+             $current = $this->root();
+             while ($current) {
+                 if ($value < $current->get()) {
+-                    if ($current->left() == NULL) {
++                    if ($current->left() == null) {
+                         $current->left($newNode);
+                         return true;
+                     } else {
+                         $current = $current->left();
+                     }
+                 } elseif ($value > $current->get()) {
+-                    if ($current->right() == NULL) {
++                    if ($current->right() == null) {
+                         $current->right($newNode);
+                         return true;
+                     } else {
+@@ -47,25 +47,25 @@
+ 
+     public function delete(TreeNodeInterface $node)
+     {
+-        if ($node->left() == NULL && $node->right() == NULL) {
++        if ($node->left() == null && $node->right() == null) {
+             $nodeToDelete = $node;
+-            $node = NULL;
++            $node = null;
+             unset($nodeToDelete);
+-        } elseif ($node->left() != NULL && $node->right() == NULL) {
++        } elseif ($node->left() != null && $node->right() == null) {
+             $nodeToDelete = $node;
+             $node = $node->left();
+             unset($nodeToDelete);
+-        } elseif ($node->left() == NULL && $node->right() != NULL) {
++        } elseif ($node->left() == null && $node->right() != null) {
+             $nodeToDelete = $node;
+             $node = $node->right();
+             unset($nodeToDelete);
+         } else {
+             $predecessor = $this->predecessor($node);
+             $successor = $this->successor($node);
+-            if ($predecessor != NULL && $predecessor != false) {
++            if ($predecessor != null && $predecessor != false) {
+                 $node = clone $predecessor;
+                 unset($predecessor);
+-            } elseif ($successor != NULL && $successor != false) {
++            } elseif ($successor != null && $successor != false) {
+                 $node = clone $successor;
+                 unset($successor);
+             }
+@@ -87,13 +87,13 @@
+         $current = $this->root();
+         while ($current) {
+             if ($value < $current->get()) {
+-                if ($current->left() != NULL) {
++                if ($current->left() != null) {
+                     $current = $current->left();
+                 } else {
+                     return false;
+                 }
+             } elseif ($value > $current->get()) {
+-                if ($current->right() != NULL) {
++                if ($current->right() != null) {
+                     $current = $current->right();
+                 } else {
+                     return false;
+--- src/BinarySearchTreeNode.php
++++ PHP_CodeSniffer
+@@ -7,14 +7,13 @@
+ 
+     public function validate()
+     {
+-        if ($this->data != NULL) {
+-            if ($this->left() != NULL && $this->left() > $this->get()) {
++        if ($this->data != null) {
++            if ($this->left() != null && $this->left() > $this->get()) {
+                 return false;
+             }
+-            if ($this->right() != NULL < $this->get()) {
++            if ($this->right() != null < $this->get()) {
+                 return false;
+             }
+         }
+     }
+ }
+-
+--- src/BinaryTree.php
++++ PHP_CodeSniffer
+@@ -8,10 +8,10 @@
+ 
+     private $root;
+ 
+-    public function root(TreeNodeInterface $node = NULL)
++    public function root(TreeNodeInterface $node = null)
+     {
+         if (isset($node)) {
+-            if ($this->root != NULL) {
++            if ($this->root != null) {
+                 throw new Exception("Node Not Empty");
+             } else {
+                 $this->root = $node;
+@@ -23,7 +23,7 @@
+ 
+     function __construct()
+     {
+-        $this->root = NULL;
++        $this->root = null;
+     }
+ 
+     abstract public function add($value);
+@@ -32,13 +32,13 @@
+ 
+     /**
+      *
+-     * @param DataStructureNode $node            
++     * @param DataStructureNode $node
+      * @return boolean|unknown
+      */
+     public function predecessor(TreeNodeInterface $node)
+     {
+         // Go Left and after right most element
+-        if ($node->left() == NULL) {
++        if ($node->left() == null) {
+             return false;
+         } else {
+             $current = $node->left();
+@@ -53,7 +53,7 @@
+     public function successor(TreeNodeInterface $node)
+     {
+         // Go right and after left most element
+-        if ($node->right() == NULL) {
++        if ($node->right() == null) {
+             return false;
+         } else {
+             $current = $node->right();
+@@ -67,7 +67,7 @@
+ 
+     public function isEmpty()
+     {
+-        if ($this->root == NULL) {
++        if ($this->root == null) {
+             return true;
+         } else {
+             return false;
+@@ -134,10 +134,12 @@
+                 break;
+             case 'inOrder':
+                 array_push($listArray, $node->readNode());
+-                while (! $stack->isEmpty()) {}
++                while (! $stack->isEmpty()) {
++                }
+                 break;
+             case 'preOrder':
+-                while (! $stack->isEmpty()) {}
++                while (! $stack->isEmpty()) {
++                }
+                 break;
+         }
+         return $listArray;
+@@ -163,8 +165,6 @@
+     }
+ 
+     public function postOrder(TreeNodeInterface $node = null)
+-    
+-    // first print self, recursive
+     {
+         if (!isset($node)) {
+             $node = $this->root();
 --- src/BinaryTreeNode.php
 +++ PHP_CodeSniffer
-@@ -16,8 +16,8 @@
+@@ -15,14 +15,14 @@
      function __construct($data)
      {
          $this->data = $data;
@@ -9,250 +178,160 @@
 +        $this->left = null;
 +        $this->right = null;
      }
-     
-     public function readNode()--- src/DataStructureInterface.php
-+++ PHP_CodeSniffer
-@@ -23,7 +23,7 @@
  
-     /**
-      *
--     * @param unknown $value            
-+     * @param unknown $value
-      */
-     public function add($value);
- 
-@@ -33,26 +33,26 @@
- 
-     /**
-      *
--     * @param unknown $value            
-+     * @param unknown $value
-      */
-     public function search($value);
- 
-     /**
-      *
--     * @param string $position            
-+     * @param string $position
-      */
--    public function delete($position = NULL);
-+    public function delete($position = null);
- 
-     /**
-      *
--     * @param string $position            
--     * @param unknown $value            
-+     * @param string $position
-+     * @param unknown $value
-      */
--    public function setData($position = NULL, $value);
-+    public function setData($position = null, $value);
- 
-     /**
-      *
--     * @param string $position            
-+     * @param string $position
-      */
--    public function getData($position = NULL);
-+    public function getData($position = null);
- }--- src/DataStructureNodeInterface.php
-+++ PHP_CodeSniffer
-@@ -4,7 +4,7 @@
- 
- /**
-  * A node is the object that holds data.
-- * 
-+ *
-  * @author mtkocak
-  * @see http://www.codediesel.com/php/linked-list-in-php/
-  *
-@@ -15,7 +15,7 @@
-     /**
-      * Returns data held in node.
-      *
--     * We consider data as strings, but hence php is not strongly typed, we can 
-+     * We consider data as strings, but hence php is not strongly typed, we can
-      * reuse this data as integer or etc.
-      *
-      * @return string--- src/DoubleLinkedList.php
-+++ PHP_CodeSniffer
-@@ -16,14 +16,15 @@
-         $this->init();
-     }
-     
--    function __toString(){
--        return print_r($this->listAll(),true);
-+    function __toString()
-+    {
-+        return print_r($this->listAll(), true);
-     }
- 
-     public function init()
+-    public function left(TreeNodeInterface $node = NULL)
++    public function left(TreeNodeInterface $node = null)
      {
--        $this->firstNode = NULL;
--        $this->lastNode = NULL;
-+        $this->firstNode = null;
-+        $this->lastNode = null;
-         $this->current = $this->firstNode;
-         $this->count = 0;
-     }
-@@ -53,7 +54,7 @@
- 
-     /**
-      * Using prev adding is easier
--     * 
-+     *
-      * @see \Mtkocak\Algorithms\DataStructureInterface::add()
-      */
-     public function add($value)
-@@ -81,7 +82,7 @@
-             $this->reset();
-             return true;
-         }
--        while ($this->current->next != NULL && $currentPosition != $position) {
-+        while ($this->current->next != null && $currentPosition != $position) {
-             $this->next();
-             $currentPosition ++;
-             if ($position == ($currentPosition + 1)) {
-@@ -92,7 +93,7 @@
-         return false;
-     }
- 
--    public function getData($position = NULL)
-+    public function getData($position = null)
-     {
-         if (! $this->isEmpty() && ! isset($position)) {
-             return $this->lastNode->readNode();
-@@ -109,7 +110,7 @@
-     {
-         
-         // return ($this->firstNode == NULL); // Same as above. Better Readability
--        if ($this->firstNode == NULL) {
-+        if ($this->firstNode == null) {
-             return true;
-         } else {
-             return false;
-@@ -123,11 +124,11 @@
-         $listData = [];
-         if (! $this->isEmpty()) {
-             $this->reset();
--            while ($this->current->next != NULL) {
-+            while ($this->current->next != null) {
-                 array_push($listData, $this->current->readNode());
-                 $this->next();
-             }
--            if ($this->current->next == NULL) {
-+            if ($this->current->next == null) {
-                 array_push($listData, $this->current->readNode());
-             }
-         }
-@@ -137,17 +138,17 @@
-     /**
-      * Recursive Search Function
-      *
--     * @param unknown $value            
-+     * @param unknown $value
-      */
-     public function search($value, $node = null, $position = null)
-     {
-         // check empty
--        if ($this->firstNode == NULL) {
-+        if ($this->firstNode == null) {
-             return false;
-         }
-         
-         // first call
--        if ($position == NULL && $node == null) {
-+        if ($position == null && $node == null) {
-             $this->reset();
-             $node = $this->firstNode;
-             $position = 0;
-@@ -157,7 +158,7 @@
-             if ($node->readNode() == $value) {
-                 return $position;
+         if (isset($node)) {
+-            if ($this->left != NULL) {
++            if ($this->left != null) {
+                 throw new Exception("Node Not Empty");
              } else {
--                if ($node->next != NULL) {
-+                if ($node->next != null) {
-                     $position ++;
-                     return $this->search($value, $node->next, $position);
-                 }
-@@ -170,58 +171,52 @@
-      *
-      * With prev variable, deleting is easier
-      *
--     * @param string $position            
-+     * @param string $position
-      */
--    public function delete($position = NULL)
-+    public function delete($position = null)
-     {
--        if($position!=null){
-+        if ($position!=null) {
-             // Check Empty
--            if($this->lastNode!=NULL){
--                
-+            if ($this->lastNode!=null) {
-                 // Delete last node;
-                 $oldLastNode = $this->lastNode;
-                 $this->lastNode = $oldLastNode->prev;
-                 unset($oldLastNode);
--                $this->lastNode->next = NULL;
-+                $this->lastNode->next = null;
-                 return true;
-             }
--        }else{
--            $this->goToPosition($position);            
-+        } else {
-+            $this->goToPosition($position);
-             $nodeToDelete = $this->current;
--            if($this->current->next!=NULL)
--            {
-+            if ($this->current->next!=null) {
-                 $nextNode = $this->current->next;
-                 $nextNode->prev = $this->current->prev;
-             }
--            if($this->current->prev!=NULL)
--            {
-+            if ($this->current->prev!=null) {
-                 $prevNode = $this->current->prev;
-                 $prevNode->next = $this->current->next;
-             }
-             
-             unset($nodeToDelete);
--            return true;      
-+            return true;
-         }
-         return false;
+                 $this->left = $node;
+@@ -31,10 +31,10 @@
+         return $this->left;
      }
  
-     /**
-      *
--     * @param string $position            
--     * @param unknown $value            
-+     * @param string $position
-+     * @param unknown $value
-      */
--    public function setData($value, $position = NULL)
-+    public function setData($value, $position = null)
+-    public function right(TreeNodeInterface $node = NULL)
++    public function right(TreeNodeInterface $node = null)
      {
--        if($position==null)
--        {
-+        if ($position==null) {
-             $this->reset();
--        }
--        else
--        {
-+        } else {
-             $this->goToPosition($position);
-         }
-        
--        if(!$this->isEmpty()){
-+        if (!$this->isEmpty()) {
-             $this->current->data == $value;
-             return true;
-         }--- src/DoubleLinkedListNode.php
+         if (isset($node)) {
+-            if ($this->right != NULL) {
++            if ($this->right != null) {
+                 throw new Exception("Node Not Empty");
+             } else {
+                 $this->right = $node;
+--- src/DataStructure.php
 +++ PHP_CodeSniffer
-@@ -13,8 +13,8 @@
+@@ -12,5 +12,4 @@
+     public function delete();
+     
+     public function isEmpty();
+-   
+ }
+--- src/DataStructureIterator.php
++++ PHP_CodeSniffer
+@@ -10,5 +10,4 @@
+     public function rewind();
+     
+     public function key();
+-
+ }
+--- src/DoubleLinkedList.php
++++ PHP_CodeSniffer
+@@ -3,14 +3,14 @@
+ class DoubleLinkedList extends LinkedList
+ {
+     
+-    public function push($value){
++    public function push($value)
++    {
+         $newNode = new DoubleLinkedListNode($value);
+         
+-        if($this->isEmpty()){
++        if ($this->isEmpty()) {
+             $this->bottom($newNode);
+             $this->top($newNode);
+-        }
+-        else{
++        } else {
+             $oldTop = $this->top;
+             $oldTop->next($newNode);
+             $newNode->prev($oldTop);
+@@ -22,14 +22,15 @@
+     /**
+     * Deletes from end, and returns value.
+     */
+-    public function pop(){
+-        if(!$this->isEmpty()){
++    public function pop()
++    {
++        if (!$this->isEmpty()) {
+             $this->rewind();
+         
+             $nodeToDelete = $this->top;
+             $value = $nodeToDelete->get();
+             $this->top($nodeToDelete->prev());
+-            $this->top->next(NULL);
++            $this->top->next(null);
+         
+             unset($nodeToDelete);
+             
+@@ -41,16 +42,16 @@
+     /**
+     * Add to beginning. Reverse of push();
+     */
+-    public function add($value){
++    public function add($value)
++    {
+         $newNode = new DoubleLinkedListNode($value);
+         
+-        if($this->isEmpty()){
++        if ($this->isEmpty()) {
+             $this->bottom = $newNode;
+             $this->top = $newNode;
+             $this->count++;
+             return true;
+-        }
+-        else{
++        } else {
+             $currentBottom = $this->bottom;
+             $currentBottom->prev($newNode);
+             $this->bottom = &$newNode;
+@@ -61,12 +62,13 @@
+         return false;
+     }
+     
+-    public function insertAfter($key, $value){
++    public function insertAfter($key, $value)
++    {
+         $newNode = new DoubleLinkedListNode($value);
+         $this->rewind();
+         $currentKey = 0;
+-        while($this->current){
+-            if($currentKey==$key){
++        while ($this->current) {
++            if ($currentKey==$key) {
+                 $next = $this->current->next();
+                 $next->prev($newNode);
+                 $this->current->next($newNode);
+@@ -79,12 +81,13 @@
+         return false;
+     }
+     
+-    public function insertBefore($key, $value){
++    public function insertBefore($key, $value)
++    {
+         $newNode = new DoubleLinkedListNode($value);
+         $this->rewind();
+         $currentKey = 0;
+-        while($this->current){
+-            if($currentKey==$key){
++        while ($this->current) {
++            if ($currentKey==$key) {
+                 $prev = $this->current->prev();
+                 $prev->next($newNode);
+                 $this->current->prev($newNode);
+@@ -100,12 +103,13 @@
+     /**
+     * Delete from beginning. Reverse of pop();
+     */
+-    public function delete(){
+-        if(!$this->isEmpty()){
++    public function delete()
++    {
++        if (!$this->isEmpty()) {
+             $nodeToDelete = $this->bottom;
+             $value = $nodeToDelete->get();
+             $newBottom = $nodeToDelete->next();
+-            $newBottom->prev(NULL);
++            $newBottom->prev(null);
+             $this->bottom($newBottom);
+             return $value;
+         }
+--- src/DoubleLinkedListNode.php
++++ PHP_CodeSniffer
+@@ -12,8 +12,8 @@
      function __construct($data)
      {
          $this->data = $data;
@@ -262,197 +341,246 @@
 +        $this->prev = null;
      }
      
-     public function readNode()--- src/Queue.php
+     public function get()
+@@ -27,20 +27,18 @@
+         return $this->data;
+     }
+     
+-    public function next(DataStructureNode $node = NULL)
++    public function next(DataStructureNode $node = null)
+     {
+-        if(isset($node))
+-        {
+-            $this->next = $node;
++        if (isset($node)) {
++        $this->next = $node;
+         }
+         return $this->next;
+     }
+     
+-    public function prev(DataStructureNode $node = NULL)
++    public function prev(DataStructureNode $node = null)
+     {
+-        if(isset($node))
+-        {
+-            $this->prev = $node;
++        if (isset($node)) {
++        $this->prev = $node;
+         }
+         return $this->prev;
+     }
+--- src/LinkedList.php
 +++ PHP_CodeSniffer
-@@ -5,21 +5,23 @@
-     /* The pointer in a queue always points to last element  */
-     private $pointer;
+@@ -1,5 +1,6 @@
+ <?php
+ namespace Mtkocak\DataStructures;
++
+ use Exception;
+ 
+ abstract class LinkedList implements DataStructure, Listable, DataStructureIterator
+@@ -20,17 +21,17 @@
+      */
+     protected $current;
+ 
+-    protected $count = NULL;
++    protected $count = null;
+ 
+     public function __construct()
+     {
+-        $this->top = NULL;
+-        $this->bottom = NULL;
++        $this->top = null;
++        $this->bottom = null;
+         $this->current = $this->bottom;
+         $this->count = $this->count();
+     }
+ 
+-    public function top(DataStructureNode $node = NULL)
++    public function top(DataStructureNode $node = null)
+     {
+         if (isset($node)) {
+             $this->top = $node;
+@@ -38,7 +39,7 @@
+         return $this->top->get();
+     }
+ 
+-    public function bottom(DataStructureNode $node = NULL)
++    public function bottom(DataStructureNode $node = null)
+     {
+         if (isset($node)) {
+             $this->bottom = $node;
+@@ -68,7 +69,7 @@
+ 
+     public function count()
+     {
+-        if ($this->count == NULL) {
++        if ($this->count == null) {
+             $this->rewind();
+             $count = 0;
+             while ($this->current) {
+@@ -81,10 +82,10 @@
+         }
+     }
+ 
+-    public function listAll(DataStructureNode $node = NULL)
++    public function listAll(DataStructureNode $node = null)
+     {
+         $listArray = [];
+-        if ($node == NULL) {
++        if ($node == null) {
+             $node = $this->bottom;
+         }
+         if (! $this->isEmpty()) {
+@@ -130,7 +131,7 @@
+ 
+     public function isEmpty()
+     {
+-        if ($this->bottom == NULL) {
++        if ($this->bottom == null) {
+             return true;
+         } else {
+             return false;
+--- src/Queue.php
++++ PHP_CodeSniffer
+@@ -6,38 +6,40 @@
+     private $head;
+     private $tail;
      
 -    function __construct(){
+-        $this->head = NULL;
+-        $this->tail = NULL;
 +    function __construct()
 +    {
-         $this->init();
++        $this->head = null;
++        $this->tail = null;
      }
      
--    public function init(){
--        $this->pointer = NULL;
-+    public function init()
+-    public function enqueue($value){
++    public function enqueue($value)
 +    {
-+        $this->pointer = null;
+         $newNode = new SingleLinkedListNode($value);
+-        if($this->isEmpty())
+-        {
++        if ($this->isEmpty()) {
+             $this->head = $newNode;
+             $this->tail = $newNode;
+-        }else{
++        } else {
+             $currentHead = $this->head;
+             $newNode->next($currentHead);
+             $this->head($newNode);
+         }
      }
      
--    public function add($value,$position = null){
-+    public function add($value, $position = null)
+-    public function dequeue(){
++    public function dequeue()
++    {
+         $nodeToDelete = $this->tail;
+-        if(!$this->isEmpty()){
++        if (!$this->isEmpty()) {
+             $value = $nodeToDelete->get();
+             $current = $this->head;
+-            if($current->next()==NULL){
+-                $this->tail = NULL;
+-                $this->head = NULL;
++            if ($current->next()==null) {
++                $this->tail = null;
++                $this->head = null;
+                 unset($nodeToDelete);
+                 return $value;
+             }
+-            while($current){
++            while ($current) {
+                 // element before last
+-                if($current->next()->next()==NULL){
++                if ($current->next()->next()==null) {
+                     $this->tail = $current;
+                     unset($nodeToDelete);
+                     return $value;
+@@ -48,15 +50,16 @@
+         return false;
+     }
+     
+-    public function peek(){
++    public function peek()
++    {
+         return $this->head->get();
+     }
+     
+-    public function isEmpty(){
+-        if($this->head == NULL){
++    public function isEmpty()
++    {
++        if ($this->head == null) {
+             return true;
+-        }
+-        else{
++        } else {
+             return false;
+         }
+     }
+--- src/SingleLinkedList.php
++++ PHP_CodeSniffer
+@@ -3,14 +3,14 @@
+ class SingleLinkedList extends LinkedList
+ {
+     
+-    public function push($value){
++    public function push($value)
 +    {
          $newNode = new SingleLinkedListNode($value);
          
 -        if($this->isEmpty()){
 +        if ($this->isEmpty()) {
-             $this->pointer = $newNode;
+             $this->bottom($newNode);
+             $this->top($newNode);
 -        }
 -        else{
 +        } else {
-             $oldLastNode = $this->pointer;
-             $this->pointer = $newNode;
-             $newNode->next = $oldLastNode;
-@@ -27,21 +29,20 @@
+             $this->top->next($newNode);
+             $this->top($newNode);
          }
-     }
-     
--    public function getData($position = null){
--        if(!$this->isEmpty())
--        {
-+    public function getData($position = null)
-+    {
-+        if (!$this->isEmpty()) {
-             return $this->pointer->readNode();
--        }
--        else{
-+        } else {
-             return false;
-         }
-     }
-     
--    public function isEmpty(){
--        if($this->pointer == NULL){
-+    public function isEmpty()
-+    {
-+        if ($this->pointer == null) {
-             return true;
--        }
--        else{
-+        } else {
-             return false;
-         }
-     }
-@@ -52,9 +53,8 @@
-     {
-         $listData = [];
-         $currentNode = $this->pointer;
--        if(!$this->isEmpty())
--        {
--            while($currentNode){
-+        if (!$this->isEmpty()) {
-+            while ($currentNode) {
-                 array_push($listData, $currentNode->readNode());
-                 $currentNode = $currentNode->next;
-             }
-@@ -67,15 +67,14 @@
-     *
-     * @param string $position
-     */
--    public function delete($position = null){
--        if(!$this->isEmpty())
--        {
-+    public function delete($position = null)
-+    {
-+        if (!$this->isEmpty()) {
-             $nodeToDelete = $this->pointer;
-             $this->pointer = $this->pointer->next;
-             unset($nodeToDelete);
-             return true;
--        }
--        else{
-+        } else {
-             return false;
-         }
-     }
-@@ -85,25 +84,24 @@
-     * @param string $position
-     * @param unknown $value
-     */
--    public function setData($value,$position = null){
--        if(!$this->isEmpty())
--        {
-+    public function setData($value, $position = null)
-+    {
-+        if (!$this->isEmpty()) {
-             $nodeToChange = $this->pointer;
-             
-             // at node we should implement getter and setter methods for better encapsulation
-             $nodeToChange->data = $nodeToChange;
-             return true;
--        }
--        else{
-+        } else {
-             return false;
-         }
-     }
-     
--	/**
--	 * Not implemented because to have a basic queue structure.
--	 * 
--	 * TODO: Need to remove it from interface
--	 * 
-+    /**
-+     * Not implemented because to have a basic queue structure.
-+     *
-+     * TODO: Need to remove it from interface
-+     *
-      * @see \Mtkocak\Algorithms\DataStructureInterface::search()
-      */
-     public function search($value)
-@@ -111,6 +109,4 @@
-         // TODO Auto-generated method stub
-         
-     }
--
--
- }--- src/SingleLinkedList.php
-+++ PHP_CodeSniffer
-@@ -10,27 +10,32 @@
-     
-     private $current;
-     
--    function __construct(){
-+    function __construct()
-+    {
-         $this->init();
-     }
-     
--    public function init(){
--        $this->firstNode = NULL;
--        $this->lastNode = NULL;
-+    public function init()
-+    {
-+        $this->firstNode = null;
-+        $this->lastNode = null;
-         $this->current = $this->firstNode;
-         $this->count = 0;
-     }
-     
--    public function current(){
-+    public function current()
-+    {
-         return $this->current;
-     }
-     
--    public function next(){
-+    public function next()
-+    {
-         $this->current = $this->current->next;
-         return $this->current();
-     }
-     
--    public function reset(){
-+    public function reset()
-+    {
-         $this->current = $this->firstNode;
-         return $this->current;
-     }
-@@ -38,22 +43,23 @@
-     
+@@ -20,26 +20,26 @@
      /**
-      * Single Linked List does not have a prev function, so we cannot use it.
--     * 
-+     *
-      */
--    public function prev(){
-+    public function prev()
+     * Deletes from end, and returns value.
+     */
+-    public function pop(){
++    public function pop()
 +    {
-         return false;
-     }
-     
+         $this->rewind();
+-        $value = NULL;
+-        if(!$this->isEmpty()){
+-            if($this->current->next()==NULL){
++        $value = null;
++        if (!$this->isEmpty()) {
++            if ($this->current->next()==null) {
+                 $nodeToDelete = $this->current;
+                 $value = $nodeToDelete->get();
+-                $this->top(NULL);
+-                $this->bottom(NULL);
++                $this->top(null);
++                $this->bottom(null);
+                 unset($nodeToDelete);
+                 return $value;
+             }
+-            while($this->current->next()!=NULL)
+-            {
+-                if($this->current->next()->next() == NULL){
++            while ($this->current->next()!=null) {
++                if ($this->current->next()->next() == null) {
+                     $nextToDelete = $this->current->next();
+                     $value = $nextToDelete->get();
+                     unset($nextToDelete);
+                     $this->top($this->current);
+-                    $this->current->next(NULL);
++                    $this->current->next(null);
+                 }
+             
+                 $this->next();
+@@ -52,16 +52,16 @@
+     /**
+     * Add to beginning. Reverse of push();
+     */
 -    public function add($value){
 +    public function add($value)
 +    {
@@ -460,257 +588,65 @@
          
 -        if($this->isEmpty()){
 +        if ($this->isEmpty()) {
-             $this->firstNode = $newNode;
-             $this->lastNode = $newNode;
+             $this->bottom = $newNode;
+             $this->top = $newNode;
              $this->count++;
-             $this->current = $newNode;
--        }
--        else{
-+        } else {
-             $this->lastNode->next = $newNode;
-             $this->lastNode = &$newNode;
-             $this->count++;
-@@ -61,41 +67,36 @@
-         }
-     }
-     
--    public function getData($position = NULL){
--        if(!$this->isEmpty() && !isset($position)){
-+    public function getData($position = null)
-+    {
-+        if (!$this->isEmpty() && !isset($position)) {
-             return $this->lastNode->readNode();
--        }
--        elseif(!$this->isEmpty())
--        {
-+        } elseif (!$this->isEmpty()) {
-             $this->reset();
-             $currentPosition = 0;
--            if($position == 0){
-+            if ($position == 0) {
-                 return $this->current->readNode();
-             }
--            while($position != $currentPosition)
--            {
--                if(($currentPosition+1)==$position){
-+            while ($position != $currentPosition) {
-+                if (($currentPosition+1)==$position) {
-                     return $this->current->next->readNode();
--                }
--                elseif($this->current->next != NULL)
--                {
-+                } elseif ($this->current->next != null) {
-                     $this->next();
-                     $currentPosition++;
-                 }
-             }
--        }
--        else{
-+        } else {
-             return false;
-         }
-     }
-     
--    public function isEmpty(){
-+    public function isEmpty()
-+    {
-         
-         // return ($this->firstNode == NULL); // Same as above. Better Readability
--        if($this->firstNode == NULL){
-+        if ($this->firstNode == null) {
              return true;
 -        }
 -        else{
 +        } else {
-             return false;
-         }
+             $currentBottom = $this->bottom;
+             $this->bottom = &$newNode;
+             $this->bottom->next($currentBottom);
+@@ -71,12 +71,13 @@
+         return false;
      }
-@@ -106,8 +107,7 @@
-     {
-         $listData = array();
-         $this->reset();
--        while($this->current != NULL)
--        {
-+        while ($this->current != null) {
-             array_push($listData, $this->current->readNode());
-             $this->current = $this->current->next;
-         }
-@@ -118,25 +118,25 @@
-     *
-     * @param unknown $value
-      */
--     public function search($value){
-+     public function search($value)
-+     {
-          $listData = array();
-          $this->reset();
-          $position = 0;
--         if($this->isEmpty()){
--             return false;
--         }
-+        if ($this->isEmpty()) {
-+            return false;
-+        }
-          
--         if($this->current->data == $value){
--             return 0;
--         }
--         while($this->current->data != $value)
--         {
--             if($this->current->next->data==$value){
--                  return $position+1;
--             }
--             $this->next();
--             $position++;
--         }
-+        if ($this->current->data == $value) {
-+            return 0;
-+        }
-+        while ($this->current->data != $value) {
-+            if ($this->current->next->data==$value) {
-+                 return $position+1;
-+            }
-+            $this->next();
-+            $position++;
-+        }
-          return false;
-      }
      
-@@ -144,83 +144,72 @@
-     *
-     * @param string $position
-     */
--    public function delete($position = NULL){
--        if(!$this->isEmpty() && !isset($position)){
--              $this->reset();
--              while($this->current->next != NULL){
--                  if($this->current->next->next == NULL){
--                      $nextToDelete = $this->current->next;
--                      unset($nextToDelete);
--                      $this->lastNode = $this->current;
--                      $this->current->next == NULL;
--                      return true;
--                  }
--                  $this->next();
--              }
--        }
--        elseif(!$this->isEmpty())
-+        public function delete($position = null)
-         {
--            $this->reset();
--            $currentPosition = 0;
--            if($position == 0){
--                $newFirstNode = $this->firstNode->next;
--                unset($this->firstNode);
--                $this->firstNode = $newFirstNode;
--                return true;
--            }
--            while($position != $currentPosition)
--            {
--                if(($currentPosition+1)==$position){
--                    $newNext = $this->current->next;
--                    unset ($this->current);
-+            if (!$this->isEmpty() && !isset($position)) {
-+                  $this->reset();
-+                while ($this->current->next != null) {
-+                    if ($this->current->next->next == null) {
-+                        $nextToDelete = $this->current->next;
-+                        unset($nextToDelete);
-+                        $this->lastNode = $this->current;
-+                        $this->current->next == null;
-+                        return true;
-+                    }
-+                    $this->next();
-+                }
-+            } elseif (!$this->isEmpty()) {
-+                $this->reset();
-+                $currentPosition = 0;
-+                if ($position == 0) {
-+                    $newFirstNode = $this->firstNode->next;
-+                    unset($this->firstNode);
-+                    $this->firstNode = $newFirstNode;
-                     return true;
-                 }
--                elseif($this->current->next != NULL)
--                {
--                    $this->next();
--                    $currentPosition++;
-+                while ($position != $currentPosition) {
-+                    if (($currentPosition+1)==$position) {
-+                        $newNext = $this->current->next;
-+                        unset ($this->current);
-+                        return true;
-+                    } elseif ($this->current->next != null) {
-+                        $this->next();
-+                        $currentPosition++;
-+                    }
-                 }
-+            } else {
-+                return false;
-             }
-         }
--        else{
--            return false;
--        } 
--    }
+-    public function insertAfter($key, $value){
++    public function insertAfter($key, $value)
++    {
+         $newNode = new SingleLinkedListNode($value);
+         $this->rewind();
+         $currentKey = 0;
+-        while($this->current){
+-            if($currentKey==$key){
++        while ($this->current) {
++            if ($currentKey==$key) {
+                 $next = $this->current->next();
+                 $this->current->next($newNode);
+                 $newNode->next($next);
+@@ -88,12 +89,13 @@
+         return false;
+     }
      
+-    public function insertBefore($key, $value){
++    public function insertBefore($key, $value)
++    {
+         $newNode = new SingleLinkedListNode($value);
+         $this->rewind();
+         $currentKey = 0;
+-        while($this->current && $currentKey!=$key){
+-            if(($currentKey+1)==$key){
++        while ($this->current && $currentKey!=$key) {
++            if (($currentKey+1)==$key) {
+                 $nodeToInsertBefore = $this->current->next();
+                 $this->current->next($newNode);
+                 $newNode->next($nodeToInsertBefore);
+@@ -108,8 +110,9 @@
      /**
-     *
-     * @param string $position
-     * @param unknown $value
+     * Delete from beginning. Reverse of pop();
      */
--    public function setData($value,$position = NULL){
--        if(!$this->isEmpty() && !isset($position)){
--            $this->lastNode->data = $value;
--            return true;
--        }
--        elseif(!$this->isEmpty())
-+        public function setData($value, $position = null)
-         {
--            $this->reset();
--            $currentPosition = 0;
--            if($position == 0){
--                $this->current->data = $value;
-+            if (!$this->isEmpty() && !isset($position)) {
-+                $this->lastNode->data = $value;
-                 return true;
--            }
--            while($position != $currentPosition)
--            {
--                if(($currentPosition+1)==$position){
--                    $this->current->next->data = $value;
-+            } elseif (!$this->isEmpty()) {
-+                $this->reset();
-+                $currentPosition = 0;
-+                if ($position == 0) {
-+                    $this->current->data = $value;
-                     return true;
-                 }
--                elseif($this->current->next != NULL)
--                {
--                    $this->next();
--                    $currentPosition++;
-+                while ($position != $currentPosition) {
-+                    if (($currentPosition+1)==$position) {
-+                        $this->current->next->data = $value;
-+                        return true;
-+                    } elseif ($this->current->next != null) {
-+                        $this->next();
-+                        $currentPosition++;
-+                    }
-                 }
-+            } else {
-+                return false;
-             }
-         }
--        else{
--            return false;
--        }
--    }
--
- }--- src/SingleLinkedListNode.php
+-    public function delete(){
+-        if(!$this->isEmpty()){
++    public function delete()
++    {
++        if (!$this->isEmpty()) {
+             $nodeToDelete = $this->bottom;
+             $value = $nodeToDelete->get();
+             $newBottom = $nodeToDelete->next();
+--- src/SingleLinkedListNode.php
 +++ PHP_CodeSniffer
-@@ -13,7 +13,7 @@
+@@ -9,7 +9,7 @@
      function __construct($data)
      {
          $this->data = $data;
@@ -718,89 +654,105 @@
 +        $this->next = null;
      }
      
-     public function readNode()--- src/Stack.php
-+++ PHP_CodeSniffer
-@@ -19,12 +19,12 @@
- 
-     public function init()
+     public function get()
+@@ -23,11 +23,10 @@
+         return $this->data;
+     }
+     
+-    public function next(DataStructureNode $node = NULL)
++    public function next(DataStructureNode $node = null)
      {
--        $this->pointer = NULL;
-+        $this->pointer = null;
+-        if(isset($node))
+-        {
+-            $this->next = $node;
++        if (isset($node)) {
++        $this->next = $node;
+         }
+         return $this->next;
+     }
+--- src/Stack.php
++++ PHP_CodeSniffer
+@@ -8,26 +8,27 @@
+ 
+     function __construct()
+     {
+-        $this->top = NULL;
+-        $this->bottom = NULL;
++        $this->top = null;
++        $this->bottom = null;
      }
  
      public function isEmpty()
      {
--        if ($this->pointer == NULL) {
-+        if ($this->pointer == null) {
+-        if ($this->top == NULL) {
++        if ($this->top == null) {
              return true;
          } else {
              return false;
-@@ -34,7 +34,7 @@
-     /**
-      * We can use single linked list node.
-      *
--     * @param unknown $value            
-+     * @param unknown $value
-      */
-     public function add($value)
-     {
-@@ -67,7 +67,7 @@
-     /**
-      * Similar to listAll function
-      *
--     * @param unknown $value            
-+     * @param unknown $value
-      */
-     public function search($value)
-     {
-@@ -86,7 +86,7 @@
+         }
+     }
+     
+-    public function push($value){
++    public function push($value)
++    {
+         $newNode = new SingleLinkedListNode($value);
+-        if($this->isEmpty()){
++        if ($this->isEmpty()) {
+             $this->top = $newNode;
+             $this->tbottom = $newNode;
+             return true;
+-        }else{
++        } else {
+             $oldTop = $this->top;
+             $this->top = $newNode;
+             $newNode->next($oldTop);
+@@ -36,19 +37,21 @@
          return false;
      }
- 
--    public function delete($position = NULL)
-+    public function delete($position = null)
-     {
-         $currentPosition = 0;
-         $currentNode = $this->pointer;
-@@ -115,7 +115,7 @@
+     
+-    public function pop(){
+-        if(!$this->isEmpty()){
++    public function pop()
++    {
++        if (!$this->isEmpty()) {
+             $top = $this->top;
+             $value = $top->get();
+             $this->top = $top->next();
+             unset($top);
+             return $value;
+-        }else{
++        } else {
+             return false;
          }
      }
  
--    public function setData($value, $position = NULL)
-+    public function setData($value, $position = null)
-     {
-         $currentPosition = 0;
-         $currentNode = $this->pointer;
-@@ -141,14 +141,14 @@
-         }
+-    public function peek(){
++    public function peek()
++    {
+         return $this->top->get();
      }
- 
--    public function getData($position = NULL)
-+    public function getData($position = null)
-     {
-         $currentPosition = 0;
-         $currentNode = $this->pointer;
-         // Select which node to delete
-         if (! $this->isEmpty() && isset($position)) {
-             // I don't like repeated code
--            if($position==0){
-+            if ($position==0) {
-                 $nodeToGetValue = $this->pointer;
-                 return $nodeToGetValue->data;
-             }--- src/Tree.php
+ }
+--- src/Tree.php
 +++ PHP_CodeSniffer
-@@ -13,7 +13,7 @@
+@@ -10,13 +10,13 @@
  
-     public function init()
+     function __construct()
      {
 -        $this->root = NULL;
 +        $this->root = null;
      }
  
-     /**
-@@ -28,8 +28,8 @@
+     public function root(TreeNodeInterface $node)
+     {
+         if (isset($node)) {
+-            if ($this->root != NULL) {
++            if ($this->root != null) {
+                 throw new Exception("Node Not Empty");
+             } else {
+                 $this->root = $node;
+@@ -38,8 +38,8 @@
          if ($this->isEmpty()) {
-             $this->root = $newNode;
+             $this->root($newNode);
          } // if this is not empty and no position add children to root
 -elseif (! isset($position)) {
 -            if ($this->root->children == NULL) {
@@ -809,7 +761,7 @@
                  $this->root->children = $newNode;
                  return true;
              } else {
-@@ -39,7 +39,7 @@
+@@ -49,7 +49,7 @@
              }
          } else {
              $nodeToAddChildren = $this->getNodeByPosition($position);
@@ -818,7 +770,7 @@
                  $nodeToAddChildren->children = $newNode;
                  return true;
              } else {
-@@ -115,7 +115,7 @@
+@@ -125,7 +125,7 @@
          }
          if (! $this->isEmpty() && isset($position)) {
              $nodeToGetData = $this->getNodeByPosition($position);
@@ -827,7 +779,7 @@
                  return $nodeToGetData->readNode();
              }
          }
-@@ -124,7 +124,7 @@
+@@ -134,7 +134,7 @@
  
      public function isEmpty()
      {
@@ -836,20 +788,7 @@
              return true;
          } else {
              return false;
-@@ -147,10 +147,9 @@
-         
-         $array = [];
-         $current = $subtree;
--        if(isset($degree))
--        {
-+        if (isset($degree)) {
-             $siblings = 0;
--        }else{
-+        } else {
-             $siblings = 1;
-         }
-         while ($current) {
-@@ -181,7 +180,7 @@
+@@ -189,7 +189,7 @@
      {
          if (! $this->isEmpty() && isset($position)) {
              $nodeToDelete = $this->getNodeByPosition($position);
@@ -858,7 +797,7 @@
                  unset($nodeToDelete);
                  return true;
              }
-@@ -196,7 +195,7 @@
+@@ -204,7 +204,7 @@
          }
          if (! $this->isEmpty() && isset($position)) {
              $nodeToSetData = $this->getNodeByPosition($position);
@@ -867,28 +806,35 @@
                  $nodeToSetData->data = $value;
                  return true;
              }
-@@ -210,7 +209,8 @@
-         $subtree = $this->root;
-         $array = [];
-         $array[$position]['value'] = $subtree->readNode();
--        if ($subtree->readNode() == $value);
-+        if ($subtree->readNode() == $value) {
-+        }
-         {
-             return true;
-         }
-@@ -224,7 +224,8 @@
-             $current = $subtree;
-             while ($current) {
-                 $array[$position][$right]['value'] = $current->readNode();
--                if ($current->readNode() == $value);
-+                if ($current->readNode() == $value) {
-+                }
-                 {
-                     return true;
-                 }--- src/TreeNode.php
+@@ -214,7 +214,7 @@
+ 
+     /**
+      * TODO: need to update with new traverse function
+-     * 
++     *
+      * @see \Mtkocak\Algorithms\DataStructureInterface::search()
+      */
+     public function search($value)
+--- src/TreeInterface.php
 +++ PHP_CodeSniffer
-@@ -14,8 +14,8 @@
+@@ -4,7 +4,7 @@
+ interface TreeInterface
+ {
+ 
+-    public function root(TreeNodeInterface $node = NULL);
++    public function root(TreeNodeInterface $node = null);
+ 
+     public function add($value);
+ 
+--- src/TreeNode.php
++++ PHP_CodeSniffer
+@@ -1,4 +1,5 @@
+ <?php namespace Mtkocak\DataStructures;
++
+ use Exception;
+ 
+ class TreeNode implements TreeNodeInterface
+@@ -15,8 +16,8 @@
      function __construct($data)
      {
          $this->data = $data;
@@ -898,522 +844,50 @@
 +        $this->right = null;
      }
      
-     public function readNode()--- tests/DoubleLinkedListTest.php
+     public function get()
+@@ -24,13 +25,15 @@
+         return $this->data;
+     }
+     
+-    public function set($value){
++    public function set($value)
++    {
+         $this->data = $value;
+     }
+     
+-    public function child(TreeNodeInterface $node = NULL){
+-        if(isset($node)){
+-            if ($this->child != NULL) {
++    public function child(TreeNodeInterface $node = null)
++    {
++        if (isset($node)) {
++            if ($this->child != null) {
+                 throw new Exception("Node Not Empty");
+             } else {
+                 $this->child = $node;
+@@ -39,9 +42,10 @@
+         return $this->child;
+     }
+     
+-    public function right(TreeNodeInterface $node = NULL){
+-        if(isset($node)){
+-            if ($this->right != NULL) {
++    public function right(TreeNodeInterface $node = null)
++    {
++        if (isset($node)) {
++            if ($this->right != null) {
+                 throw new Exception("Node Not Empty");
+             } else {
+                 $this->right = $node;
+--- tests/BinarySearchTreeTest.php
 +++ PHP_CodeSniffer
-@@ -50,110 +50,127 @@
-         $this->assertTrue($this->doubleLinkedList->listAll() == $dataArray);
-     }
-     
--    public function testGoToPosition(){
-+    public function testGoToPosition()
-+    {
-         $this->testAddAnotherData();
-         $this->testAddAnotherData();
-         $this->assertTrue($this->doubleLinkedList->goToPosition(3));
-     }
-     
--    public function testGetPosition(){
-+    public function testGetPosition()
-+    {
-         $this->testAddAnotherData();
-         //var_dump($this->doubleLinkedList->listAll());
-         $dataToCheck = $this->doubleLinkedList->getData();
-         //var_dump($dataToCheck);
-         $this->testAddAnotherData();
--        $this->assertEquals($this->doubleLinkedList->getData(1),$dataToCheck);
-+        $this->assertEquals($this->doubleLinkedList->getData(1), $dataToCheck);
-     }
-     
--    public function testGetFirstPosition(){
-+    public function testGetFirstPosition()
-+    {
-         $this->testAddData();
-         $dataToCheck = $this->doubleLinkedList->getData();
-         $this->testAddAnotherData();
--        $this->assertEquals($this->doubleLinkedList->getData(0),$dataToCheck);
-+        $this->assertEquals($this->doubleLinkedList->getData(0), $dataToCheck);
-     }
-     
--    public function testGetLastPosition(){
-+    public function testGetLastPosition()
-+    {
-         $this->testAddAnotherData();
-         $this->testAddAnotherData();
-         $dataToCheck = $this->doubleLinkedList->getData();
--        $this->assertEquals($this->doubleLinkedList->getData(3),$dataToCheck);
-+        $this->assertEquals($this->doubleLinkedList->getData(3), $dataToCheck);
-     }
-     
--    public function testGetEmptyPosition(){
--        $this->assertEquals($this->doubleLinkedList->getData(1),NULL);
-+    public function testGetEmptyPosition()
-+    {
-+        $this->assertEquals($this->doubleLinkedList->getData(1), null);
-     }
-     
--    public function testSearchEmpty(){
-+    public function testSearchEmpty()
-+    {
-         $dataToSearch = $this->generateData();
--        $this->assertEquals($this->doubleLinkedList->search($dataToSearch),false);
-+        $this->assertEquals($this->doubleLinkedList->search($dataToSearch), false);
-     }
-     
--    public function testSearchFirst(){
-+    public function testSearchFirst()
-+    {
-         $dataToSearch = $this->generateData();
-         $this->doubleLinkedList->add($dataToSearch);
--        $this->assertEquals($this->doubleLinkedList->search($dataToSearch),0);
-+        $this->assertEquals($this->doubleLinkedList->search($dataToSearch), 0);
-     }
-     
--    public function testSearchLast(){
-+    public function testSearchLast()
-+    {
-         $this->testAddAnotherData();
-         //echo $this->doubleLinkedList;
-         $dataToSearch = $this->generateData();
-         $this->doubleLinkedList->add($dataToSearch);
--        $this->assertEquals($this->doubleLinkedList->search($dataToSearch),2);
-+        $this->assertEquals($this->doubleLinkedList->search($dataToSearch), 2);
-     }
-     
--    public function testSearchMiddle(){
-+    public function testSearchMiddle()
-+    {
-         $this->testAddData();
-         $dataToSearch = $this->generateData();
-         $this->doubleLinkedList->add($dataToSearch);
--        $this->assertEquals($this->doubleLinkedList->search($dataToSearch),1);
-+        $this->assertEquals($this->doubleLinkedList->search($dataToSearch), 1);
-     }
-     
--    public function testDeleteEmpty(){
--        $this->assertEquals($this->doubleLinkedList->delete(3),false);
-+    public function testDeleteEmpty()
-+    {
-+        $this->assertEquals($this->doubleLinkedList->delete(3), false);
-     }
-     
--    public function testDeleteLastPosition(){
-+    public function testDeleteLastPosition()
-+    {
-         $this->testAddAnotherData();
-         $dataToSearch = $this->generateData();
-         $this->doubleLinkedList->add($dataToSearch);
--        $this->assertEquals($this->doubleLinkedList->delete(2),true);
-+        $this->assertEquals($this->doubleLinkedList->delete(2), true);
-     }
-     
--    public function testDeleteLast(){
-+    public function testDeleteLast()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
--        $this->assertEquals($this->doubleLinkedList->delete(),true);
-+        $this->assertEquals($this->doubleLinkedList->delete(), true);
-     }
-     
--    public function testDeleteMiddle(){
-+    public function testDeleteMiddle()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
--        $this->assertEquals($this->doubleLinkedList->delete(1),true);
-+        $this->assertEquals($this->doubleLinkedList->delete(1), true);
-     }
-     
--    public function testSetDataEmpty(){
-+    public function testSetDataEmpty()
-+    {
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->doubleLinkedList->setData($dataToSet),false);
-+        $this->assertEquals($this->doubleLinkedList->setData($dataToSet), false);
-     }
-     
--    public function testSetDataLastPosition(){
-+    public function testSetDataLastPosition()
-+    {
-         $this->testAddAnotherData();
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->doubleLinkedList->setData($dataToSet,1),true);
-+        $this->assertEquals($this->doubleLinkedList->setData($dataToSet, 1), true);
-     }
-     
--    public function testSetDataLast(){
-+    public function testSetDataLast()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->doubleLinkedList->setData($dataToSet),true);
-+        $this->assertEquals($this->doubleLinkedList->setData($dataToSet), true);
-     }
-     
--    public function testSetDataMiddle(){
-+    public function testSetDataMiddle()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->doubleLinkedList->setData($dataToSet,1),true);
-+        $this->assertEquals($this->doubleLinkedList->setData($dataToSet, 1), true);
-     }
- }--- tests/QueueTest.php
-+++ PHP_CodeSniffer
-@@ -51,34 +51,39 @@
-         //var_dump($dataArray);
-         $this->assertTrue($this->queue->listAll() == $dataArray);
-     }
--    public function testGetData(){
-+    public function testGetData()
-+    {
-         $this->testAddAnotherData();
-         $this->testAddAnotherData();
-         $dataToCheck = $this->queue->getData();
--        $this->assertEquals($this->queue->getData(),$dataToCheck);
-+        $this->assertEquals($this->queue->getData(), $dataToCheck);
-     }
-     
-     
--    public function testDeleteEmpty(){
--        $this->assertEquals($this->queue->delete(3),false);
-+    public function testDeleteEmpty()
-+    {
-+        $this->assertEquals($this->queue->delete(3), false);
-     }
-     
--    public function testDeleteLast(){
-+    public function testDeleteLast()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
--        $this->assertEquals($this->queue->delete(),true);
-+        $this->assertEquals($this->queue->delete(), true);
-     }
-     
-     
--    public function testSetDataEmpty(){
-+    public function testSetDataEmpty()
-+    {
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->queue->setData($dataToSet),false);
-+        $this->assertEquals($this->queue->setData($dataToSet), false);
-     }
-     
--    public function testSetDataLast(){
-+    public function testSetDataLast()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->queue->setData($dataToSet),true);
-+        $this->assertEquals($this->queue->setData($dataToSet), true);
-     }
- }--- tests/SingleLinkedListTest.php
-+++ PHP_CodeSniffer
-@@ -47,101 +47,117 @@
-         ];
-         $this->assertTrue($this->singleLinkedList->listAll() == $dataArray);
-     }
--    public function testGetPosition(){
-+    public function testGetPosition()
-+    {
-         $this->testAddAnotherData();
-         $dataToCheck = $this->singleLinkedList->getData();
-         $this->testAddAnotherData();
--        $this->assertEquals($this->singleLinkedList->getData(1),$dataToCheck);
-+        $this->assertEquals($this->singleLinkedList->getData(1), $dataToCheck);
-     }
-     
--    public function testGetFirstPosition(){
-+    public function testGetFirstPosition()
-+    {
-         $this->testAddData();
-         $dataToCheck = $this->singleLinkedList->getData();
-         $this->testAddAnotherData();
--        $this->assertEquals($this->singleLinkedList->getData(0),$dataToCheck);
-+        $this->assertEquals($this->singleLinkedList->getData(0), $dataToCheck);
-     }
-     
--    public function testGetLastPosition(){
-+    public function testGetLastPosition()
-+    {
-         $this->testAddAnotherData();
-         $this->testAddAnotherData();
-         $dataToCheck = $this->singleLinkedList->getData();
--        $this->assertEquals($this->singleLinkedList->getData(3),$dataToCheck);
-+        $this->assertEquals($this->singleLinkedList->getData(3), $dataToCheck);
-     }
-     
--    public function testGetEmptyPosition(){
--        $this->assertEquals($this->singleLinkedList->getData(1),NULL);
-+    public function testGetEmptyPosition()
-+    {
-+        $this->assertEquals($this->singleLinkedList->getData(1), null);
-     }
-     
--    public function testSearchEmpty(){
-+    public function testSearchEmpty()
-+    {
-         $dataToSearch = $this->generateData();
--        $this->assertEquals($this->singleLinkedList->search($dataToSearch),false);
-+        $this->assertEquals($this->singleLinkedList->search($dataToSearch), false);
-     }
-     
--    public function testSearchFirst(){
-+    public function testSearchFirst()
-+    {
-         $dataToSearch = $this->generateData();
-         $this->singleLinkedList->add($dataToSearch);
--        $this->assertEquals($this->singleLinkedList->search($dataToSearch),0);
-+        $this->assertEquals($this->singleLinkedList->search($dataToSearch), 0);
-     }
-     
--    public function testSearchLast(){
-+    public function testSearchLast()
-+    {
-         $this->testAddAnotherData();
-         $dataToSearch = $this->generateData();
-         $this->singleLinkedList->add($dataToSearch);
--        $this->assertEquals($this->singleLinkedList->search($dataToSearch),2);
-+        $this->assertEquals($this->singleLinkedList->search($dataToSearch), 2);
-     }
-     
--    public function testSearchMiddle(){
-+    public function testSearchMiddle()
-+    {
-         $this->testAddData();
-         $dataToSearch = $this->generateData();
-         $this->singleLinkedList->add($dataToSearch);
--        $this->assertEquals($this->singleLinkedList->search($dataToSearch),1);
-+        $this->assertEquals($this->singleLinkedList->search($dataToSearch), 1);
-     }
-     
--    public function testDeleteEmpty(){
--        $this->assertEquals($this->singleLinkedList->delete(3),false);
-+    public function testDeleteEmpty()
-+    {
-+        $this->assertEquals($this->singleLinkedList->delete(3), false);
-     }
-     
--    public function testDeleteLastPosition(){
-+    public function testDeleteLastPosition()
-+    {
-         $this->testAddAnotherData();
-         $dataToSearch = $this->generateData();
-         $this->singleLinkedList->add($dataToSearch);
--        $this->assertEquals($this->singleLinkedList->delete(2),true);
-+        $this->assertEquals($this->singleLinkedList->delete(2), true);
-     }
-     
--    public function testDeleteLast(){
-+    public function testDeleteLast()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
--        $this->assertEquals($this->singleLinkedList->delete(),true);
-+        $this->assertEquals($this->singleLinkedList->delete(), true);
-     }
-     
--    public function testDeleteMiddle(){
-+    public function testDeleteMiddle()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
--        $this->assertEquals($this->singleLinkedList->delete(1),true);
-+        $this->assertEquals($this->singleLinkedList->delete(1), true);
-     }
-     
--    public function testSetDataEmpty(){
-+    public function testSetDataEmpty()
-+    {
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->singleLinkedList->setData($dataToSet),false);
-+        $this->assertEquals($this->singleLinkedList->setData($dataToSet), false);
-     }
-     
--    public function testSetDataLastPosition(){
-+    public function testSetDataLastPosition()
-+    {
-         $this->testAddAnotherData();
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->singleLinkedList->setData($dataToSet,1),true);
-+        $this->assertEquals($this->singleLinkedList->setData($dataToSet, 1), true);
-     }
-     
--    public function testSetDataLast(){
-+    public function testSetDataLast()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->singleLinkedList->setData($dataToSet),true);
-+        $this->assertEquals($this->singleLinkedList->setData($dataToSet), true);
-     }
-     
--    public function testSetDataMiddle(){
-+    public function testSetDataMiddle()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->singleLinkedList->setData($dataToSet,1),true);
-+        $this->assertEquals($this->singleLinkedList->setData($dataToSet, 1), true);
-     }
- }--- tests/StackTest.php
-+++ PHP_CodeSniffer
-@@ -52,104 +52,120 @@
-         //var_dump($dataArray);
-         $this->assertTrue($this->stack->listAll() == $dataArray);
-     }
--    public function testGetPosition(){
-+    public function testGetPosition()
-+    {
-         $this->testAddAnotherData();
-         $dataToCheck = $this->stack->getData();
-         $this->testAddAnotherData();
--        $this->assertEquals($this->stack->getData(2),$dataToCheck);
-+        $this->assertEquals($this->stack->getData(2), $dataToCheck);
-     }
-     
--    public function testGetFirstPosition(){
-+    public function testGetFirstPosition()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
-         $dataToCheck = $this->stack->getData();
--        $this->assertEquals($this->stack->getData(0),$dataToCheck);
-+        $this->assertEquals($this->stack->getData(0), $dataToCheck);
-     }
-     
--    public function testGetLastPosition(){
-+    public function testGetLastPosition()
-+    {
-         $this->testAddAnotherData();
-         $this->testAddAnotherData();
-         $dataToCheck = $this->stack->getData();
--        $this->assertEquals($this->stack->getData(0),$dataToCheck);
-+        $this->assertEquals($this->stack->getData(0), $dataToCheck);
-     }
-     
--    public function testGetEmptyPosition(){
--        $this->assertEquals($this->stack->getData(1),NULL);
-+    public function testGetEmptyPosition()
-+    {
-+        $this->assertEquals($this->stack->getData(1), null);
-     }
-     
--    public function testSearchEmpty(){
-+    public function testSearchEmpty()
-+    {
-         $dataToSearch = $this->generateData();
--        $this->assertEquals($this->stack->search($dataToSearch),false);
-+        $this->assertEquals($this->stack->search($dataToSearch), false);
-     }
-     
--    public function testSearchFirst(){
-+    public function testSearchFirst()
-+    {
-         $dataToSearch = $this->generateData();
-         $this->stack->add($dataToSearch);
--        $this->assertEquals($this->stack->search($dataToSearch),0);
-+        $this->assertEquals($this->stack->search($dataToSearch), 0);
-     }
-     
--    public function testSearchLast(){
-+    public function testSearchLast()
-+    {
-         $this->testAddAnotherData();
-         $dataToSearch = $this->generateData();
-         $this->stack->add($dataToSearch);
-         // Last added element is always first elemen in stack LIFO
-         // Last in first out.
--        $this->assertEquals($this->stack->search($dataToSearch),0);
-+        $this->assertEquals($this->stack->search($dataToSearch), 0);
-     }
-     
--    public function testSearchMiddle(){
-+    public function testSearchMiddle()
-+    {
-         $this->testAddData();
-         $dataToSearch = $this->generateData();
-         $this->stack->add($dataToSearch);
-         $this->testAddData();
--        $this->assertEquals($this->stack->search($dataToSearch),1);
-+        $this->assertEquals($this->stack->search($dataToSearch), 1);
-     }
-     
--    public function testDeleteEmpty(){
--        $this->assertEquals($this->stack->delete(3),false);
-+    public function testDeleteEmpty()
-+    {
-+        $this->assertEquals($this->stack->delete(3), false);
-     }
-     
--    public function testDeleteLastPosition(){
-+    public function testDeleteLastPosition()
-+    {
-         $this->testAddAnotherData();
-         $dataToSearch = $this->generateData();
-         $this->stack->add($dataToSearch);
--        $this->assertEquals($this->stack->delete(2),true);
-+        $this->assertEquals($this->stack->delete(2), true);
-     }
-     
--    public function testDeleteLast(){
-+    public function testDeleteLast()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
--        $this->assertEquals($this->stack->delete(),true);
-+        $this->assertEquals($this->stack->delete(), true);
-     }
-     
--    public function testDeleteMiddle(){
-+    public function testDeleteMiddle()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
--        $this->assertEquals($this->stack->delete(1),true);
-+        $this->assertEquals($this->stack->delete(1), true);
-     }
-     
--    public function testSetDataEmpty(){
-+    public function testSetDataEmpty()
-+    {
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->stack->setData($dataToSet),false);
-+        $this->assertEquals($this->stack->setData($dataToSet), false);
-     }
-     
--    public function testSetDataLastPosition(){
-+    public function testSetDataLastPosition()
-+    {
-         $this->testAddAnotherData();
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->stack->setData($dataToSet,1),true);
-+        $this->assertEquals($this->stack->setData($dataToSet, 1), true);
-     }
-     
--    public function testSetDataLast(){
-+    public function testSetDataLast()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->stack->setData($dataToSet),true);
-+        $this->assertEquals($this->stack->setData($dataToSet), true);
-     }
-     
--    public function testSetDataMiddle(){
-+    public function testSetDataMiddle()
-+    {
-         $this->testAddData();
-         $this->testAddAnotherData();
-         $dataToSet = $this->generateData();
--        $this->assertEquals($this->stack->setData($dataToSet,1),true);
-+        $this->assertEquals($this->stack->setData($dataToSet, 1), true);
-     }
- }
+@@ -40,7 +40,7 @@
+ 
+     public function testCreateTree()
+     {
+-        foreach($this->values as $value){
++        foreach ($this->values as $value) {
+             $this->binarySearchTree->add($value);
+         }
+         // Sorts!
+

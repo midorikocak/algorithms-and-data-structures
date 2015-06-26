@@ -1,15 +1,14 @@
-<?php namespace Mtkocak\Algorithms;
+<?php namespace Mtkocak\DataStructures;
 
-class DoubleLinkedListNode implements DataStructureNodeInterface
+class DoubleLinkedListNode implements DataStructureNode
 {
-    /* Data to hold */
-    public $data;
+    private $data;
     
-    /* Link to next node */
-    public $next;
+    private $next;
+    
+    private $prev;
     
     
-    /* Node constructor */
     function __construct($data)
     {
         $this->data = $data;
@@ -17,8 +16,32 @@ class DoubleLinkedListNode implements DataStructureNodeInterface
         $this->prev = NULL;
     }
     
-    public function readNode()
+    public function get()
     {
         return $this->data;
+    }
+    
+    public function set($value)
+    {
+        $this->data = $value;
+        return $this->data;
+    }
+    
+    public function next(DataStructureNode $node = NULL)
+    {
+        if(isset($node))
+        {
+            $this->next = $node;
+        }
+        return $this->next;
+    }
+    
+    public function prev(DataStructureNode $node = NULL)
+    {
+        if(isset($node))
+        {
+            $this->prev = $node;
+        }
+        return $this->prev;
     }
 }

@@ -1,95 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="PHP Algorithms Test Suite" tests="78" assertions="188" failures="0" errors="0" time="0.540029">
-    <testsuite name="AlgorithmsTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/AlgorithmsTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.003876">
-      <testcase name="testAlgorithmsHasCheese" class="AlgorithmsTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/AlgorithmsTest.php" line="7" assertions="1" time="0.003876"/>
+  <testsuite name="PHP Algorithms Test Suite" tests="14" assertions="20" failures="0" errors="0" time="0.106500">
+    <testsuite name="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" tests="4" assertions="6" failures="0" errors="0" time="0.057798">
+      <testcase name="testAddDataWhenEmpty" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="34" assertions="1" time="0.008752"/>
+      <testcase name="testCreateTree" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="41" assertions="1" time="0.014661"/>
+      <testcase name="testSearchFound" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="50" assertions="2" time="0.016941"/>
+      <testcase name="testSearchNotFound" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="56" assertions="2" time="0.017444"/>
     </testsuite>
-    <testsuite name="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" tests="20" assertions="55" failures="0" errors="0" time="0.148384">
-      <testcase name="testAddData" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="20" assertions="1" time="0.004543"/>
-      <testcase name="testAddAnotherData" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="28" assertions="2" time="0.003440"/>
-      <testcase name="testListAll" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="40" assertions="1" time="0.004891"/>
-      <testcase name="testGoToPosition" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="53" assertions="5" time="0.006460"/>
-      <testcase name="testGetPosition" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="59" assertions="5" time="0.014157"/>
-      <testcase name="testGetFirstPosition" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="68" assertions="4" time="0.009642"/>
-      <testcase name="testGetLastPosition" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="75" assertions="5" time="0.009421"/>
-      <testcase name="testGetEmptyPosition" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="82" assertions="1" time="0.006346"/>
-      <testcase name="testSearchEmpty" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="86" assertions="1" time="0.006076"/>
-      <testcase name="testSearchFirst" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="91" assertions="1" time="0.006339"/>
-      <testcase name="testSearchLast" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="97" assertions="3" time="0.008945"/>
-      <testcase name="testSearchMiddle" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="105" assertions="2" time="0.006847"/>
-      <testcase name="testDeleteEmpty" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="112" assertions="1" time="0.006363"/>
-      <testcase name="testDeleteLastPosition" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="116" assertions="3" time="0.007209"/>
-      <testcase name="testDeleteLast" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="123" assertions="4" time="0.008127"/>
-      <testcase name="testDeleteMiddle" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="129" assertions="4" time="0.008004"/>
-      <testcase name="testSetDataEmpty" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="135" assertions="1" time="0.005986"/>
-      <testcase name="testSetDataLastPosition" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="140" assertions="3" time="0.008165"/>
-      <testcase name="testSetDataLast" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="146" assertions="4" time="0.008115"/>
-      <testcase name="testSetDataMiddle" class="doubleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/DoubleLinkedListTest.php" line="153" assertions="4" time="0.009308"/>
+    <testsuite name="DoubleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/DoubleLinkedListTest.php" tests="3" assertions="4" failures="0" errors="0" time="0.017849">
+      <testcase name="testAddData" class="DoubleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/DoubleLinkedListTest.php" line="20" assertions="1" time="0.007937"/>
+      <testcase name="testAddAnotherData" class="DoubleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/DoubleLinkedListTest.php" line="28" assertions="2" time="0.005861"/>
+      <testcase name="testListAll" class="DoubleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/DoubleLinkedListTest.php" line="37" assertions="1" time="0.004051"/>
     </testsuite>
-    <testsuite name="QueueTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/QueueTest.php" tests="8" assertions="19" failures="0" errors="0" time="0.051213">
-      <testcase name="testAddData" class="QueueTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/QueueTest.php" line="20" assertions="1" time="0.003991"/>
-      <testcase name="testAddAnotherData" class="QueueTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/QueueTest.php" line="28" assertions="2" time="0.003911"/>
-      <testcase name="testListAll" class="QueueTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/QueueTest.php" line="38" assertions="1" time="0.003633"/>
-      <testcase name="testGetData" class="QueueTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/QueueTest.php" line="54" assertions="5" time="0.009477"/>
-      <testcase name="testDeleteEmpty" class="QueueTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/QueueTest.php" line="62" assertions="1" time="0.006102"/>
-      <testcase name="testDeleteLast" class="QueueTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/QueueTest.php" line="66" assertions="4" time="0.009617"/>
-      <testcase name="testSetDataEmpty" class="QueueTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/QueueTest.php" line="73" assertions="1" time="0.005888"/>
-      <testcase name="testSetDataLast" class="QueueTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/QueueTest.php" line="78" assertions="4" time="0.008594"/>
+    <testsuite name="QueueTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/QueueTest.php" tests="2" assertions="3" failures="0" errors="0" time="0.008289">
+      <testcase name="testAddData" class="QueueTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/QueueTest.php" line="20" assertions="1" time="0.004317"/>
+      <testcase name="testAddAnotherData" class="QueueTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/QueueTest.php" line="28" assertions="2" time="0.003972"/>
     </testsuite>
-    <testsuite name="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" tests="19" assertions="50" failures="0" errors="0" time="0.142670">
-      <testcase name="testAddData" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="20" assertions="1" time="0.003537"/>
-      <testcase name="testAddAnotherData" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="28" assertions="2" time="0.004157"/>
-      <testcase name="testListAll" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="38" assertions="1" time="0.002921"/>
-      <testcase name="testGetPosition" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="50" assertions="5" time="0.010507"/>
-      <testcase name="testGetFirstPosition" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="57" assertions="4" time="0.009307"/>
-      <testcase name="testGetLastPosition" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="64" assertions="5" time="0.010063"/>
-      <testcase name="testGetEmptyPosition" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="71" assertions="1" time="0.005478"/>
-      <testcase name="testSearchEmpty" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="75" assertions="1" time="0.006258"/>
-      <testcase name="testSearchFirst" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="80" assertions="1" time="0.006580"/>
-      <testcase name="testSearchLast" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="86" assertions="3" time="0.007695"/>
-      <testcase name="testSearchMiddle" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="93" assertions="2" time="0.007885"/>
-      <testcase name="testDeleteEmpty" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="100" assertions="1" time="0.006204"/>
-      <testcase name="testDeleteLastPosition" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="104" assertions="3" time="0.009121"/>
-      <testcase name="testDeleteLast" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="111" assertions="4" time="0.009834"/>
-      <testcase name="testDeleteMiddle" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="117" assertions="4" time="0.009554"/>
-      <testcase name="testSetDataEmpty" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="123" assertions="1" time="0.006915"/>
-      <testcase name="testSetDataLastPosition" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="128" assertions="3" time="0.007975"/>
-      <testcase name="testSetDataLast" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="134" assertions="4" time="0.009737"/>
-      <testcase name="testSetDataMiddle" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/SingleLinkedListTest.php" line="141" assertions="4" time="0.008942"/>
+    <testsuite name="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/SingleLinkedListTest.php" tests="3" assertions="4" failures="0" errors="0" time="0.014535">
+      <testcase name="testAddData" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/SingleLinkedListTest.php" line="20" assertions="1" time="0.004671"/>
+      <testcase name="testAddAnotherData" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/SingleLinkedListTest.php" line="28" assertions="2" time="0.005792"/>
+      <testcase name="testListAll" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/SingleLinkedListTest.php" line="37" assertions="1" time="0.004072"/>
     </testsuite>
-    <testsuite name="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" tests="19" assertions="51" failures="0" errors="0" time="0.137651">
-      <testcase name="testAddData" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="20" assertions="1" time="0.003923"/>
-      <testcase name="testAddAnotherData" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="28" assertions="2" time="0.003783"/>
-      <testcase name="testListAll" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="38" assertions="1" time="0.003138"/>
-      <testcase name="testGetPosition" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="55" assertions="5" time="0.008785"/>
-      <testcase name="testGetFirstPosition" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="62" assertions="4" time="0.008600"/>
-      <testcase name="testGetLastPosition" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="69" assertions="5" time="0.009361"/>
-      <testcase name="testGetEmptyPosition" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="76" assertions="1" time="0.005779"/>
-      <testcase name="testSearchEmpty" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="80" assertions="1" time="0.006211"/>
-      <testcase name="testSearchFirst" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="85" assertions="1" time="0.006028"/>
-      <testcase name="testSearchLast" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="91" assertions="3" time="0.007973"/>
-      <testcase name="testSearchMiddle" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="100" assertions="3" time="0.008138"/>
-      <testcase name="testDeleteEmpty" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="108" assertions="1" time="0.006177"/>
-      <testcase name="testDeleteLastPosition" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="112" assertions="3" time="0.007830"/>
-      <testcase name="testDeleteLast" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="119" assertions="4" time="0.007985"/>
-      <testcase name="testDeleteMiddle" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="125" assertions="4" time="0.009269"/>
-      <testcase name="testSetDataEmpty" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="131" assertions="1" time="0.005464"/>
-      <testcase name="testSetDataLastPosition" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="136" assertions="3" time="0.007723"/>
-      <testcase name="testSetDataLast" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="142" assertions="4" time="0.008455"/>
-      <testcase name="testSetDataMiddle" class="StackTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/StackTest.php" line="149" assertions="4" time="0.013029"/>
-    </testsuite>
-    <testsuite name="TreeTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/TreeTest.php" tests="11" assertions="12" failures="0" errors="0" time="0.056235">
-      <testcase name="testGoToLastSibling" class="TreeTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/TreeTest.php" line="67" assertions="1" time="0.005212"/>
-      <testcase name="testGoToLastNumberedSibling" class="TreeTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/TreeTest.php" line="73" assertions="1" time="0.004257"/>
-      <testcase name="testGoToLastChild" class="TreeTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/TreeTest.php" line="80" assertions="1" time="0.003484"/>
-      <testcase name="testGoToLastNumberedChild" class="TreeTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/TreeTest.php" line="86" assertions="1" time="0.003655"/>
-      <testcase name="testGetNodeByPositionZero" class="TreeTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/TreeTest.php" line="92" assertions="1" time="0.003311"/>
-      <testcase name="testAddData" class="TreeTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/TreeTest.php" line="99" assertions="1" time="0.004119"/>
-      <testcase name="testAddChildren" class="TreeTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/TreeTest.php" line="107" assertions="2" time="0.004857"/>
-      <testcase name="testListAll" class="TreeTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/TreeTest.php" line="117" assertions="1" time="0.005865"/>
-      <testcase name="testSearch" class="TreeTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/TreeTest.php" line="123" assertions="1" time="0.007080"/>
-      <testcase name="testDelete" class="TreeTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/TreeTest.php" line="130" assertions="1" time="0.007354"/>
-      <testcase name="testSetDataEmpty" class="TreeTest" file="/Users/mtkocak/Desktop/php-algorithms/tests/TreeTest.php" line="135" assertions="1" time="0.007041"/>
+    <testsuite name="StackTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/StackTest.php" tests="2" assertions="3" failures="0" errors="0" time="0.008029">
+      <testcase name="testAddData" class="StackTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/StackTest.php" line="20" assertions="1" time="0.003675"/>
+      <testcase name="testAddAnotherData" class="StackTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/StackTest.php" line="28" assertions="2" time="0.004354"/>
     </testsuite>
   </testsuite>
 </testsuites>

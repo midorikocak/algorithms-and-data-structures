@@ -1,172 +1,54 @@
 <?php
-namespace Mtkocak\Algorithms;
+namespace Mtkocak\DataStructures;
 
 class Stack
 {
-
-    /**
-     * A stack pointer always shows the beginning of the list.
-     * All operations are made here.
-     *
-     * @var SingleLinkedListNode
-     */
-    public $pointer;
+    private $top;
+    private $bottom;
 
     function __construct()
     {
-        $this->init();
-    }
-
-    public function init()
-    {
-        $this->pointer = NULL;
+        $this->top = NULL;
+        $this->bottom = NULL;
     }
 
     public function isEmpty()
     {
-        if ($this->pointer == NULL) {
+        if ($this->top == NULL) {
             return true;
         } else {
             return false;
         }
     }
-
-    /**
-     * We can use single linked list node.
-     *
-     * @param unknown $value            
-     */
-    public function add($value)
-    {
+    
+    public function push($value){
         $newNode = new SingleLinkedListNode($value);
-        if ($this->isEmpty()) {
-            $this->pointer = $newNode;
-        } else {
-            $oldStartNode = $this->pointer;
-            $newNode->next = $oldStartNode;
-            
-            // Added to beginning
-            $this->pointer = $newNode;
-        }
-    }
-
-    public function listAll()
-    {
-        $listData = [];
-        if (! $this->isEmpty()) {
-            $current = $this->pointer;
-            // goes until null
-            while ($current) {
-                array_push($listData, $current->readNode());
-                $current = $current->next;
-            }
-        }
-        return $listData;
-    }
-
-    /**
-     * Similar to listAll function
-     *
-     * @param unknown $value            
-     */
-    public function search($value)
-    {
-        if (! $this->isEmpty()) {
-            $position = 0;
-            $current = $this->pointer;
-            // goes until null
-            while ($current) {
-                if ($current->readNode() == $value) {
-                    return $position;
-                }
-                $current = $current->next;
-                $position ++;
-            }
+        if($this->isEmpty()){
+            $this->top = $newNode;
+            $this->tbottom = $newNode;
+            return true;
+        }else{
+            $oldTop = $this->top;
+            $this->top = $newNode;
+            $newNode->next($oldTop);
+            return true;
         }
         return false;
     }
-
-    public function delete($position = NULL)
-    {
-        $currentPosition = 0;
-        $currentNode = $this->pointer;
-        // Select which node to delete
-        if (! $this->isEmpty() && isset($position)) {
-            while ($position != $currentPosition) {
-                if (($currentPosition + 1) == $position) {
-                    // the next node is the node to delete
-                    $nodeToDelete = $currentNode->next;
-                    // we get the next of the nodeTodele and add to current node
-                    $currentNode->next = $nodeToDelete->next;
-                    unset($nodeToDelete);
-                    return true;
-                } else {
-                    $currentNode = $currentNode->next;
-                }
-                $currentPosition ++;
-            }
-        } elseif (! $this->isEmpty() && ! isset($position)) {
-            $nodeToDelete = $this->pointer;
-            $this->pointer = $nodeToDelete->next;
-            unset($nodeToDelete);
-            return true;
-        } else {
+    
+    public function pop(){
+        if(!$this->isEmpty()){
+            $top = $this->top;
+            $value = $top->get();
+            $this->top = $top->next();
+            unset($top);
+            return $value;
+        }else{
             return false;
         }
     }
 
-    public function setData($value, $position = NULL)
-    {
-        $currentPosition = 0;
-        $currentNode = $this->pointer;
-        // Select which node to delete
-        if (! $this->isEmpty() && isset($position)) {
-            while ($position != $currentPosition) {
-                if (($currentPosition + 1) == $position) {
-                    // the next node is the node to change
-                    $nodeToChange = $currentNode->next;
-                    $nodeToChange->data = $value;
-                    return true;
-                } else {
-                    $currentNode = $currentNode->next;
-                }
-                $currentPosition ++;
-            }
-        } elseif (! $this->isEmpty() && ! isset($position)) {
-            $nodeToChange = $this->pointer;
-            $nodeToChange->data = $value;
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public function getData($position = NULL)
-    {
-        $currentPosition = 0;
-        $currentNode = $this->pointer;
-        // Select which node to delete
-        if (! $this->isEmpty() && isset($position)) {
-            // I don't like repeated code
-            if($position==0){
-                $nodeToGetValue = $this->pointer;
-                return $nodeToGetValue->data;
-            }
-            while ($position != $currentPosition) {
-                if (($currentPosition + 1) == $position) {
-                    // the next node is the node to change
-                    $nodeToGetValue = $currentNode->next;
-                    return $nodeToGetValue->data;
-                } else {
-                    $currentNode = $currentNode->next;
-                }
-                $currentPosition ++;
-            }
-        } elseif (! $this->isEmpty() && ! isset($position)) {
-            $nodeToGetValue = $this->pointer;
-            return $nodeToGetValue->data;
-        } else {
-            return false;
-        }
+    public function peek(){
+        return $this->top->get();
     }
 }

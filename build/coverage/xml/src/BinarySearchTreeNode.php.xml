@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
+  <file name="BinarySearchTreeNode.php">
+    <totals>
+      <lines total="20" comments="0" code="20" executable="7" executed="0" percent="0.00%"/>
+      <methods count="1" tested="0" percent="0.00%"/>
+      <functions count="0" tested="0" percent=""/>
+      <classes count="1" tested="0" percent="0.00%"/>
+      <traits count="0" tested="0" percent=""/>
+    </totals>
+    <class name="BinarySearchTreeNode" start="5" executable="7" executed="0" crap="30">
+      <package full="" name="" sub="" category=""/>
+      <namespace name="Mtkocak\DataStructures"/>
+      <method name="validate" signature="validate()" start="8" end="18" crap="30" executable="7" executed="0" coverage="0"/>
+    </class>
+  </file>
+</phpunit>

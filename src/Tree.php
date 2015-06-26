@@ -1,19 +1,29 @@
 <?php
-namespace Mtkocak\Algorithms;
+namespace Mtkocak\DataStructures;
 
-class Tree implements DataStructureInterface
+use Exception;
+
+class Tree implements TreeInterface
 {
 
-    public $root;
+    private $root;
 
     function __construct()
     {
-        $this->init();
+        $this->root = NULL;
     }
 
-    public function init()
+    public function root(TreeNodeInterface $node)
     {
-        $this->root = NULL;
+        if (isset($node)) {
+            if ($this->root != NULL) {
+                throw new Exception("Node Not Empty");
+            } else {
+                $this->root = $node;
+            }
+        } else {
+            return $this->root;
+        }
     }
 
     /**
@@ -26,7 +36,7 @@ class Tree implements DataStructureInterface
         $newNode = new TreeNode($value);
         // if this is empty, add value as root
         if ($this->isEmpty()) {
-            $this->root = $newNode;
+            $this->root($newNode);
         } // if this is not empty and no position add children to root
 elseif (! isset($position)) {
             if ($this->root->children == NULL) {
@@ -144,13 +154,11 @@ elseif (! isset($position)) {
         // array[0][1][1]['value'] => '1.1';
         
         // a children counter when going right array[1] array[2] ... and append to parent using recursion
-        
         $array = [];
         $current = $subtree;
-        if(isset($degree) && $degree == 0)
-        {
+        if (isset($degree) && $degree == 0) {
             $siblings = 0;
-        }else{
+        } else {
             $siblings = 1;
         }
         while ($current) {
@@ -158,7 +166,7 @@ elseif (! isset($position)) {
                 $array[$siblings] = $this->traverse($current->children);
             }
             $array[$siblings]['value'] = $current->readNode();
-            $siblings++;
+            $siblings ++;
             $current = $current->right;
         }
         return $array;
@@ -204,9 +212,9 @@ elseif (! isset($position)) {
         return false;
     }
 
-    
     /**
      * TODO: need to update with new traverse function
+     * 
      * @see \Mtkocak\Algorithms\DataStructureInterface::search()
      */
     public function search($value)

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
-  <file name="DataStructureNodeInterface.php">
+  <file name="Listable.php">
     <totals>
-      <lines total="24" comments="15" code="9" executable="0" executed="0" percent=""/>
+      <lines total="7" comments="0" code="7" executable="0" executed="0" percent=""/>
       <methods count="0" tested="0" percent=""/>
       <functions count="0" tested="0" percent=""/>
       <classes count="0" tested="0" percent=""/>

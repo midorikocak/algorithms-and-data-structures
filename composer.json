@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Mtkocak\\Algorithms\\": "src"
+            "Mtkocak\\DataStructures\\": "src"
         }
     }
 }

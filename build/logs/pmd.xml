@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<pmd version="@project.version@" timestamp="2015-06-23T16:32:18+02:00">
-  <file name="/Users/mtkocak/Desktop/php-algorithms/src/SingleLinkedList.php">
-    <violation beginline="122" endline="122" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3">
-      Avoid unused local variables such as '$listData'.
-    </violation>
-    <violation beginline="147" endline="188" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="Mtkocak\Algorithms" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="SingleLinkedList" method="delete" priority="3">
-      The method delete() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.
-    </violation>
-    <violation beginline="174" endline="174" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3">
-      Avoid unused local variables such as '$newNext'.
+<pmd version="@project.version@" timestamp="2015-06-26T21:35:10+02:00">
+  <file name="/Users/mtkocak/Desktop/php-data-structures/src/BinarySearchTree.php">
+    <violation beginline="48" endline="73" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="Mtkocak\DataStructures" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="BinarySearchTree" method="delete" priority="3">
+      The method delete() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.
     </violation>
   </file>
-  <file name="/Users/mtkocak/Desktop/php-algorithms/src/Tree.php">
-    <violation beginline="4" endline="237" rule="ExcessiveClassComplexity" ruleset="Code Size Rules" package="Mtkocak\Algorithms" externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveclasscomplexity" class="Tree" priority="3">
-      The class Tree has an overall complexity of 52 which is very high. The configured complexity threshold is 50.
+  <file name="/Users/mtkocak/Desktop/php-data-structures/src/BinaryTree.php">
+    <violation beginline="107" endline="144" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="Mtkocak\DataStructures" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="BinaryTree" method="depthFirsth" priority="3">
+      The method depthFirsth() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.
+    </violation>
+  </file>
+  <file name="/Users/mtkocak/Desktop/php-data-structures/src/Tree.php">
+    <violation beginline="6" endline="224" rule="ExcessiveClassComplexity" ruleset="Code Size Rules" package="Mtkocak\DataStructures" externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveclasscomplexity" class="Tree" priority="3">
+      The class Tree has an overall complexity of 50 which is very high. The configured complexity threshold is 50.
+    </violation>
+    <violation beginline="220" endline="220" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3">
+      Avoid unused parameters such as '$value'.
     </violation>
   </file>
 </pmd>
