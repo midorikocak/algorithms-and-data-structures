@@ -3,8 +3,11 @@
 **Description**: Data Structures and Algorithms preparation for technical interview. Hence I am a php person, I had to recreate these classes using PHP to repeat CS topics.
 
 Includes:
+ - Stack
+ - Queue
  - Single Linked List
  - Double Linked List
+ - BinarySearchTree
  - Tests
  - Other classes are not completed.
 
