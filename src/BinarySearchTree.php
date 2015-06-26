@@ -48,13 +48,9 @@ class BinarySearchTree extends BinaryTree
     public function delete(TreeNodeInterface $node)
     {
         if ($node->left() == NULL && $node->right() == NULL) {
-            $nodeToDelete = $node;
             $node = NULL;
-            unset($nodeToDelete);
         } elseif ($node->left() != NULL && $node->right() == NULL) {
-            $nodeToDelete = $node;
             $node = $node->left();
-            unset($nodeToDelete);
         } elseif ($node->left() == NULL && $node->right() != NULL) {
             $nodeToDelete = $node;
             $node = $node->right();
@@ -63,21 +59,77 @@ class BinarySearchTree extends BinaryTree
             $predecessor = $this->predecessor($node);
             $successor = $this->successor($node);
             if ($predecessor != NULL && $predecessor != false) {
-                $node = clone $predecessor;
-                unset($predecessor);
+                $node = $predecessor;
             } elseif ($successor != NULL && $successor != false) {
-                $node = clone $successor;
-                unset($successor);
+                $node = $successor;
             }
         }
     }
 
     public function deleteValue($value)
     {
-        $node = $this->search($value);
-        if ($node) {
-            $this->delete($node);
-            return true;
+        $current = $this->root();
+        $parent = NULL;
+        $direction = NULL;
+        while($current){
+            if ($value < $current->get()) {
+                if ($current->left() != NULL) {
+                    $parent = $current;
+                    $direction = 'left';
+                    $current = $current->left();
+                } else {
+                    return false;
+                }
+            } elseif ($value > $current->get()) {
+                if ($current->right() != NULL) {
+                    $parent = $current;
+                    $direction = 'right';
+                    $current = $current->right();
+                } else {
+                    return false;
+                }
+            } else {
+                if($current->left()==NULL && $current->right()==NULL){
+                    if($direction=='right'){
+                        $parent->right = NULL;
+                    }
+                    if($direction=='left'){
+                        $parent->left = NULL;
+                    }
+                }elseif($current->left()!=NULL && $current->right()==NULL){
+                    if($direction=='right'){
+                        $parent->right = $current->left();
+                    }
+                    if($direction=='left'){
+                        $parent->left = $current->left();
+                    }
+                }elseif($current->left()==NULL && $current->right()!=NULL){
+                    if($direction=='right'){
+                        $parent->right = $current->right();
+                    }
+                    if($direction=='left'){
+                        $parent->left = $current->right();
+                    }
+                }
+                elseif($current->left()!=NULL && $current->right()!=NULL){
+                    if($direction=='right'){
+                        $parent->right = $current->right();
+                    }
+                    if($direction=='left'){
+                        $parent->left = $current->left();
+                    }
+                    
+                    $predecessor = $this->predecessor($current);
+                    $successor = $this->successor($current);
+                    if ($predecessor != NULL && $predecessor != false) {
+                        $current = $predecessor;
+                    } elseif ($successor != NULL && $successor != false) {
+                        $current = $successor;
+                    }
+                    
+                }
+                return true;
+            }  
         }
         return false;
     }

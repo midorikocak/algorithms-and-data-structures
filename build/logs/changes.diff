@@ -17,21 +17,17 @@
                          $current->right($newNode);
                          return true;
                      } else {
-@@ -47,25 +47,25 @@
+@@ -47,20 +47,20 @@
  
      public function delete(TreeNodeInterface $node)
      {
 -        if ($node->left() == NULL && $node->right() == NULL) {
-+        if ($node->left() == null && $node->right() == null) {
-             $nodeToDelete = $node;
 -            $node = NULL;
-+            $node = null;
-             unset($nodeToDelete);
 -        } elseif ($node->left() != NULL && $node->right() == NULL) {
++        if ($node->left() == null && $node->right() == null) {
++            $node = null;
 +        } elseif ($node->left() != null && $node->right() == null) {
-             $nodeToDelete = $node;
              $node = $node->left();
-             unset($nodeToDelete);
 -        } elseif ($node->left() == NULL && $node->right() != NULL) {
 +        } elseif ($node->left() == null && $node->right() != null) {
              $nodeToDelete = $node;
@@ -42,14 +38,103 @@
              $successor = $this->successor($node);
 -            if ($predecessor != NULL && $predecessor != false) {
 +            if ($predecessor != null && $predecessor != false) {
-                 $node = clone $predecessor;
-                 unset($predecessor);
+                 $node = $predecessor;
 -            } elseif ($successor != NULL && $successor != false) {
 +            } elseif ($successor != null && $successor != false) {
-                 $node = clone $successor;
-                 unset($successor);
+                 $node = $successor;
              }
-@@ -87,13 +87,13 @@
+         }
+@@ -69,11 +69,11 @@
+     public function deleteValue($value)
+     {
+         $current = $this->root();
+-        $parent = NULL;
+-        $direction = NULL;
+-        while($current){
++        $parent = null;
++        $direction = null;
++        while ($current) {
+             if ($value < $current->get()) {
+-                if ($current->left() != NULL) {
++                if ($current->left() != null) {
+                     $parent = $current;
+                     $direction = 'left';
+                     $current = $current->left();
+@@ -81,7 +81,7 @@
+                     return false;
+                 }
+             } elseif ($value > $current->get()) {
+-                if ($current->right() != NULL) {
++                if ($current->right() != null) {
+                     $parent = $current;
+                     $direction = 'right';
+                     $current = $current->right();
+@@ -89,47 +89,46 @@
+                     return false;
+                 }
+             } else {
+-                if($current->left()==NULL && $current->right()==NULL){
+-                    if($direction=='right'){
+-                        $parent->right = NULL;
++                if ($current->left()==null && $current->right()==null) {
++                    if ($direction=='right') {
++                        $parent->right = null;
+                     }
+-                    if($direction=='left'){
+-                        $parent->left = NULL;
++                    if ($direction=='left') {
++                        $parent->left = null;
+                     }
+-                }elseif($current->left()!=NULL && $current->right()==NULL){
+-                    if($direction=='right'){
++                } elseif ($current->left()!=null && $current->right()==null) {
++                    if ($direction=='right') {
+                         $parent->right = $current->left();
+                     }
+-                    if($direction=='left'){
++                    if ($direction=='left') {
+                         $parent->left = $current->left();
+                     }
+-                }elseif($current->left()==NULL && $current->right()!=NULL){
+-                    if($direction=='right'){
++                } elseif ($current->left()==null && $current->right()!=null) {
++                    if ($direction=='right') {
+                         $parent->right = $current->right();
+                     }
+-                    if($direction=='left'){
++                    if ($direction=='left') {
+                         $parent->left = $current->right();
+                     }
+-                }
+-                elseif($current->left()!=NULL && $current->right()!=NULL){
+-                    if($direction=='right'){
++                } elseif ($current->left()!=null && $current->right()!=null) {
++                    if ($direction=='right') {
+                         $parent->right = $current->right();
+                     }
+-                    if($direction=='left'){
++                    if ($direction=='left') {
+                         $parent->left = $current->left();
+                     }
+                     
+                     $predecessor = $this->predecessor($current);
+                     $successor = $this->successor($current);
+-                    if ($predecessor != NULL && $predecessor != false) {
++                    if ($predecessor != null && $predecessor != false) {
+                         $current = $predecessor;
+-                    } elseif ($successor != NULL && $successor != false) {
++                    } elseif ($successor != null && $successor != false) {
+                         $current = $successor;
+                     }
+                     
+                 }
+                 return true;
+-            }  
++            }
+         }
+         return false;
+     }
+@@ -139,13 +138,13 @@
          $current = $this->root();
          while ($current) {
              if ($value < $current->get()) {
@@ -109,7 +194,7 @@
      }
  
      abstract public function add($value);
-@@ -32,13 +32,13 @@
+@@ -32,18 +32,18 @@
  
      /**
       *
@@ -125,7 +210,13 @@
              return false;
          } else {
              $current = $node->left();
-@@ -53,7 +53,7 @@
+             while ($current) {
+-                if($current->right()==NULL){
++                if ($current->right()==null) {
+                     return $current;
+                 }
+                 $current = $current->right();
+@@ -55,12 +55,12 @@
      public function successor(TreeNodeInterface $node)
      {
          // Go right and after left most element
@@ -134,7 +225,13 @@
              return false;
          } else {
              $current = $node->right();
-@@ -67,7 +67,7 @@
+             while ($current) {
+-                if($current->left()==NULL){
++                if ($current->left()==null) {
+                     return $current;
+                 }
+                 $current = $current->left();
+@@ -71,7 +71,7 @@
  
      public function isEmpty()
      {
@@ -143,7 +240,7 @@
              return true;
          } else {
              return false;
-@@ -134,10 +134,12 @@
+@@ -138,10 +138,12 @@
                  break;
              case 'inOrder':
                  array_push($listArray, $node->readNode());
@@ -158,7 +255,7 @@
                  break;
          }
          return $listArray;
-@@ -163,8 +165,6 @@
+@@ -167,8 +169,6 @@
      }
  
      public function postOrder(TreeNodeInterface $node = null)
@@ -169,7 +266,7 @@
              $node = $this->root();
 --- src/BinaryTreeNode.php
 +++ PHP_CodeSniffer
-@@ -15,14 +15,14 @@
+@@ -15,18 +15,17 @@
      function __construct($data)
      {
          $this->data = $data;
@@ -187,8 +284,13 @@
 +            if ($this->left != null) {
                  throw new Exception("Node Not Empty");
              } else {
+-                if($node==NULL){
+-                    
++                if ($node==null) {
+                     echo 'yarrak';
+                 }
                  $this->left = $node;
-@@ -31,10 +31,10 @@
+@@ -35,10 +34,10 @@
          return $this->left;
      }
  
@@ -732,89 +834,6 @@
          return $this->top->get();
      }
  }
---- src/Tree.php
-+++ PHP_CodeSniffer
-@@ -10,13 +10,13 @@
- 
-     function __construct()
-     {
--        $this->root = NULL;
-+        $this->root = null;
-     }
- 
-     public function root(TreeNodeInterface $node)
-     {
-         if (isset($node)) {
--            if ($this->root != NULL) {
-+            if ($this->root != null) {
-                 throw new Exception("Node Not Empty");
-             } else {
-                 $this->root = $node;
-@@ -38,8 +38,8 @@
-         if ($this->isEmpty()) {
-             $this->root($newNode);
-         } // if this is not empty and no position add children to root
--elseif (! isset($position)) {
--            if ($this->root->children == NULL) {
-+        elseif (! isset($position)) {
-+            if ($this->root->children == null) {
-                 $this->root->children = $newNode;
-                 return true;
-             } else {
-@@ -49,7 +49,7 @@
-             }
-         } else {
-             $nodeToAddChildren = $this->getNodeByPosition($position);
--            if ($nodeToAddChildren->children == NULL) {
-+            if ($nodeToAddChildren->children == null) {
-                 $nodeToAddChildren->children = $newNode;
-                 return true;
-             } else {
-@@ -125,7 +125,7 @@
-         }
-         if (! $this->isEmpty() && isset($position)) {
-             $nodeToGetData = $this->getNodeByPosition($position);
--            if ($nodeToGetData != NULL) {
-+            if ($nodeToGetData != null) {
-                 return $nodeToGetData->readNode();
-             }
-         }
-@@ -134,7 +134,7 @@
- 
-     public function isEmpty()
-     {
--        if ($this->root == NULL) {
-+        if ($this->root == null) {
-             return true;
-         } else {
-             return false;
-@@ -189,7 +189,7 @@
-     {
-         if (! $this->isEmpty() && isset($position)) {
-             $nodeToDelete = $this->getNodeByPosition($position);
--            if ($nodeToDelete != NULL) {
-+            if ($nodeToDelete != null) {
-                 unset($nodeToDelete);
-                 return true;
-             }
-@@ -204,7 +204,7 @@
-         }
-         if (! $this->isEmpty() && isset($position)) {
-             $nodeToSetData = $this->getNodeByPosition($position);
--            if ($nodeToSetData != NULL) {
-+            if ($nodeToSetData != null) {
-                 $nodeToSetData->data = $value;
-                 return true;
-             }
-@@ -214,7 +214,7 @@
- 
-     /**
-      * TODO: need to update with new traverse function
--     * 
-+     *
-      * @see \Mtkocak\Algorithms\DataStructureInterface::search()
-      */
-     public function search($value)
 --- src/TreeInterface.php
 +++ PHP_CodeSniffer
 @@ -4,7 +4,7 @@
@@ -826,59 +845,6 @@
  
      public function add($value);
  
---- src/TreeNode.php
-+++ PHP_CodeSniffer
-@@ -1,4 +1,5 @@
- <?php namespace Mtkocak\DataStructures;
-+
- use Exception;
- 
- class TreeNode implements TreeNodeInterface
-@@ -15,8 +16,8 @@
-     function __construct($data)
-     {
-         $this->data = $data;
--        $this->children = NULL;
--        $this->right = NULL;
-+        $this->children = null;
-+        $this->right = null;
-     }
-     
-     public function get()
-@@ -24,13 +25,15 @@
-         return $this->data;
-     }
-     
--    public function set($value){
-+    public function set($value)
-+    {
-         $this->data = $value;
-     }
-     
--    public function child(TreeNodeInterface $node = NULL){
--        if(isset($node)){
--            if ($this->child != NULL) {
-+    public function child(TreeNodeInterface $node = null)
-+    {
-+        if (isset($node)) {
-+            if ($this->child != null) {
-                 throw new Exception("Node Not Empty");
-             } else {
-                 $this->child = $node;
-@@ -39,9 +42,10 @@
-         return $this->child;
-     }
-     
--    public function right(TreeNodeInterface $node = NULL){
--        if(isset($node)){
--            if ($this->right != NULL) {
-+    public function right(TreeNodeInterface $node = null)
-+    {
-+        if (isset($node)) {
-+            if ($this->right != null) {
-                 throw new Exception("Node Not Empty");
-             } else {
-                 $this->right = $node;
 --- tests/BinarySearchTreeTest.php
 +++ PHP_CodeSniffer
 @@ -40,7 +40,7 @@

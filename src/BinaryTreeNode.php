@@ -8,9 +8,9 @@ class BinaryTreeNode implements TreeNodeInterface
 
     private $data;
 
-    private $left;
+    public $left;
 
-    private $right;
+    public $right;
 
     function __construct($data)
     {
@@ -25,6 +25,10 @@ class BinaryTreeNode implements TreeNodeInterface
             if ($this->left != NULL) {
                 throw new Exception("Node Not Empty");
             } else {
+                if($node==NULL){
+                    
+                    echo 'yarrak';
+                }
                 $this->left = $node;
             }
         }

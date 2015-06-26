@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2015-06-26 21:35:13</timestamp>
+  <timestamp>2015-06-26 23:57:24</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>75</methodCount>
-    <crapMethodCount>6</crapMethodCount>
-    <crapLoad>44</crapLoad>
-    <totalCrap>653.38</totalCrap>
-    <crapMethodPercent>8</crapMethodPercent>
+    <crapMethodCount>7</crapMethodCount>
+    <crapLoad>53</crapLoad>
+    <totalCrap>679.71</totalCrap>
+    <crapMethodPercent>9.33</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -50,10 +50,10 @@
       <methodName>deleteValue</methodName>
       <methodSignature>deleteValue($value)</methodSignature>
       <fullMethod>deleteValue($value)</fullMethod>
-      <crap>6</crap>
-      <complexity>2</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
+      <crap>45.2</crap>
+      <complexity>26</complexity>
+      <coverage>69.49</coverage>
+      <crapLoad>9</crapLoad>
     </method>
     <method>
       <package>Mtkocak\DataStructures</package>
@@ -127,9 +127,9 @@
       <methodName>predecessor</methodName>
       <methodSignature>predecessor(TreeNodeInterface $node)</methodSignature>
       <fullMethod>predecessor(TreeNodeInterface $node)</fullMethod>
-      <crap>12</crap>
-      <complexity>3</complexity>
-      <coverage>0</coverage>
+      <crap>4.18</crap>
+      <complexity>4</complexity>
+      <coverage>77.78</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -138,9 +138,9 @@
       <methodName>successor</methodName>
       <methodSignature>successor(TreeNodeInterface $node)</methodSignature>
       <fullMethod>successor(TreeNodeInterface $node)</fullMethod>
-      <crap>12</crap>
-      <complexity>3</complexity>
-      <coverage>0</coverage>
+      <crap>5.4</crap>
+      <complexity>4</complexity>
+      <coverage>55.56</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -241,9 +241,9 @@
       <methodName>left</methodName>
       <methodSignature>left(TreeNodeInterface $node = NULL)</methodSignature>
       <fullMethod>left(TreeNodeInterface $node = NULL)</fullMethod>
-      <crap>3.04</crap>
-      <complexity>3</complexity>
-      <coverage>83.33</coverage>
+      <crap>4.59</crap>
+      <complexity>4</complexity>
+      <coverage>66.67</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>

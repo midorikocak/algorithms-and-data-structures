@@ -43,11 +43,13 @@ abstract class BinaryTree implements TreeInterface, Traversable, Searchable
         } else {
             $current = $node->left();
             while ($current) {
+                if($current->right()==NULL){
+                    return $current;
+                }
                 $current = $current->right();
             }
-            $address = &$current;
-            return $address;
         }
+        return false;
     }
 
     public function successor(TreeNodeInterface $node)
@@ -58,11 +60,13 @@ abstract class BinaryTree implements TreeInterface, Traversable, Searchable
         } else {
             $current = $node->right();
             while ($current) {
+                if($current->left()==NULL){
+                    return $current;
+                }
                 $current = $current->left();
             }
-            $address = &$current;
-            return $address;
         }
+        return false;
     }
 
     public function isEmpty()

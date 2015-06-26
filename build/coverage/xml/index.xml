@@ -5,6 +5,9 @@
       <test name="BinarySearchTreeTest::testAddDataWhenEmpty" size="small" result="0" status="PASSED"/>
       <test name="BinarySearchTreeTest::testCreateTree" size="small" result="0" status="PASSED"/>
       <test name="BinarySearchTreeTest::testSearchFound" size="small" result="0" status="PASSED"/>
+      <test name="BinarySearchTreeTest::testDeleteOneNodeEmpty" size="small" result="0" status="PASSED"/>
+      <test name="BinarySearchTreeTest::testDeleteTwoNodeEmpty" size="small" result="0" status="PASSED"/>
+      <test name="BinarySearchTreeTest::testDeleteNoNodeEmpty" size="small" result="0" status="PASSED"/>
       <test name="BinarySearchTreeTest::testSearchNotFound" size="small" result="0" status="PASSED"/>
       <test name="DoubleLinkedListTest::testAddData" size="small" result="0" status="PASSED"/>
       <test name="DoubleLinkedListTest::testAddAnotherData" size="small" result="0" status="PASSED"/>
@@ -19,7 +22,7 @@
     </tests>
     <directory name="/Users/mtkocak/Desktop/php-data-structures">
       <totals>
-        <lines total="1325" comments="91" code="1234" executable="495" executed="219" percent="44.24%"/>
+        <lines total="1385" comments="91" code="1294" executable="548" executed="273" percent="49.82%"/>
         <methods count="63" tested="25" percent="39.68%"/>
         <functions count="0" tested="0" percent=""/>
         <classes count="12" tested="1" percent="8.33%"/>
@@ -27,7 +30,7 @@
       </totals>
       <directory name="src">
         <totals>
-          <lines total="1050" comments="68" code="982" executable="495" executed="219" percent="44.24%"/>
+          <lines total="1110" comments="68" code="1042" executable="548" executed="273" percent="49.82%"/>
           <methods count="63" tested="25" percent="39.68%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="11" tested="0" percent="0.00%"/>
@@ -35,7 +38,7 @@
         </totals>
         <file name="BinarySearchTree.php" href="src/BinarySearchTree.php.xml">
           <totals>
-            <lines total="107" comments="5" code="102" executable="66" executed="29" percent="43.94%"/>
+            <lines total="159" comments="5" code="154" executable="114" executed="70" percent="61.40%"/>
             <methods count="5" tested="0" percent="0.00%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="0" percent="0.00%"/>
@@ -53,7 +56,7 @@
         </file>
         <file name="BinaryTree.php" href="src/BinaryTree.php.xml">
           <totals>
-            <lines total="203" comments="25" code="178" executable="121" executed="25" percent="20.66%"/>
+            <lines total="207" comments="25" code="182" executable="123" executed="37" percent="30.08%"/>
             <methods count="10" tested="3" percent="30.00%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="0" percent="0.00%"/>
@@ -62,7 +65,7 @@
         </file>
         <file name="BinaryTreeNode.php" href="src/BinaryTreeNode.php.xml">
           <totals>
-            <lines total="55" comments="0" code="55" executable="19" executed="15" percent="78.95%"/>
+            <lines total="59" comments="0" code="59" executable="22" executed="16" percent="72.73%"/>
             <methods count="5" tested="2" percent="40.00%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="0" percent="0.00%"/>
@@ -207,7 +210,7 @@
       </directory>
       <file name="BinarySearchTree.php" href="src/BinarySearchTree.php.xml">
         <totals>
-          <lines total="107" comments="5" code="102" executable="66" executed="29" percent="43.94%"/>
+          <lines total="159" comments="5" code="154" executable="114" executed="70" percent="61.40%"/>
           <methods count="5" tested="0" percent="0.00%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>
@@ -225,7 +228,7 @@
       </file>
       <file name="BinaryTree.php" href="src/BinaryTree.php.xml">
         <totals>
-          <lines total="203" comments="25" code="178" executable="121" executed="25" percent="20.66%"/>
+          <lines total="207" comments="25" code="182" executable="123" executed="37" percent="30.08%"/>
           <methods count="10" tested="3" percent="30.00%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>
@@ -234,7 +237,7 @@
       </file>
       <file name="BinaryTreeNode.php" href="src/BinaryTreeNode.php.xml">
         <totals>
-          <lines total="55" comments="0" code="55" executable="19" executed="15" percent="78.95%"/>
+          <lines total="59" comments="0" code="59" executable="22" executed="16" percent="72.73%"/>
           <methods count="5" tested="2" percent="40.00%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>

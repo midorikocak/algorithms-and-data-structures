@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="PHP Algorithms Test Suite" tests="14" assertions="20" failures="0" errors="0" time="0.106500">
-    <testsuite name="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" tests="4" assertions="6" failures="0" errors="0" time="0.057798">
-      <testcase name="testAddDataWhenEmpty" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="34" assertions="1" time="0.008752"/>
-      <testcase name="testCreateTree" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="41" assertions="1" time="0.014661"/>
-      <testcase name="testSearchFound" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="50" assertions="2" time="0.016941"/>
-      <testcase name="testSearchNotFound" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="56" assertions="2" time="0.017444"/>
+  <testsuite name="PHP Algorithms Test Suite" tests="17" assertions="26" failures="0" errors="0" time="0.170547">
+    <testsuite name="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" tests="7" assertions="12" failures="0" errors="0" time="0.113665">
+      <testcase name="testAddDataWhenEmpty" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="34" assertions="1" time="0.007361"/>
+      <testcase name="testCreateTree" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="41" assertions="1" time="0.012659"/>
+      <testcase name="testSearchFound" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="50" assertions="2" time="0.013874"/>
+      <testcase name="testDeleteOneNodeEmpty" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="56" assertions="2" time="0.018223"/>
+      <testcase name="testDeleteTwoNodeEmpty" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="64" assertions="2" time="0.019081"/>
+      <testcase name="testDeleteNoNodeEmpty" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="72" assertions="2" time="0.019121"/>
+      <testcase name="testSearchNotFound" class="BinarySearchTreeTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/BinarySearchTreeTest.php" line="80" assertions="2" time="0.023346"/>
     </testsuite>
-    <testsuite name="DoubleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/DoubleLinkedListTest.php" tests="3" assertions="4" failures="0" errors="0" time="0.017849">
-      <testcase name="testAddData" class="DoubleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/DoubleLinkedListTest.php" line="20" assertions="1" time="0.007937"/>
-      <testcase name="testAddAnotherData" class="DoubleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/DoubleLinkedListTest.php" line="28" assertions="2" time="0.005861"/>
-      <testcase name="testListAll" class="DoubleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/DoubleLinkedListTest.php" line="37" assertions="1" time="0.004051"/>
+    <testsuite name="DoubleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/DoubleLinkedListTest.php" tests="3" assertions="4" failures="0" errors="0" time="0.019473">
+      <testcase name="testAddData" class="DoubleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/DoubleLinkedListTest.php" line="20" assertions="1" time="0.006968"/>
+      <testcase name="testAddAnotherData" class="DoubleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/DoubleLinkedListTest.php" line="28" assertions="2" time="0.009002"/>
+      <testcase name="testListAll" class="DoubleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/DoubleLinkedListTest.php" line="37" assertions="1" time="0.003503"/>
     </testsuite>
-    <testsuite name="QueueTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/QueueTest.php" tests="2" assertions="3" failures="0" errors="0" time="0.008289">
-      <testcase name="testAddData" class="QueueTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/QueueTest.php" line="20" assertions="1" time="0.004317"/>
-      <testcase name="testAddAnotherData" class="QueueTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/QueueTest.php" line="28" assertions="2" time="0.003972"/>
+    <testsuite name="QueueTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/QueueTest.php" tests="2" assertions="3" failures="0" errors="0" time="0.008154">
+      <testcase name="testAddData" class="QueueTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/QueueTest.php" line="20" assertions="1" time="0.004657"/>
+      <testcase name="testAddAnotherData" class="QueueTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/QueueTest.php" line="28" assertions="2" time="0.003497"/>
     </testsuite>
-    <testsuite name="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/SingleLinkedListTest.php" tests="3" assertions="4" failures="0" errors="0" time="0.014535">
-      <testcase name="testAddData" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/SingleLinkedListTest.php" line="20" assertions="1" time="0.004671"/>
-      <testcase name="testAddAnotherData" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/SingleLinkedListTest.php" line="28" assertions="2" time="0.005792"/>
-      <testcase name="testListAll" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/SingleLinkedListTest.php" line="37" assertions="1" time="0.004072"/>
+    <testsuite name="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/SingleLinkedListTest.php" tests="3" assertions="4" failures="0" errors="0" time="0.016885">
+      <testcase name="testAddData" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/SingleLinkedListTest.php" line="20" assertions="1" time="0.004442"/>
+      <testcase name="testAddAnotherData" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/SingleLinkedListTest.php" line="28" assertions="2" time="0.008049"/>
+      <testcase name="testListAll" class="SingleLinkedListTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/SingleLinkedListTest.php" line="37" assertions="1" time="0.004394"/>
     </testsuite>
-    <testsuite name="StackTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/StackTest.php" tests="2" assertions="3" failures="0" errors="0" time="0.008029">
-      <testcase name="testAddData" class="StackTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/StackTest.php" line="20" assertions="1" time="0.003675"/>
-      <testcase name="testAddAnotherData" class="StackTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/StackTest.php" line="28" assertions="2" time="0.004354"/>
+    <testsuite name="StackTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/StackTest.php" tests="2" assertions="3" failures="0" errors="0" time="0.012370">
+      <testcase name="testAddData" class="StackTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/StackTest.php" line="20" assertions="1" time="0.003427"/>
+      <testcase name="testAddAnotherData" class="StackTest" file="/Users/mtkocak/Desktop/php-data-structures/tests/StackTest.php" line="28" assertions="2" time="0.008943"/>
     </testsuite>
   </testsuite>
 </testsuites>

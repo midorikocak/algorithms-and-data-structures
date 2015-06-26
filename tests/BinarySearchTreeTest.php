@@ -50,7 +50,31 @@ class BinarySearchTreeTest extends PHPUnit_Framework_TestCase
     public function testSearchFound()
     {
         $this->testCreateTree();
-        $this->assertTrue($this->binarySearchTree->search(8));
+        $this->assertTrue($this->binarySearchTree->search(8)!=false);
+    }
+    
+    public function testDeleteOneNodeEmpty()
+    {
+        $this->testCreateTree();
+        $this->binarySearchTree->deleteValue(4);
+        $values = [1,2,3,5,7,8,9,10,11,12];
+        $this->assertTrue($values == $this->binarySearchTree->inOrder());
+    }
+    
+    public function testDeleteTwoNodeEmpty()
+    {
+        $this->testCreateTree();
+        $this->binarySearchTree->deleteValue(7);
+        $values = [1,2,3,4,5,8,9,10,11,12];
+        $this->assertTrue($values == $this->binarySearchTree->inOrder());
+    }
+    
+    public function testDeleteNoNodeEmpty()
+    {
+        $this->testCreateTree();
+        $this->binarySearchTree->deleteValue(5);
+        $values = [1,2,3,4,8,9,10,11,12];
+        $this->assertTrue($values == $this->binarySearchTree->inOrder());
     }
     
     public function testSearchNotFound()

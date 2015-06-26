@@ -3,14 +3,14 @@
   <Packages>
     <Package name="Mtkocak\DataStructures">
       <Stats>
-        <TotalClasses>21</TotalClasses>
-        <ConcreteClasses>11</ConcreteClasses>
+        <TotalClasses>19</TotalClasses>
+        <ConcreteClasses>9</ConcreteClasses>
         <AbstractClasses>10</AbstractClasses>
         <Ca>0</Ca>
         <Ce>1</Ce>
-        <A>0.47619047619048</A>
+        <A>0.52631578947368</A>
         <I>1</I>
-        <D>0.47619047619048</D>
+        <D>0.52631578947368</D>
       </Stats>
       <ConcreteClasses>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/BinarySearchTree.php">BinarySearchTree</Class>
@@ -22,8 +22,6 @@
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/SingleLinkedList.php">SingleLinkedList</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/SingleLinkedListNode.php">SingleLinkedListNode</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Stack.php">Stack</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Tree.php">Tree</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/TreeNode.php">TreeNode</Class>
       </ConcreteClasses>
       <AbstractClasses>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/BinaryTree.php">BinaryTree</Class>
