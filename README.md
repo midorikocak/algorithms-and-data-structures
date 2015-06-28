@@ -8,6 +8,15 @@ Includes:
  - Single Linked List
  - Double Linked List
  - BinarySearchTree
+ - Sorting Algorithms
+ - Bucket Sort
+ - Bubble Sort
+ - Selection Sort
+ - Shell Sort
+ - Insertion Sort
+ - Insertion Sort with Array
+ - Merge Sort
+ - Quick Sort
  - Tests
  - Other classes are not completed.
 

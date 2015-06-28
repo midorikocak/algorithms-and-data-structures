@@ -17,23 +17,31 @@
       <test name="SingleLinkedListTest::testAddData" size="small" result="0" status="PASSED"/>
       <test name="SingleLinkedListTest::testAddAnotherData" size="small" result="0" status="PASSED"/>
       <test name="SingleLinkedListTest::testListAll" size="small" result="0" status="PASSED"/>
+      <test name="SortableTest::testBucketSort" size="small" result="0" status="PASSED"/>
+      <test name="SortableTest::testBubbleSort" size="small" result="0" status="PASSED"/>
+      <test name="SortableTest::testSelectionSort" size="small" result="0" status="PASSED"/>
+      <test name="SortableTest::testShellSort" size="small" result="0" status="PASSED"/>
+      <test name="SortableTest::testInsertionSort" size="small" result="0" status="PASSED"/>
+      <test name="SortableTest::testInsertionSortArray" size="small" result="0" status="PASSED"/>
+      <test name="SortableTest::testMergeSort" size="small" result="0" status="PASSED"/>
+      <test name="SortableTest::testQuickSort" size="small" result="0" status="PASSED"/>
       <test name="StackTest::testAddData" size="small" result="0" status="PASSED"/>
       <test name="StackTest::testAddAnotherData" size="small" result="0" status="PASSED"/>
     </tests>
     <directory name="/Users/mtkocak/Desktop/php-data-structures">
       <totals>
-        <lines total="1385" comments="91" code="1294" executable="548" executed="273" percent="49.82%"/>
-        <methods count="63" tested="25" percent="39.68%"/>
+        <lines total="1958" comments="227" code="1731" executable="847" executed="485" percent="57.26%"/>
+        <methods count="95" tested="38" percent="40.00%"/>
         <functions count="0" tested="0" percent=""/>
-        <classes count="12" tested="1" percent="8.33%"/>
+        <classes count="14" tested="2" percent="14.29%"/>
         <traits count="0" tested="0" percent=""/>
       </totals>
       <directory name="src">
         <totals>
-          <lines total="1110" comments="68" code="1042" executable="548" executed="273" percent="49.82%"/>
-          <methods count="63" tested="25" percent="39.68%"/>
+          <lines total="1525" comments="142" code="1383" executable="810" executed="482" percent="59.51%"/>
+          <methods count="88" tested="37" percent="42.05%"/>
           <functions count="0" tested="0" percent=""/>
-          <classes count="11" tested="0" percent="0.00%"/>
+          <classes count="12" tested="1" percent="8.33%"/>
           <traits count="0" tested="0" percent=""/>
         </totals>
         <file name="BinarySearchTree.php" href="src/BinarySearchTree.php.xml">
@@ -81,15 +89,6 @@
             <traits count="0" tested="0" percent=""/>
           </totals>
         </file>
-        <file name="DataStructureIterator.php" href="src/DataStructureIterator.php.xml">
-          <totals>
-            <lines total="14" comments="0" code="14" executable="0" executed="0" percent=""/>
-            <methods count="0" tested="0" percent=""/>
-            <functions count="0" tested="0" percent=""/>
-            <classes count="0" tested="0" percent=""/>
-            <traits count="0" tested="0" percent=""/>
-          </totals>
-        </file>
         <file name="DataStructureNode.php" href="src/DataStructureNode.php.xml">
           <totals>
             <lines total="9" comments="0" code="9" executable="0" executed="0" percent=""/>
@@ -101,8 +100,8 @@
         </file>
         <file name="DoubleLinkedList.php" href="src/DoubleLinkedList.php.xml">
           <totals>
-            <lines total="114" comments="9" code="105" executable="68" executed="19" percent="27.94%"/>
-            <methods count="6" tested="1" percent="16.67%"/>
+            <lines total="145" comments="9" code="136" executable="93" executed="43" percent="46.24%"/>
+            <methods count="7" tested="2" percent="28.57%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="0" percent="0.00%"/>
             <traits count="0" tested="0" percent=""/>
@@ -110,17 +109,17 @@
         </file>
         <file name="DoubleLinkedListNode.php" href="src/DoubleLinkedListNode.php.xml">
           <totals>
-            <lines total="47" comments="0" code="47" executable="17" executed="15" percent="88.24%"/>
-            <methods count="5" tested="4" percent="80.00%"/>
+            <lines total="47" comments="0" code="47" executable="17" executed="17" percent="100.00%"/>
+            <methods count="5" tested="5" percent="100.00%"/>
             <functions count="0" tested="0" percent=""/>
-            <classes count="1" tested="0" percent="0.00%"/>
+            <classes count="1" tested="1" percent="100.00%"/>
             <traits count="0" tested="0" percent=""/>
           </totals>
         </file>
         <file name="LinkedList.php" href="src/LinkedList.php.xml">
           <totals>
-            <lines total="139" comments="17" code="122" executable="53" executed="38" percent="71.70%"/>
-            <methods count="11" tested="7" percent="63.64%"/>
+            <lines total="183" comments="17" code="166" executable="79" executed="59" percent="74.68%"/>
+            <methods count="15" tested="7" percent="46.67%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="0" percent="0.00%"/>
             <traits count="0" tested="0" percent=""/>
@@ -155,8 +154,8 @@
         </file>
         <file name="SingleLinkedList.php" href="src/SingleLinkedList.php.xml">
           <totals>
-            <lines total="121" comments="9" code="112" executable="75" executed="30" percent="40.00%"/>
-            <methods count="6" tested="1" percent="16.67%"/>
+            <lines total="147" comments="55" code="92" executable="76" executed="30" percent="39.47%"/>
+            <methods count="7" tested="1" percent="14.29%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="0" percent="0.00%"/>
             <traits count="0" tested="0" percent=""/>
@@ -166,6 +165,15 @@
           <totals>
             <lines total="34" comments="0" code="34" executable="11" executed="9" percent="81.82%"/>
             <methods count="4" tested="3" percent="75.00%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="0" percent="0.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+        </file>
+        <file name="Sortable.php" href="src/Sortable.php.xml">
+          <totals>
+            <lines total="328" comments="28" code="300" executable="210" executed="162" percent="77.14%"/>
+            <methods count="19" tested="10" percent="52.63%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="0" percent="0.00%"/>
             <traits count="0" tested="0" percent=""/>
@@ -253,15 +261,6 @@
           <traits count="0" tested="0" percent=""/>
         </totals>
       </file>
-      <file name="DataStructureIterator.php" href="src/DataStructureIterator.php.xml">
-        <totals>
-          <lines total="14" comments="0" code="14" executable="0" executed="0" percent=""/>
-          <methods count="0" tested="0" percent=""/>
-          <functions count="0" tested="0" percent=""/>
-          <classes count="0" tested="0" percent=""/>
-          <traits count="0" tested="0" percent=""/>
-        </totals>
-      </file>
       <file name="DataStructureNode.php" href="src/DataStructureNode.php.xml">
         <totals>
           <lines total="9" comments="0" code="9" executable="0" executed="0" percent=""/>
@@ -273,8 +272,8 @@
       </file>
       <file name="DoubleLinkedList.php" href="src/DoubleLinkedList.php.xml">
         <totals>
-          <lines total="114" comments="9" code="105" executable="68" executed="19" percent="27.94%"/>
-          <methods count="6" tested="1" percent="16.67%"/>
+          <lines total="145" comments="9" code="136" executable="93" executed="43" percent="46.24%"/>
+          <methods count="7" tested="2" percent="28.57%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>
           <traits count="0" tested="0" percent=""/>
@@ -282,17 +281,17 @@
       </file>
       <file name="DoubleLinkedListNode.php" href="src/DoubleLinkedListNode.php.xml">
         <totals>
-          <lines total="47" comments="0" code="47" executable="17" executed="15" percent="88.24%"/>
-          <methods count="5" tested="4" percent="80.00%"/>
+          <lines total="47" comments="0" code="47" executable="17" executed="17" percent="100.00%"/>
+          <methods count="5" tested="5" percent="100.00%"/>
           <functions count="0" tested="0" percent=""/>
-          <classes count="1" tested="0" percent="0.00%"/>
+          <classes count="1" tested="1" percent="100.00%"/>
           <traits count="0" tested="0" percent=""/>
         </totals>
       </file>
       <file name="LinkedList.php" href="src/LinkedList.php.xml">
         <totals>
-          <lines total="139" comments="17" code="122" executable="53" executed="38" percent="71.70%"/>
-          <methods count="11" tested="7" percent="63.64%"/>
+          <lines total="183" comments="17" code="166" executable="79" executed="59" percent="74.68%"/>
+          <methods count="15" tested="7" percent="46.67%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>
           <traits count="0" tested="0" percent=""/>
@@ -327,8 +326,8 @@
       </file>
       <file name="SingleLinkedList.php" href="src/SingleLinkedList.php.xml">
         <totals>
-          <lines total="121" comments="9" code="112" executable="75" executed="30" percent="40.00%"/>
-          <methods count="6" tested="1" percent="16.67%"/>
+          <lines total="147" comments="55" code="92" executable="76" executed="30" percent="39.47%"/>
+          <methods count="7" tested="1" percent="14.29%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>
           <traits count="0" tested="0" percent=""/>
@@ -338,6 +337,15 @@
         <totals>
           <lines total="34" comments="0" code="34" executable="11" executed="9" percent="81.82%"/>
           <methods count="4" tested="3" percent="75.00%"/>
+          <functions count="0" tested="0" percent=""/>
+          <classes count="1" tested="0" percent="0.00%"/>
+          <traits count="0" tested="0" percent=""/>
+        </totals>
+      </file>
+      <file name="Sortable.php" href="src/Sortable.php.xml">
+        <totals>
+          <lines total="328" comments="28" code="300" executable="210" executed="162" percent="77.14%"/>
+          <methods count="19" tested="10" percent="52.63%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>
           <traits count="0" tested="0" percent=""/>
@@ -381,10 +389,10 @@
       </file>
       <directory name="vendor">
         <totals>
-          <lines total="275" comments="23" code="252" executable="0" executed="0" percent=""/>
-          <methods count="0" tested="0" percent=""/>
+          <lines total="433" comments="85" code="348" executable="37" executed="3" percent="8.11%"/>
+          <methods count="7" tested="1" percent="14.29%"/>
           <functions count="0" tested="0" percent=""/>
-          <classes count="1" tested="1" percent="100.00%"/>
+          <classes count="2" tested="1" percent="50.00%"/>
           <traits count="0" tested="0" percent=""/>
         </totals>
         <directory name="nikic">
@@ -666,6 +674,141 @@
             <traits count="0" tested="0" percent=""/>
           </totals>
         </file>
+        <directory name="sebastian">
+          <totals>
+            <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+            <methods count="7" tested="1" percent="14.29%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="0" percent="0.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+          <directory name="recursion-context">
+            <totals>
+              <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+              <methods count="7" tested="1" percent="14.29%"/>
+              <functions count="0" tested="0" percent=""/>
+              <classes count="1" tested="0" percent="0.00%"/>
+              <traits count="0" tested="0" percent=""/>
+            </totals>
+            <directory name="src">
+              <totals>
+                <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+                <methods count="7" tested="1" percent="14.29%"/>
+                <functions count="0" tested="0" percent=""/>
+                <classes count="1" tested="0" percent="0.00%"/>
+                <traits count="0" tested="0" percent=""/>
+              </totals>
+              <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+                <totals>
+                  <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+                  <methods count="7" tested="1" percent="14.29%"/>
+                  <functions count="0" tested="0" percent=""/>
+                  <classes count="1" tested="0" percent="0.00%"/>
+                  <traits count="0" tested="0" percent=""/>
+                </totals>
+              </file>
+            </directory>
+            <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+              <totals>
+                <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+                <methods count="7" tested="1" percent="14.29%"/>
+                <functions count="0" tested="0" percent=""/>
+                <classes count="1" tested="0" percent="0.00%"/>
+                <traits count="0" tested="0" percent=""/>
+              </totals>
+            </file>
+          </directory>
+          <directory name="src">
+            <totals>
+              <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+              <methods count="7" tested="1" percent="14.29%"/>
+              <functions count="0" tested="0" percent=""/>
+              <classes count="1" tested="0" percent="0.00%"/>
+              <traits count="0" tested="0" percent=""/>
+            </totals>
+            <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+              <totals>
+                <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+                <methods count="7" tested="1" percent="14.29%"/>
+                <functions count="0" tested="0" percent=""/>
+                <classes count="1" tested="0" percent="0.00%"/>
+                <traits count="0" tested="0" percent=""/>
+              </totals>
+            </file>
+          </directory>
+          <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+            <totals>
+              <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+              <methods count="7" tested="1" percent="14.29%"/>
+              <functions count="0" tested="0" percent=""/>
+              <classes count="1" tested="0" percent="0.00%"/>
+              <traits count="0" tested="0" percent=""/>
+            </totals>
+          </file>
+        </directory>
+        <directory name="recursion-context">
+          <totals>
+            <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+            <methods count="7" tested="1" percent="14.29%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="0" percent="0.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+          <directory name="src">
+            <totals>
+              <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+              <methods count="7" tested="1" percent="14.29%"/>
+              <functions count="0" tested="0" percent=""/>
+              <classes count="1" tested="0" percent="0.00%"/>
+              <traits count="0" tested="0" percent=""/>
+            </totals>
+            <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+              <totals>
+                <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+                <methods count="7" tested="1" percent="14.29%"/>
+                <functions count="0" tested="0" percent=""/>
+                <classes count="1" tested="0" percent="0.00%"/>
+                <traits count="0" tested="0" percent=""/>
+              </totals>
+            </file>
+          </directory>
+          <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+            <totals>
+              <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+              <methods count="7" tested="1" percent="14.29%"/>
+              <functions count="0" tested="0" percent=""/>
+              <classes count="1" tested="0" percent="0.00%"/>
+              <traits count="0" tested="0" percent=""/>
+            </totals>
+          </file>
+        </directory>
+        <directory name="src">
+          <totals>
+            <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+            <methods count="7" tested="1" percent="14.29%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="0" percent="0.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+          <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+            <totals>
+              <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+              <methods count="7" tested="1" percent="14.29%"/>
+              <functions count="0" tested="0" percent=""/>
+              <classes count="1" tested="0" percent="0.00%"/>
+              <traits count="0" tested="0" percent=""/>
+            </totals>
+          </file>
+        </directory>
+        <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+          <totals>
+            <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+            <methods count="7" tested="1" percent="14.29%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="0" percent="0.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+        </file>
       </directory>
       <directory name="nikic">
         <totals>
@@ -943,6 +1086,141 @@
           <methods count="0" tested="0" percent=""/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="1" percent="100.00%"/>
+          <traits count="0" tested="0" percent=""/>
+        </totals>
+      </file>
+      <directory name="sebastian">
+        <totals>
+          <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+          <methods count="7" tested="1" percent="14.29%"/>
+          <functions count="0" tested="0" percent=""/>
+          <classes count="1" tested="0" percent="0.00%"/>
+          <traits count="0" tested="0" percent=""/>
+        </totals>
+        <directory name="recursion-context">
+          <totals>
+            <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+            <methods count="7" tested="1" percent="14.29%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="0" percent="0.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+          <directory name="src">
+            <totals>
+              <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+              <methods count="7" tested="1" percent="14.29%"/>
+              <functions count="0" tested="0" percent=""/>
+              <classes count="1" tested="0" percent="0.00%"/>
+              <traits count="0" tested="0" percent=""/>
+            </totals>
+            <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+              <totals>
+                <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+                <methods count="7" tested="1" percent="14.29%"/>
+                <functions count="0" tested="0" percent=""/>
+                <classes count="1" tested="0" percent="0.00%"/>
+                <traits count="0" tested="0" percent=""/>
+              </totals>
+            </file>
+          </directory>
+          <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+            <totals>
+              <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+              <methods count="7" tested="1" percent="14.29%"/>
+              <functions count="0" tested="0" percent=""/>
+              <classes count="1" tested="0" percent="0.00%"/>
+              <traits count="0" tested="0" percent=""/>
+            </totals>
+          </file>
+        </directory>
+        <directory name="src">
+          <totals>
+            <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+            <methods count="7" tested="1" percent="14.29%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="0" percent="0.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+          <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+            <totals>
+              <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+              <methods count="7" tested="1" percent="14.29%"/>
+              <functions count="0" tested="0" percent=""/>
+              <classes count="1" tested="0" percent="0.00%"/>
+              <traits count="0" tested="0" percent=""/>
+            </totals>
+          </file>
+        </directory>
+        <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+          <totals>
+            <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+            <methods count="7" tested="1" percent="14.29%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="0" percent="0.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+        </file>
+      </directory>
+      <directory name="recursion-context">
+        <totals>
+          <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+          <methods count="7" tested="1" percent="14.29%"/>
+          <functions count="0" tested="0" percent=""/>
+          <classes count="1" tested="0" percent="0.00%"/>
+          <traits count="0" tested="0" percent=""/>
+        </totals>
+        <directory name="src">
+          <totals>
+            <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+            <methods count="7" tested="1" percent="14.29%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="0" percent="0.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+          <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+            <totals>
+              <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+              <methods count="7" tested="1" percent="14.29%"/>
+              <functions count="0" tested="0" percent=""/>
+              <classes count="1" tested="0" percent="0.00%"/>
+              <traits count="0" tested="0" percent=""/>
+            </totals>
+          </file>
+        </directory>
+        <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+          <totals>
+            <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+            <methods count="7" tested="1" percent="14.29%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="0" percent="0.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+        </file>
+      </directory>
+      <directory name="src">
+        <totals>
+          <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+          <methods count="7" tested="1" percent="14.29%"/>
+          <functions count="0" tested="0" percent=""/>
+          <classes count="1" tested="0" percent="0.00%"/>
+          <traits count="0" tested="0" percent=""/>
+        </totals>
+        <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+          <totals>
+            <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+            <methods count="7" tested="1" percent="14.29%"/>
+            <functions count="0" tested="0" percent=""/>
+            <classes count="1" tested="0" percent="0.00%"/>
+            <traits count="0" tested="0" percent=""/>
+          </totals>
+        </file>
+      </directory>
+      <file name="Context.php" href="vendor/sebastian/recursion-context/src/Context.php.xml">
+        <totals>
+          <lines total="158" comments="62" code="96" executable="37" executed="3" percent="8.11%"/>
+          <methods count="7" tested="1" percent="14.29%"/>
+          <functions count="0" tested="0" percent=""/>
+          <classes count="1" tested="0" percent="0.00%"/>
           <traits count="0" tested="0" percent=""/>
         </totals>
       </file>

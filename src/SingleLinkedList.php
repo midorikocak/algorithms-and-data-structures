@@ -105,6 +105,32 @@ class SingleLinkedList extends LinkedList
         return false;
     }
     
+    public function offsetUnset(  $offset ){
+        // $counter = 0;
+        // $current = $this->bottom;
+        // while($current){
+        //     $counter++;
+        //     $current = $current->next();
+        // }
+        // if($counter == $offset){
+        //     $next = $current->next();
+        //
+        //     if($this->count()==1){
+        //         $this->top = NULL;
+        //         $this->bottom = NULL;
+        //     }elseif($counter == $this->count()){
+        //         $this->top = $prev;
+        //     }else{
+        //         $prev->next($next);
+        //         $next->prev($prev);
+        //     }
+        //     $current = NULL;
+        //     return true;
+        // }else{
+        //     return false;
+        // }
+    }
+    
     /**
     * Delete from beginning. Reverse of pop();
     */

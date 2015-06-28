@@ -4,9 +4,9 @@ class DoubleLinkedListNode implements DataStructureNode
 {
     private $data;
     
-    private $next;
+    public $next;
     
-    private $prev;
+    public $prev;
     
     
     function __construct($data)

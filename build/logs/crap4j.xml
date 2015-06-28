@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2015-06-26 23:57:24</timestamp>
+  <timestamp>2015-06-28 23:43:13</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>75</methodCount>
-    <crapMethodCount>7</crapMethodCount>
-    <crapLoad>53</crapLoad>
-    <totalCrap>679.71</totalCrap>
-    <crapMethodPercent>9.33</crapMethodPercent>
+    <methodCount>108</methodCount>
+    <crapMethodCount>9</crapMethodCount>
+    <crapLoad>64</crapLoad>
+    <totalCrap>912.68</totalCrap>
+    <crapMethodPercent>8.33</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -307,9 +307,9 @@
       <methodName>add</methodName>
       <methodSignature>add($value)</methodSignature>
       <fullMethod>add($value)</fullMethod>
-      <crap>6</crap>
+      <crap>2</crap>
       <complexity>2</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -337,12 +337,23 @@
     <method>
       <package>Mtkocak\DataStructures</package>
       <className>DoubleLinkedList</className>
+      <methodName>offsetUnset</methodName>
+      <methodSignature>offsetUnset(  $offset )</methodSignature>
+      <fullMethod>offsetUnset(  $offset )</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
+      <coverage>0</coverage>
+      <crapLoad>5</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>DoubleLinkedList</className>
       <methodName>delete</methodName>
       <methodSignature>delete()</methodSignature>
       <fullMethod>delete()</fullMethod>
-      <crap>6</crap>
-      <complexity>2</complexity>
-      <coverage>0</coverage>
+      <crap>4.01</crap>
+      <complexity>4</complexity>
+      <coverage>92.31</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -373,9 +384,9 @@
       <methodName>set</methodName>
       <methodSignature>set($value)</methodSignature>
       <fullMethod>set($value)</fullMethod>
-      <crap>2</crap>
+      <crap>1</crap>
       <complexity>1</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -419,6 +430,61 @@
       <fullMethod>top(DataStructureNode $node = NULL)</fullMethod>
       <crap>2</crap>
       <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>valid</methodName>
+      <methodSignature>valid()</methodSignature>
+      <fullMethod>valid()</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>offsetExists</methodName>
+      <methodSignature>offsetExists(  $offset )</methodSignature>
+      <fullMethod>offsetExists(  $offset )</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>offsetGet</methodName>
+      <methodSignature>offsetGet(  $offset )</methodSignature>
+      <fullMethod>offsetGet(  $offset )</fullMethod>
+      <crap>3.01</crap>
+      <complexity>3</complexity>
+      <coverage>88.89</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>offsetSet</methodName>
+      <methodSignature>offsetSet(  $offset ,  $value )</methodSignature>
+      <fullMethod>offsetSet(  $offset ,  $value )</fullMethod>
+      <crap>3.01</crap>
+      <complexity>3</complexity>
+      <coverage>90</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>LinkedList</className>
+      <methodName>offsetUnset</methodName>
+      <methodSignature>offsetUnset(  $offset )</methodSignature>
+      <fullMethod>offsetUnset(  $offset )</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -483,9 +549,9 @@
       <methodName>count</methodName>
       <methodSignature>count()</methodSignature>
       <fullMethod>count()</fullMethod>
-      <crap>3.43</crap>
+      <crap>3.18</crap>
       <complexity>3</complexity>
-      <coverage>63.64</coverage>
+      <coverage>72.73</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -516,8 +582,8 @@
       <methodName>key</methodName>
       <methodSignature>key()</methodSignature>
       <fullMethod>key()</fullMethod>
-      <crap>6</crap>
-      <complexity>2</complexity>
+      <crap>2</crap>
+      <complexity>1</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -700,6 +766,17 @@
     <method>
       <package>Mtkocak\DataStructures</package>
       <className>SingleLinkedList</className>
+      <methodName>offsetUnset</methodName>
+      <methodSignature>offsetUnset(  $offset )</methodSignature>
+      <fullMethod>offsetUnset(  $offset )</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>SingleLinkedList</className>
       <methodName>delete</methodName>
       <methodSignature>delete()</methodSignature>
       <fullMethod>delete()</fullMethod>
@@ -750,6 +827,215 @@
       <crap>2</crap>
       <complexity>2</complexity>
       <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(DataStructure $dataStructure)</methodSignature>
+      <fullMethod>__construct(DataStructure $dataStructure)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>count</methodName>
+      <methodSignature>count()</methodSignature>
+      <fullMethod>count()</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>reverse</methodName>
+      <methodSignature>reverse()</methodSignature>
+      <fullMethod>reverse()</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>findLastElement</methodName>
+      <methodSignature>findLastElement()</methodSignature>
+      <fullMethod>findLastElement()</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
+      <coverage>0</coverage>
+      <crapLoad>5</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>isSorted</methodName>
+      <methodSignature>isSorted()</methodSignature>
+      <fullMethod>isSorted()</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>isUnique</methodName>
+      <methodSignature>isUnique()</methodSignature>
+      <fullMethod>isUnique()</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>bucketSort</methodName>
+      <methodSignature>bucketSort()</methodSignature>
+      <fullMethod>bucketSort()</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>quick3Sort</methodName>
+      <methodSignature>quick3Sort(DataStructure $dataStructure)</methodSignature>
+      <fullMethod>quick3Sort(DataStructure $dataStructure)</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>quickSort</methodName>
+      <methodSignature>quickSort(DataStructure $dataStructure)</methodSignature>
+      <fullMethod>quickSort(DataStructure $dataStructure)</fullMethod>
+      <crap>5</crap>
+      <complexity>5</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>split</methodName>
+      <methodSignature>split(DataStructure $dataStructure)</methodSignature>
+      <fullMethod>split(DataStructure $dataStructure)</fullMethod>
+      <crap>4.05</crap>
+      <complexity>4</complexity>
+      <coverage>85.71</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>append</methodName>
+      <methodSignature>append(DataStructure $first, DataStructure $second)</methodSignature>
+      <fullMethod>append(DataStructure $first, DataStructure $second)</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>merge</methodName>
+      <methodSignature>merge(DataStructure $first, DataStructure $second)</methodSignature>
+      <fullMethod>merge(DataStructure $first, DataStructure $second)</fullMethod>
+      <crap>8.14</crap>
+      <complexity>8</complexity>
+      <coverage>86.96</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>mergeSort</methodName>
+      <methodSignature>mergeSort(DataStructure $dataStructure)</methodSignature>
+      <fullMethod>mergeSort(DataStructure $dataStructure)</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>bubbleSort</methodName>
+      <methodSignature>bubbleSort()</methodSignature>
+      <fullMethod>bubbleSort()</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>selectionSort</methodName>
+      <methodSignature>selectionSort()</methodSignature>
+      <fullMethod>selectionSort()</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>shellSort</methodName>
+      <methodSignature>shellSort()</methodSignature>
+      <fullMethod>shellSort()</fullMethod>
+      <crap>7</crap>
+      <complexity>7</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>insertionSortArray</methodName>
+      <methodSignature>insertionSortArray()</methodSignature>
+      <fullMethod>insertionSortArray()</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>insertionSort</methodName>
+      <methodSignature>insertionSort()</methodSignature>
+      <fullMethod>insertionSort()</fullMethod>
+      <crap>5</crap>
+      <complexity>5</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Sortable</className>
+      <methodName>heapSort</methodName>
+      <methodSignature>heapSort()</methodSignature>
+      <fullMethod>heapSort()</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -838,6 +1124,83 @@
       <crap>2</crap>
       <complexity>2</complexity>
       <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>SebastianBergmann\RecursionContext</package>
+      <className>Context</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct()</methodSignature>
+      <fullMethod>__construct()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>SebastianBergmann\RecursionContext</package>
+      <className>Context</className>
+      <methodName>add</methodName>
+      <methodSignature>add(&amp;$value)</methodSignature>
+      <fullMethod>add(&amp;$value)</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>SebastianBergmann\RecursionContext</package>
+      <className>Context</className>
+      <methodName>contains</methodName>
+      <methodSignature>contains(&amp;$value)</methodSignature>
+      <fullMethod>contains(&amp;$value)</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>SebastianBergmann\RecursionContext</package>
+      <className>Context</className>
+      <methodName>addArray</methodName>
+      <methodSignature>addArray(array &amp;$array)</methodSignature>
+      <fullMethod>addArray(array &amp;$array)</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>SebastianBergmann\RecursionContext</package>
+      <className>Context</className>
+      <methodName>addObject</methodName>
+      <methodSignature>addObject($object)</methodSignature>
+      <fullMethod>addObject($object)</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>SebastianBergmann\RecursionContext</package>
+      <className>Context</className>
+      <methodName>containsArray</methodName>
+      <methodSignature>containsArray(array &amp;$array)</methodSignature>
+      <fullMethod>containsArray(array &amp;$array)</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>SebastianBergmann\RecursionContext</package>
+      <className>Context</className>
+      <methodName>containsObject</methodName>
+      <methodSignature>containsObject($value)</methodSignature>
+      <fullMethod>containsObject($value)</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
   </methods>

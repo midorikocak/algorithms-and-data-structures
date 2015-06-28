@@ -311,14 +311,6 @@
      public function isEmpty();
 -   
  }
---- src/DataStructureIterator.php
-+++ PHP_CodeSniffer
-@@ -10,5 +10,4 @@
-     public function rewind();
-     
-     public function key();
--
- }
 --- src/DoubleLinkedList.php
 +++ PHP_CodeSniffer
 @@ -3,14 +3,14 @@
@@ -354,8 +346,8 @@
              $nodeToDelete = $this->top;
              $value = $nodeToDelete->get();
              $this->top($nodeToDelete->prev());
--            $this->top->next(NULL);
-+            $this->top->next(null);
+-            $this->top->next = NULL;
++            $this->top->next = null;
          
              unset($nodeToDelete);
              
@@ -414,7 +406,42 @@
                  $prev = $this->current->prev();
                  $prev->next($newNode);
                  $this->current->prev($newNode);
-@@ -100,12 +103,13 @@
+@@ -97,24 +100,25 @@
+         return false;
+     }
+     
+-    public function offsetUnset(  $offset ){
++    public function offsetUnset($offset)
++    {
+         $counter = 0;
+         $current = $this->bottom;
+-        while($current){
+-            if($counter == $offset){
++        while ($current) {
++            if ($counter == $offset) {
+                 $next = $current->next();
+                 $prev = $current->prev();
+             
+-                if($this->count()==1){
+-                    $this->top = NULL;
+-                    $this->bottom = NULL;
+-                }elseif($counter == $this->count()){
++                if ($this->count()==1) {
++                    $this->top = null;
++                    $this->bottom = null;
++                } elseif ($counter == $this->count()) {
+                     $this->top = $prev;
+-                }else{
++                } else {
+                     $prev->next($next);
+                     $next->prev($prev);
+                 }
+-                $current = NULL;
++                $current = null;
+                 return true;
+             }
+             $counter++;
+@@ -126,17 +130,18 @@
      /**
      * Delete from beginning. Reverse of pop();
      */
@@ -426,9 +453,17 @@
              $nodeToDelete = $this->bottom;
              $value = $nodeToDelete->get();
              $newBottom = $nodeToDelete->next();
--            $newBottom->prev(NULL);
-+            $newBottom->prev(null);
-             $this->bottom($newBottom);
+-            if($newBottom!=NULL){
+-                $newBottom->prev = NULL;
++            if ($newBottom!=null) {
++                $newBottom->prev = null;
+             }
+             $this->bottom = $newBottom;
+-            if($this->isEmpty()){
+-                $this->top = NULL;
++            if ($this->isEmpty()) {
++                $this->top = null;
+             }
              return $value;
          }
 --- src/DoubleLinkedListNode.php
@@ -473,19 +508,25 @@
      }
 --- src/LinkedList.php
 +++ PHP_CodeSniffer
-@@ -1,5 +1,6 @@
+@@ -1,8 +1,9 @@
  <?php
  namespace Mtkocak\DataStructures;
 +
  use Exception;
  
- abstract class LinkedList implements DataStructure, Listable, DataStructureIterator
-@@ -20,17 +21,17 @@
-      */
-     protected $current;
+-abstract class LinkedList implements DataStructure, Listable, \Iterator , \ArrayAccess , \Countable
++abstract class LinkedList implements DataStructure, Listable, \Iterator, \ArrayAccess, \Countable
+ {
  
--    protected $count = NULL;
-+    protected $count = null;
+     /**
+@@ -20,20 +21,20 @@
+     */
+     public $current;
+ 
+-    public $count = NULL;
++    public $count = null;
+     
+     public $key;
  
      public function __construct()
      {
@@ -494,6 +535,7 @@
 +        $this->top = null;
 +        $this->bottom = null;
          $this->current = $this->bottom;
+         $this->key = 0;
          $this->count = $this->count();
      }
  
@@ -502,16 +544,74 @@
      {
          if (isset($node)) {
              $this->top = $node;
-@@ -38,7 +39,7 @@
+@@ -41,16 +42,18 @@
          return $this->top->get();
      }
+     
+-    public function valid(){
++    public function valid()
++    {
+         return $this->offsetExists($this->key);
+     }
+     
+     
+-    public function offsetExists(  $offset ){
++    public function offsetExists($offset)
++    {
+         $counter = 0;
+         $current = $this->bottom;
+-        while($current){
+-            if($counter == $offset){
++        while ($current) {
++            if ($counter == $offset) {
+                 return true;
+             }
+             $counter++;
+@@ -59,11 +62,12 @@
+         return false;
+     }
+     
+-    public function offsetGet(  $offset ){
++    public function offsetGet($offset)
++    {
+         $counter = 0;
+         $current = $this->bottom;
+-        while($current){
+-            if($counter == $offset){
++        while ($current) {
++            if ($counter == $offset) {
+                 return $current->get();
+             }
+             $counter++;
+@@ -71,11 +75,12 @@
+         }
+         throw new \OutOfBoundsException();
+     }
+-    public function offsetSet(  $offset ,  $value ){
++    public function offsetSet($offset, $value)
++    {
+         $counter = 0;
+         $current = $this->bottom;
+-        while($current){
+-            if($counter == $offset){
++        while ($current) {
++            if ($counter == $offset) {
+                 $current->set($value);
+                 return true;
+             }
+@@ -84,9 +89,9 @@
+         }
+         throw new \OutOfBoundsException();
+     }
+-    abstract public function offsetUnset(  $offset );
++    abstract public function offsetUnset($offset);
  
 -    public function bottom(DataStructureNode $node = NULL)
 +    public function bottom(DataStructureNode $node = null)
      {
          if (isset($node)) {
              $this->bottom = $node;
-@@ -68,7 +69,7 @@
+@@ -119,7 +124,7 @@
  
      public function count()
      {
@@ -520,7 +620,7 @@
              $this->rewind();
              $count = 0;
              while ($this->current) {
-@@ -81,10 +82,10 @@
+@@ -132,10 +137,10 @@
          }
      }
  
@@ -533,7 +633,7 @@
              $node = $this->bottom;
          }
          if (! $this->isEmpty()) {
-@@ -130,7 +131,7 @@
+@@ -174,7 +179,7 @@
  
      public function isEmpty()
      {
@@ -734,7 +834,17 @@
                  $nodeToInsertBefore = $this->current->next();
                  $this->current->next($newNode);
                  $newNode->next($nodeToInsertBefore);
-@@ -108,8 +110,9 @@
+@@ -105,7 +107,8 @@
+         return false;
+     }
+     
+-    public function offsetUnset(  $offset ){
++    public function offsetUnset($offset)
++    {
+         // $counter = 0;
+         // $current = $this->bottom;
+         // while($current){
+@@ -134,8 +137,9 @@
      /**
      * Delete from beginning. Reverse of pop();
      */
@@ -772,6 +882,364 @@
          }
          return $this->next;
      }
+--- src/Sortable.php
++++ PHP_CodeSniffer
+@@ -6,31 +6,33 @@
+ {
+     private $dataStructure;
+     
+-    public function __construct(DataStructure $dataStructure){
++    public function __construct(DataStructure $dataStructure)
++    {
+         $this->dataStructure = $dataStructure;
+     }
+     
+     /**
+     * If there is not a length property
+     */
+-    public function count(){
+-        if(!method_exists($this->dataStructure,'count')){
++    public function count()
++    {
++        if (!method_exists($this->dataStructure, 'count')) {
+             $count = 0;
+             $this->dataStructure->rewind();
+-            if(!$this->dataStructure->isEmpty()){
+-                while($this->dataStructure->current()){
++            if (!$this->dataStructure->isEmpty()) {
++                while ($this->dataStructure->current()) {
+                     $count++;
+                     $this->dataStructure->next();
+                 }
+             }
+             return $count;
+-        }
+-        else{
++        } else {
+             return $this->dataStructure->count();
+         }
+     }
+     
+-    public function reverse(){
++    public function reverse()
++    {
+         // all next should be prev
+         // all prev should be next
+         // top should be bottom
+@@ -40,41 +42,41 @@
+     /**
+     * If there is not a pointer to show last element
+     */
+-    public function findLastElement(){
+-        if(!method_exists($this->dataStructure,'top')){
+-            if(!$this->dataStructure->isEmpty()){
++    public function findLastElement()
++    {
++        if (!method_exists($this->dataStructure, 'top')) {
++            if (!$this->dataStructure->isEmpty()) {
+                 $this->dataStructure->rewind();
+-                while($this->dataStructure->current()){
+-                    if($this->dataStructure->current()->next()==NULL)
+-                    {
++                while ($this->dataStructure->current()) {
++                    if ($this->dataStructure->current()->next()==null) {
+                         return $this->dataStructure->current()->get();
+                     }
+                     $this->dataStructure->next();
+                 }
+-            }
+-            else{
++            } else {
+                 return $dataStructure->bottom();
+             }
+-        }
+-        else{
++        } else {
+             return $dataStructure->top();
+         }
+         return false;
+     }
+     
+-    public function isSorted(){
++    public function isSorted()
++    {
+         
+     }
+     
+-    public function isUnique(){
++    public function isUnique()
++    {
+         $values = [];
+-        if(!$this->dataStructure->isEmpty()){
++        if (!$this->dataStructure->isEmpty()) {
+             $this->dataStructure->rewind();
+-            while($this->dataStructure->current()){
++            while ($this->dataStructure->current()) {
+                 $value = $this->dataStructure->current()->get();
+-                if(!isset($value[$value])){
++                if (!isset($value[$value])) {
+                     $values[$value] = 1;
+-                }else{
++                } else {
+                     return false;
+                 }
+                 $this->dataStructure->next();
+@@ -82,15 +84,16 @@
+         }
+     }
+     
+-    public function bucketSort(){
++    public function bucketSort()
++    {
+         $count = $this->dataStructure->count();
+         $bucket = [];
+-        for($i=1;$i<=$count;$i++){
++        for ($i=1; $i<=$count; $i++) {
+             $bucket[$i] = 0;
+         }
+ 
+         $current = $this->dataStructure->bottom;
+-        while($current){
++        while ($current) {
+             $bucket[$current->get()]++;
+             $current=$current->next();
+         }
+@@ -104,7 +107,7 @@
+     
+     public function quickSort(DataStructure $dataStructure)
+     {
+-        if($dataStructure->isEmpty()){
++        if ($dataStructure->isEmpty()) {
+             return $dataStructure;
+         }
+         $listToReturn = new DoubleLinkedList();
+@@ -117,10 +120,10 @@
+         
+         $listToReturn->add($pivot);
+         
+-        while($current){
+-            if($current->get()<$pivot){
++        while ($current) {
++            if ($current->get()<$pivot) {
+                 $smallerList->add($current->get());
+-            }elseif($current->get()>$pivot){
++            } elseif ($current->get()>$pivot) {
+                 $biggerList->add($current->get());
+             }
+             $current = $current->next();
+@@ -130,17 +133,18 @@
+ 
+         $sortedSecond = $this->quickSort($biggerList);
+ 
+-        $listToReturn = $this->append($sortedFirst,$listToReturn);
+-        $listToReturn = $this->append($listToReturn,$sortedSecond);
++        $listToReturn = $this->append($sortedFirst, $listToReturn);
++        $listToReturn = $this->append($listToReturn, $sortedSecond);
+         
+         return $listToReturn;
+     }
+     
+-    private function split(DataStructure $dataStructure){
++    private function split(DataStructure $dataStructure)
++    {
+         
+-        if($dataStructure->count()==1){
++        if ($dataStructure->count()==1) {
+             $arrayToReturn['firstPart'] = $dataStructure;
+-            $arrayToReturn['secondPart'] = NULL;
++            $arrayToReturn['secondPart'] = null;
+         }
+         
+         $arrayToReturn = [];
+@@ -155,12 +159,12 @@
+         
+         $counter = 1;
+         
+-        while($current){
++        while ($current) {
+             $value = $current->get();
+             
+-            if($counter<=$middle){
++            if ($counter<=$middle) {
+                 $arrayToReturn['firstPart']->add($value);
+-            }else{
++            } else {
+                 $arrayToReturn['secondPart']->add($value);
+             }
+             
+@@ -171,13 +175,14 @@
+         return $arrayToReturn;
+     }
+     
+-    private function append(DataStructure $first, DataStructure $second){
++    private function append(DataStructure $first, DataStructure $second)
++    {
+         $listToReturn = new DoubleLinkedList();
+-        if($first->isEmpty()){
++        if ($first->isEmpty()) {
+             $listToReturn = $second;
+-        }elseif($second->isEmpty()){
++        } elseif ($second->isEmpty()) {
+             $listToReturn = $first;
+-        }else{
++        } else {
+             $second->bottom->prev($first->top);
+             $first->top->next($second->bottom);
+             $listToReturn->bottom = $first->bottom;
+@@ -189,30 +194,31 @@
+     /**
+     * Merges two sorted linked lists non recursively
+     */
+-    private function merge(DataStructure $first, DataStructure $second){
++    private function merge(DataStructure $first, DataStructure $second)
++    {
+         
+         $listToReturn = new DoubleLinkedList();
+         
+-        if($first==NULL){
++        if ($first==null) {
+             $listToReturn = $second;
+-        }elseif($second==NULL){
++        } elseif ($second==null) {
+             $listToReturn = $first;
+-        }else{
+-            while(!$first->isEmpty() && !$second->isEmpty()){
++        } else {
++            while (!$first->isEmpty() && !$second->isEmpty()) {
+                 //echo $first->bottom()." and ".$second->bottom()."\n";
+-                if($first->bottom()<$second->bottom()){
++                if ($first->bottom()<$second->bottom()) {
+                     $listToReturn->push($first->bottom());
+                     $first->delete();
+-                }else{
++                } else {
+                     $listToReturn->push($second->bottom());
+                     $second->delete();
+                 }
+             }
+-            while(!$first->isEmpty()){
++            while (!$first->isEmpty()) {
+                 $listToReturn->push($first->bottom());
+                 $first->delete();
+             }
+-            while(!$second->isEmpty()){
++            while (!$second->isEmpty()) {
+                 $listToReturn->push($second->bottom());
+                 $second->delete();
+             }
+@@ -225,22 +231,22 @@
+     */
+     public function mergeSort(DataStructure $dataStructure)
+     {
+-        if($dataStructure->count()==1){
++        if ($dataStructure->count()==1) {
+             return $dataStructure;
+         }
+         $array = $this->split($dataStructure);
+         $first = $this->mergeSort($array['firstPart']);
+         $second = $this->mergeSort($array['secondPart']);
+-        return $this->merge($first,$second);
++        return $this->merge($first, $second);
+     }
+     
+     public function bubbleSort()
+     {
+         $current = $this->dataStructure->bottom;
+-        while($current){
++        while ($current) {
+             $selectedToCompare = $current->next();
+-            while($selectedToCompare){
+-                if($current->get()>$selectedToCompare->get()){
++            while ($selectedToCompare) {
++                if ($current->get()>$selectedToCompare->get()) {
+                     $temp = $selectedToCompare->get();
+                     //echo $current->get()." and ".$temp." swapped\n";
+                     $selectedToCompare->set($current->get());
+@@ -255,11 +261,11 @@
+     public function selectionSort()
+     {
+         $current = $this->dataStructure->bottom;
+-        while($current){
++        while ($current) {
+             $minElement = $current;
+             $selectedToCompare = $current->next();
+-            while($selectedToCompare){
+-                if((int)$minElement->get()>(int)$selectedToCompare->get()){
++            while ($selectedToCompare) {
++                if ((int)$minElement->get()>(int)$selectedToCompare->get()) {
+                     $minElement = $selectedToCompare;
+                 }
+                 $selectedToCompare = $selectedToCompare->next();
+@@ -271,15 +277,16 @@
+         }
+     }
+     
+-    public function shellSort(){
++    public function shellSort()
++    {
+         $gaps = [701, 301, 132, 57, 23, 10, 4, 1];
+         $array = $this->dataStructure;
+-        foreach ($gaps as $gap){
+-            if($gap<count($array)){
+-                for($k=0;$k<$gap;$k++){
+-                    for($i=1+$k;$i<count($array);$i=$i+$gap){
+-                        for($j=$i;$j>=1;$j=$j-$gap){
+-                            if($array[$j]<$array[$j-1]){
++        foreach ($gaps as $gap) {
++            if ($gap<count($array)) {
++                for ($k=0; $k<$gap; $k++) {
++                    for ($i=1+$k; $i<count($array); $i=$i+$gap) {
++                        for ($j=$i; $j>=1; $j=$j-$gap) {
++                            if ($array[$j]<$array[$j-1]) {
+                                 $tmp = $array[$j];
+                                 $array[$j] = $array[$j-1];
+                                 $array[$j-1] = $tmp;
+@@ -291,11 +298,12 @@
+         }
+     }
+     
+-    public function insertionSortArray(){
++    public function insertionSortArray()
++    {
+         $array = $this->dataStructure;
+-        for($i=1;$i<count($array);$i++){
+-            for($j=$i;$j>=1;$j--){
+-                if($array[$j]<$array[$j-1]){
++        for ($i=1; $i<count($array); $i++) {
++            for ($j=$i; $j>=1; $j--) {
++                if ($array[$j]<$array[$j-1]) {
+                     $tmp = $array[$j];
+                     $array[$j] = $array[$j-1];
+                     $array[$j-1] = $tmp;
+@@ -304,13 +312,14 @@
+         }
+     }
+     
+-    public function insertionSort(){
++    public function insertionSort()
++    {
+         $current = $this->dataStructure->bottom;
+-        while($current){
++        while ($current) {
+             //echo $current->get()."\n";
+             $selectedToCompare = $current;
+-            while($selectedToCompare){
+-                if($selectedToCompare->prev()!=NULL && $selectedToCompare->get()<$selectedToCompare->prev()->get()){
++            while ($selectedToCompare) {
++                if ($selectedToCompare->prev()!=null && $selectedToCompare->get()<$selectedToCompare->prev()->get()) {
+                     $tmp = $selectedToCompare->get();
+                     $selectedToCompare->set($selectedToCompare->prev()->get());
+                     $selectedToCompare->prev()->set($tmp);
+@@ -322,7 +331,8 @@
+         }
+     }
+     
+-    public function heapSort(){
++    public function heapSort()
++    {
+     
+     }
+ }
 --- src/Stack.php
 +++ PHP_CodeSniffer
 @@ -8,26 +8,27 @@
@@ -856,4 +1324,87 @@
              $this->binarySearchTree->add($value);
          }
          // Sorts!
+--- tests/SortableTest.php
++++ PHP_CodeSniffer
+@@ -30,7 +30,7 @@
+         ];
+         
+         $this->sorted = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+-        foreach($this->values as $value){
++        foreach ($this->values as $value) {
+             $this->doubleLinkedList->push($value);
+         }
+         $this->sortable = new Sortable($this->doubleLinkedList);
+@@ -39,7 +39,7 @@
+     public function testBucketSort()
+     {
+         $start = microtime();
+-        $this->assertEquals($this->sortable->bucketSort(),$this->sorted);
++        $this->assertEquals($this->sortable->bucketSort(), $this->sorted);
+         $end = microtime();
+         echo "\n"."Bucket Sort: ".($end - $start);
+     }
+@@ -49,7 +49,7 @@
+         $start = microtime();
+         $this->sortable->bubbleSort();
+         // print_r($this->doubleLinkedList->listAll());
+-        $this->assertEquals($this->doubleLinkedList->listAll(),$this->sorted);
++        $this->assertEquals($this->doubleLinkedList->listAll(), $this->sorted);
+         $end = microtime();
+         echo "\n"."Bubble Sort: ".($end - $start);
+     }
+@@ -58,7 +58,7 @@
+         $start = microtime();
+         $this->sortable->selectionSort();
+         //print_r($this->doubleLinkedList->listAll());
+-        $this->assertEquals($this->doubleLinkedList->listAll(),$this->sorted);
++        $this->assertEquals($this->doubleLinkedList->listAll(), $this->sorted);
+         $end = microtime();
+         echo "\n"."Selection Sort: ".($end - $start);
+     }
+@@ -67,7 +67,7 @@
+     {
+         $start = microtime();
+         $this->sortable->shellSort();
+-        $this->assertEquals($this->doubleLinkedList->listAll(),$this->sorted);
++        $this->assertEquals($this->doubleLinkedList->listAll(), $this->sorted);
+         $end = microtime();
+         echo "\n"."Shell Sort: ".($end - $start);
+     }
+@@ -77,7 +77,7 @@
+         $start = microtime();
+         $this->sortable->insertionSort();
+         //print_r($this->doubleLinkedList->listAll());
+-        $this->assertEquals($this->doubleLinkedList->listAll(),$this->sorted);
++        $this->assertEquals($this->doubleLinkedList->listAll(), $this->sorted);
+         $end = microtime();
+         echo "\n"."Insertion Sort: ".($end - $start);
+     }
+@@ -87,7 +87,7 @@
+         $start = microtime();
+         $this->sortable->insertionSortArray();
+         //print_r($this->doubleLinkedList->listAll());
+-        $this->assertEquals($this->doubleLinkedList->listAll(),$this->sorted);
++        $this->assertEquals($this->doubleLinkedList->listAll(), $this->sorted);
+         $end = microtime();
+         echo "\n"."Insertion Sort with Array: ".($end - $start);
+     }
+@@ -96,7 +96,7 @@
+     {
+         $start = microtime();
+         $sorted = $this->sortable->mergeSort($this->doubleLinkedList);
+-        $this->assertEquals($sorted->listAll(),$this->sorted);
++        $this->assertEquals($sorted->listAll(), $this->sorted);
+         $end = microtime();
+         echo "\n"."Merge Sort: ".($end - $start);
+     }
+@@ -105,7 +105,7 @@
+         $start = microtime();
+         $sorted = $this->sortable->quickSort($this->doubleLinkedList);
+         //print_r($sorted->listAll());
+-        $this->assertEquals($sorted->listAll(),$this->sorted);
++        $this->assertEquals($sorted->listAll(), $this->sorted);
+         $end = microtime();
+         echo "\n"."Quick Sort: ".($end - $start);
+     }
 

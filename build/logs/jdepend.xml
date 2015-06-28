@@ -4,13 +4,13 @@
     <Package name="Mtkocak\DataStructures">
       <Stats>
         <TotalClasses>19</TotalClasses>
-        <ConcreteClasses>9</ConcreteClasses>
-        <AbstractClasses>10</AbstractClasses>
+        <ConcreteClasses>10</ConcreteClasses>
+        <AbstractClasses>9</AbstractClasses>
         <Ca>0</Ca>
         <Ce>1</Ce>
-        <A>0.52631578947368</A>
+        <A>0.47368421052632</A>
         <I>1</I>
-        <D>0.52631578947368</D>
+        <D>0.47368421052632</D>
       </Stats>
       <ConcreteClasses>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/BinarySearchTree.php">BinarySearchTree</Class>
@@ -21,12 +21,12 @@
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Queue.php">Queue</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/SingleLinkedList.php">SingleLinkedList</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/SingleLinkedListNode.php">SingleLinkedListNode</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Sortable.php">Sortable</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Stack.php">Stack</Class>
       </ConcreteClasses>
       <AbstractClasses>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/BinaryTree.php">BinaryTree</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DataStructure.php">DataStructure</Class>
-        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DataStructureIterator.php">DataStructureIterator</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DataStructureNode.php">DataStructureNode</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/LinkedList.php">LinkedList</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Listable.php">Listable</Class>

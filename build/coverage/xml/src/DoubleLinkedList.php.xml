@@ -2,73 +2,162 @@
 <phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
   <file name="DoubleLinkedList.php">
     <totals>
-      <lines total="114" comments="9" code="105" executable="68" executed="19" percent="27.94%"/>
-      <methods count="6" tested="1" percent="16.67%"/>
+      <lines total="145" comments="9" code="136" executable="93" executed="43" percent="46.24%"/>
+      <methods count="7" tested="2" percent="28.57%"/>
       <functions count="0" tested="0" percent=""/>
       <classes count="1" tested="0" percent="0.00%"/>
       <traits count="0" tested="0" percent=""/>
     </totals>
-    <class name="DoubleLinkedList" start="3" executable="68" executed="19" crap="87.34">
+    <class name="DoubleLinkedList" start="3" executable="93" executed="43" crap="89.53">
       <package full="" name="" sub="" category=""/>
       <namespace name="Mtkocak\DataStructures"/>
       <method name="push" signature="push($value)" start="6" end="20" crap="2" executable="11" executed="11" coverage="100"/>
       <method name="pop" signature="pop()" start="25" end="39" crap="2.01" executable="9" executed="8" coverage="88.888888888889"/>
-      <method name="add" signature="add($value)" start="44" end="62" crap="6" executable="12" executed="0" coverage="0"/>
+      <method name="add" signature="add($value)" start="44" end="62" crap="2" executable="12" executed="12" coverage="100"/>
       <method name="insertAfter" signature="insertAfter($key, $value)" start="64" end="80" crap="12" executable="14" executed="0" coverage="0"/>
       <method name="insertBefore" signature="insertBefore($key, $value)" start="82" end="98" crap="12" executable="14" executed="0" coverage="0"/>
-      <method name="delete" signature="delete()" start="103" end="113" crap="6" executable="8" executed="0" coverage="0"/>
+      <method name="offsetUnset" signature="offsetUnset(  $offset )" start="100" end="124" crap="30" executable="20" executed="0" coverage="0"/>
+      <method name="delete" signature="delete()" start="129" end="144" crap="4.01" executable="13" executed="12" coverage="92.307692307692"/>
     </class>
     <coverage>
       <line nr="7">
         <covered by="DoubleLinkedListTest::testAddData"/>
         <covered by="DoubleLinkedListTest::testAddAnotherData"/>
         <covered by="DoubleLinkedListTest::testListAll"/>
+        <covered by="SortableTest::testBucketSort"/>
+        <covered by="SortableTest::testBubbleSort"/>
+        <covered by="SortableTest::testSelectionSort"/>
+        <covered by="SortableTest::testShellSort"/>
+        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="9">
         <covered by="DoubleLinkedListTest::testAddData"/>
         <covered by="DoubleLinkedListTest::testAddAnotherData"/>
         <covered by="DoubleLinkedListTest::testListAll"/>
+        <covered by="SortableTest::testBucketSort"/>
+        <covered by="SortableTest::testBubbleSort"/>
+        <covered by="SortableTest::testSelectionSort"/>
+        <covered by="SortableTest::testShellSort"/>
+        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="10">
         <covered by="DoubleLinkedListTest::testAddData"/>
         <covered by="DoubleLinkedListTest::testAddAnotherData"/>
         <covered by="DoubleLinkedListTest::testListAll"/>
+        <covered by="SortableTest::testBucketSort"/>
+        <covered by="SortableTest::testBubbleSort"/>
+        <covered by="SortableTest::testSelectionSort"/>
+        <covered by="SortableTest::testShellSort"/>
+        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="11">
         <covered by="DoubleLinkedListTest::testAddData"/>
         <covered by="DoubleLinkedListTest::testAddAnotherData"/>
         <covered by="DoubleLinkedListTest::testListAll"/>
+        <covered by="SortableTest::testBucketSort"/>
+        <covered by="SortableTest::testBubbleSort"/>
+        <covered by="SortableTest::testSelectionSort"/>
+        <covered by="SortableTest::testShellSort"/>
+        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="12">
         <covered by="DoubleLinkedListTest::testAddData"/>
         <covered by="DoubleLinkedListTest::testAddAnotherData"/>
         <covered by="DoubleLinkedListTest::testListAll"/>
+        <covered by="SortableTest::testBucketSort"/>
+        <covered by="SortableTest::testBubbleSort"/>
+        <covered by="SortableTest::testSelectionSort"/>
+        <covered by="SortableTest::testShellSort"/>
+        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="14">
         <covered by="DoubleLinkedListTest::testAddAnotherData"/>
         <covered by="DoubleLinkedListTest::testListAll"/>
+        <covered by="SortableTest::testBucketSort"/>
+        <covered by="SortableTest::testBubbleSort"/>
+        <covered by="SortableTest::testSelectionSort"/>
+        <covered by="SortableTest::testShellSort"/>
+        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="15">
         <covered by="DoubleLinkedListTest::testAddAnotherData"/>
         <covered by="DoubleLinkedListTest::testListAll"/>
+        <covered by="SortableTest::testBucketSort"/>
+        <covered by="SortableTest::testBubbleSort"/>
+        <covered by="SortableTest::testSelectionSort"/>
+        <covered by="SortableTest::testShellSort"/>
+        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="16">
         <covered by="DoubleLinkedListTest::testAddAnotherData"/>
         <covered by="DoubleLinkedListTest::testListAll"/>
+        <covered by="SortableTest::testBucketSort"/>
+        <covered by="SortableTest::testBubbleSort"/>
+        <covered by="SortableTest::testSelectionSort"/>
+        <covered by="SortableTest::testShellSort"/>
+        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="17">
         <covered by="DoubleLinkedListTest::testAddAnotherData"/>
         <covered by="DoubleLinkedListTest::testListAll"/>
+        <covered by="SortableTest::testBucketSort"/>
+        <covered by="SortableTest::testBubbleSort"/>
+        <covered by="SortableTest::testSelectionSort"/>
+        <covered by="SortableTest::testShellSort"/>
+        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="19">
         <covered by="DoubleLinkedListTest::testAddData"/>
         <covered by="DoubleLinkedListTest::testAddAnotherData"/>
         <covered by="DoubleLinkedListTest::testListAll"/>
+        <covered by="SortableTest::testBucketSort"/>
+        <covered by="SortableTest::testBubbleSort"/>
+        <covered by="SortableTest::testSelectionSort"/>
+        <covered by="SortableTest::testShellSort"/>
+        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="20">
         <covered by="DoubleLinkedListTest::testAddData"/>
         <covered by="DoubleLinkedListTest::testAddAnotherData"/>
         <covered by="DoubleLinkedListTest::testListAll"/>
+        <covered by="SortableTest::testBucketSort"/>
+        <covered by="SortableTest::testBubbleSort"/>
+        <covered by="SortableTest::testSelectionSort"/>
+        <covered by="SortableTest::testShellSort"/>
+        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="26">
         <covered by="DoubleLinkedListTest::testAddData"/>
@@ -101,6 +190,90 @@
       <line nr="36">
         <covered by="DoubleLinkedListTest::testAddData"/>
         <covered by="DoubleLinkedListTest::testAddAnotherData"/>
+      </line>
+      <line nr="45">
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
+      </line>
+      <line nr="47">
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
+      </line>
+      <line nr="48">
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
+      </line>
+      <line nr="49">
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
+      </line>
+      <line nr="50">
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
+      </line>
+      <line nr="51">
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
+      </line>
+      <line nr="54">
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
+      </line>
+      <line nr="55">
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
+      </line>
+      <line nr="56">
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
+      </line>
+      <line nr="57">
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
+      </line>
+      <line nr="58">
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
+      </line>
+      <line nr="59">
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
+      </line>
+      <line nr="130">
+        <covered by="SortableTest::testMergeSort"/>
+      </line>
+      <line nr="131">
+        <covered by="SortableTest::testMergeSort"/>
+      </line>
+      <line nr="132">
+        <covered by="SortableTest::testMergeSort"/>
+      </line>
+      <line nr="133">
+        <covered by="SortableTest::testMergeSort"/>
+      </line>
+      <line nr="134">
+        <covered by="SortableTest::testMergeSort"/>
+      </line>
+      <line nr="135">
+        <covered by="SortableTest::testMergeSort"/>
+      </line>
+      <line nr="136">
+        <covered by="SortableTest::testMergeSort"/>
+      </line>
+      <line nr="137">
+        <covered by="SortableTest::testMergeSort"/>
+      </line>
+      <line nr="138">
+        <covered by="SortableTest::testMergeSort"/>
+      </line>
+      <line nr="139">
+        <covered by="SortableTest::testMergeSort"/>
+      </line>
+      <line nr="140">
+        <covered by="SortableTest::testMergeSort"/>
+      </line>
+      <line nr="141">
+        <covered by="SortableTest::testMergeSort"/>
       </line>
     </coverage>
   </file>

@@ -2,31 +2,34 @@
 namespace Mtkocak\DataStructures;
 use Exception;
 
-abstract class LinkedList implements DataStructure, Listable, DataStructureIterator
+abstract class LinkedList implements DataStructure, Listable, \Iterator , \ArrayAccess , \Countable
 {
 
     /**
-     * Last Element
-     */
-    protected $top;
+    * Last Element
+    */
+    public $top;
 
     /**
-     * First Element
-     */
-    protected $bottom;
+    * First Element
+    */
+    public $bottom;
 
     /**
-     * Pointer Element
-     */
-    protected $current;
+    * Pointer Element
+    */
+    public $current;
 
-    protected $count = NULL;
+    public $count = NULL;
+    
+    public $key;
 
     public function __construct()
     {
         $this->top = NULL;
         $this->bottom = NULL;
         $this->current = $this->bottom;
+        $this->key = 0;
         $this->count = $this->count();
     }
 
@@ -37,6 +40,51 @@ abstract class LinkedList implements DataStructure, Listable, DataStructureItera
         }
         return $this->top->get();
     }
+    
+    public function valid(){
+        return $this->offsetExists($this->key);
+    }
+    
+    
+    public function offsetExists(  $offset ){
+        $counter = 0;
+        $current = $this->bottom;
+        while($current){
+            if($counter == $offset){
+                return true;
+            }
+            $counter++;
+            $current = $current->next();
+        }
+        return false;
+    }
+    
+    public function offsetGet(  $offset ){
+        $counter = 0;
+        $current = $this->bottom;
+        while($current){
+            if($counter == $offset){
+                return $current->get();
+            }
+            $counter++;
+            $current = $current->next();
+        }
+        throw new \OutOfBoundsException();
+    }
+    public function offsetSet(  $offset ,  $value ){
+        $counter = 0;
+        $current = $this->bottom;
+        while($current){
+            if($counter == $offset){
+                $current->set($value);
+                return true;
+            }
+            $counter++;
+            $current = $current->next();
+        }
+        throw new \OutOfBoundsException();
+    }
+    abstract public function offsetUnset(  $offset );
 
     public function bottom(DataStructureNode $node = NULL)
     {
@@ -53,16 +101,19 @@ abstract class LinkedList implements DataStructure, Listable, DataStructureItera
 
     public function next()
     {
+        $this->key++;
         $this->current = $this->current->next();
     }
 
     public function prev()
     {
+        $this->key--;
         $this->current = $this->current->prev();
     }
 
     public function rewind()
     {
+        $this->key = 0;
         $this->current = $this->bottom;
     }
 
@@ -100,22 +151,15 @@ abstract class LinkedList implements DataStructure, Listable, DataStructureItera
 
     public function key()
     {
-        $node = $this->current;
-        $key = 0;
-        $pointer = $this->bottom;
-        while ($pointer != $node) {
-            $key ++;
-            $pointer = $pointer->next();
-        }
-        return $key;
+        return $this->key;
     }
 
     abstract public function pop();
 
     /**
-     * Add to beginning.
-     * Reverse of push();
-     */
+    * Add to beginning.
+    * Reverse of push();
+    */
     abstract public function add($value);
 
     abstract public function insertAfter($key, $value);
@@ -123,9 +167,9 @@ abstract class LinkedList implements DataStructure, Listable, DataStructureItera
     abstract public function insertBefore($key, $value);
 
     /**
-     * Delete from beginning.
-     * Reverse of pop();
-     */
+    * Delete from beginning.
+    * Reverse of pop();
+    */
     abstract public function delete();
 
     public function isEmpty()

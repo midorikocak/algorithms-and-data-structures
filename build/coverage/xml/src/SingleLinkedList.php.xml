@@ -2,13 +2,13 @@
 <phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
   <file name="SingleLinkedList.php">
     <totals>
-      <lines total="121" comments="9" code="112" executable="75" executed="30" percent="40.00%"/>
-      <methods count="6" tested="1" percent="16.67%"/>
+      <lines total="147" comments="55" code="92" executable="76" executed="30" percent="39.47%"/>
+      <methods count="7" tested="1" percent="14.29%"/>
       <functions count="0" tested="0" percent=""/>
       <classes count="1" tested="0" percent="0.00%"/>
       <traits count="0" tested="0" percent=""/>
     </totals>
-    <class name="SingleLinkedList" start="3" executable="75" executed="30" crap="87.98">
+    <class name="SingleLinkedList" start="3" executable="76" executed="30" crap="99.05">
       <package full="" name="" sub="" category=""/>
       <namespace name="Mtkocak\DataStructures"/>
       <method name="push" signature="push($value)" start="6" end="18" crap="2" executable="9" executed="9" coverage="100"/>
@@ -16,7 +16,8 @@
       <method name="add" signature="add($value)" start="55" end="72" crap="6" executable="11" executed="0" coverage="0"/>
       <method name="insertAfter" signature="insertAfter($key, $value)" start="74" end="89" crap="12" executable="13" executed="0" coverage="0"/>
       <method name="insertBefore" signature="insertBefore($key, $value)" start="91" end="106" crap="20" executable="13" executed="0" coverage="0"/>
-      <method name="delete" signature="delete()" start="111" end="120" crap="6" executable="7" executed="0" coverage="0"/>
+      <method name="offsetUnset" signature="offsetUnset(  $offset )" start="108" end="132" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="delete" signature="delete()" start="137" end="146" crap="6" executable="7" executed="0" coverage="0"/>
     </class>
     <coverage>
       <line nr="7">

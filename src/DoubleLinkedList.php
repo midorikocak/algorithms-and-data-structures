@@ -29,7 +29,7 @@ class DoubleLinkedList extends LinkedList
             $nodeToDelete = $this->top;
             $value = $nodeToDelete->get();
             $this->top($nodeToDelete->prev());
-            $this->top->next(NULL);
+            $this->top->next = NULL;
         
             unset($nodeToDelete);
             
@@ -97,6 +97,32 @@ class DoubleLinkedList extends LinkedList
         return false;
     }
     
+    public function offsetUnset(  $offset ){
+        $counter = 0;
+        $current = $this->bottom;
+        while($current){
+            if($counter == $offset){
+                $next = $current->next();
+                $prev = $current->prev();
+            
+                if($this->count()==1){
+                    $this->top = NULL;
+                    $this->bottom = NULL;
+                }elseif($counter == $this->count()){
+                    $this->top = $prev;
+                }else{
+                    $prev->next($next);
+                    $next->prev($prev);
+                }
+                $current = NULL;
+                return true;
+            }
+            $counter++;
+            $current = $current->next();
+        }
+        throw new \OutOfBoundsException();
+    }
+    
     /**
     * Delete from beginning. Reverse of pop();
     */
@@ -105,8 +131,13 @@ class DoubleLinkedList extends LinkedList
             $nodeToDelete = $this->bottom;
             $value = $nodeToDelete->get();
             $newBottom = $nodeToDelete->next();
-            $newBottom->prev(NULL);
-            $this->bottom($newBottom);
+            if($newBottom!=NULL){
+                $newBottom->prev = NULL;
+            }
+            $this->bottom = $newBottom;
+            if($this->isEmpty()){
+                $this->top = NULL;
+            }
             return $value;
         }
         return false;
