@@ -54,10 +54,10 @@ class Sortable
                     $this->dataStructure->next();
                 }
             } else {
-                return $dataStructure->bottom();
+                return $this->dataStructure->bottom();
             }
         } else {
-            return $dataStructure->top();
+            return $this->dataStructure->top();
         }
         return false;
     }
