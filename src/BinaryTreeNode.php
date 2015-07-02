@@ -19,23 +19,19 @@ class BinaryTreeNode implements TreeNodeInterface
         $this->right = NULL;
     }
 
-    public function left(TreeNodeInterface $node = NULL)
+    public function left(TreeNodeInterface &$node = NULL)
     {
         if (isset($node)) {
             if ($this->left != NULL) {
                 throw new Exception("Node Not Empty");
             } else {
-                if($node==NULL){
-                    
-                    echo 'yarrak';
-                }
                 $this->left = $node;
             }
         }
         return $this->left;
     }
 
-    public function right(TreeNodeInterface $node = NULL)
+    public function right(TreeNodeInterface &$node = NULL)
     {
         if (isset($node)) {
             if ($this->right != NULL) {

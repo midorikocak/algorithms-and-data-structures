@@ -1,110 +1,109 @@
 <?php
-
 namespace Mtkocak\DataStructures;
 
 class Sortable
 {
+
     private $dataStructure;
-    
-    public function __construct(DataStructure $dataStructure){
+
+    public function __construct(DataStructure $dataStructure)
+    {
         $this->dataStructure = $dataStructure;
     }
-    
+
     /**
-    * If there is not a length property
-    */
-    public function count(){
-        if(!method_exists($this->dataStructure,'count')){
+     * If there is not a length property
+     */
+    public function count()
+    {
+        if (! method_exists($this->dataStructure, 'count')) {
             $count = 0;
             $this->dataStructure->rewind();
-            if(!$this->dataStructure->isEmpty()){
-                while($this->dataStructure->current()){
-                    $count++;
+            if (! $this->dataStructure->isEmpty()) {
+                while ($this->dataStructure->current()) {
+                    $count ++;
                     $this->dataStructure->next();
                 }
             }
             return $count;
-        }
-        else{
+        } else {
             return $this->dataStructure->count();
         }
     }
-    
-    public function reverse(){
+
+    public function reverse()
+    {
         // all next should be prev
         // all prev should be next
         // top should be bottom
         // bottom should be top
     }
-    
+
     /**
-    * If there is not a pointer to show last element
-    */
-    public function findLastElement(){
-        if(!method_exists($this->dataStructure,'top')){
-            if(!$this->dataStructure->isEmpty()){
+     * If there is not a pointer to show last element
+     */
+    public function findLastElement()
+    {
+        if (! method_exists($this->dataStructure, 'top')) {
+            if (! $this->dataStructure->isEmpty()) {
                 $this->dataStructure->rewind();
-                while($this->dataStructure->current()){
-                    if($this->dataStructure->current()->next()==NULL)
-                    {
+                while ($this->dataStructure->current()) {
+                    if ($this->dataStructure->current()->next() == NULL) {
                         return $this->dataStructure->current()->get();
                     }
                     $this->dataStructure->next();
                 }
-            }
-            else{
+            } else {
                 return $dataStructure->bottom();
             }
-        }
-        else{
+        } else {
             return $dataStructure->top();
         }
         return false;
     }
-    
-    public function isSorted(){
-        
-    }
-    
-    public function isUnique(){
+
+    public function isSorted()
+    {}
+
+    public function isUnique()
+    {
         $values = [];
-        if(!$this->dataStructure->isEmpty()){
+        if (! $this->dataStructure->isEmpty()) {
             $this->dataStructure->rewind();
-            while($this->dataStructure->current()){
+            while ($this->dataStructure->current()) {
                 $value = $this->dataStructure->current()->get();
-                if(!isset($value[$value])){
+                if (! isset($value[$value])) {
                     $values[$value] = 1;
-                }else{
+                } else {
                     return false;
                 }
                 $this->dataStructure->next();
             }
         }
     }
-    
-    public function bucketSort(){
+
+    public function bucketSort()
+    {
         $count = $this->dataStructure->count();
         $bucket = [];
-        for($i=1;$i<=$count;$i++){
+        for ($i = 1; $i <= $count; $i ++) {
             $bucket[$i] = 0;
         }
-
+        
         $current = $this->dataStructure->bottom;
-        while($current){
-            $bucket[$current->get()]++;
-            $current=$current->next();
+        while ($current) {
+            $bucket[$current->get()] ++;
+            $current = $current->next();
         }
         return array_keys($bucket);
     }
-    
-    
+
     public function quick3Sort(DataStructure $dataStructure)
-    {
-    }
-    
+    {}
+
     public function quickSort(DataStructure $dataStructure)
     {
-        if($dataStructure->isEmpty()){
+        if ($dataStructure->isEmpty()) {
             return $dataStructure;
         }
         $listToReturn = new DoubleLinkedList();
@@ -117,28 +116,28 @@ class Sortable
         
         $listToReturn->add($pivot);
         
-        while($current){
-            if($current->get()<$pivot){
+        while ($current) {
+            if ($current->get() < $pivot) {
                 $smallerList->add($current->get());
-            }elseif($current->get()>$pivot){
+            } elseif ($current->get() > $pivot) {
                 $biggerList->add($current->get());
             }
             $current = $current->next();
         }
         
         $sortedFirst = $this->quickSort($smallerList);
-
+        
         $sortedSecond = $this->quickSort($biggerList);
-
-        $listToReturn = $this->append($sortedFirst,$listToReturn);
-        $listToReturn = $this->append($listToReturn,$sortedSecond);
+        
+        $listToReturn = $this->append($sortedFirst, $listToReturn);
+        $listToReturn = $this->append($listToReturn, $sortedSecond);
         
         return $listToReturn;
     }
-    
-    private function split(DataStructure $dataStructure){
-        
-        if($dataStructure->count()==1){
+
+    private function split(DataStructure $dataStructure)
+    {
+        if ($dataStructure->count() == 1) {
             $arrayToReturn['firstPart'] = $dataStructure;
             $arrayToReturn['secondPart'] = NULL;
         }
@@ -146,7 +145,7 @@ class Sortable
         $arrayToReturn = [];
         
         $count = $dataStructure->count();
-        $middle = ceil($count/2);
+        $middle = ceil($count / 2);
         
         $arrayToReturn['firstPart'] = new DoubleLinkedList();
         $arrayToReturn['secondPart'] = new DoubleLinkedList();
@@ -155,29 +154,30 @@ class Sortable
         
         $counter = 1;
         
-        while($current){
+        while ($current) {
             $value = $current->get();
             
-            if($counter<=$middle){
+            if ($counter <= $middle) {
                 $arrayToReturn['firstPart']->add($value);
-            }else{
+            } else {
                 $arrayToReturn['secondPart']->add($value);
             }
             
-            $counter++;
+            $counter ++;
             $current = $current->next();
         }
         
         return $arrayToReturn;
     }
-    
-    private function append(DataStructure $first, DataStructure $second){
+
+    private function append(DataStructure $first, DataStructure $second)
+    {
         $listToReturn = new DoubleLinkedList();
-        if($first->isEmpty()){
+        if ($first->isEmpty()) {
             $listToReturn = $second;
-        }elseif($second->isEmpty()){
+        } elseif ($second->isEmpty()) {
             $listToReturn = $first;
-        }else{
+        } else {
             $second->bottom->prev($first->top);
             $first->top->next($second->bottom);
             $listToReturn->bottom = $first->bottom;
@@ -185,81 +185,82 @@ class Sortable
         }
         return $listToReturn;
     }
-    
+
     /**
-    * Merges two sorted linked lists non recursively
-    */
-    private function merge(DataStructure $first, DataStructure $second){
-        
+     * Merges two sorted linked lists non recursively
+     */
+    private function merge(DataStructure $first, DataStructure $second)
+    {
         $listToReturn = new DoubleLinkedList();
         
-        if($first==NULL){
+        if ($first == NULL) {
             $listToReturn = $second;
-        }elseif($second==NULL){
+        } elseif ($second == NULL) {
             $listToReturn = $first;
-        }else{
-            while(!$first->isEmpty() && !$second->isEmpty()){
-                //echo $first->bottom()." and ".$second->bottom()."\n";
-                if($first->bottom()<$second->bottom()){
+        } else {
+            while (! $first->isEmpty() && ! $second->isEmpty()) {
+                // echo $first->bottom()." and ".$second->bottom()."\n";
+                if ($first->bottom() < $second->bottom()) {
                     $listToReturn->push($first->bottom());
                     $first->delete();
-                }else{
+                } else {
                     $listToReturn->push($second->bottom());
                     $second->delete();
                 }
             }
-            while(!$first->isEmpty()){
+            while (! $first->isEmpty()) {
                 $listToReturn->push($first->bottom());
                 $first->delete();
             }
-            while(!$second->isEmpty()){
+            while (! $second->isEmpty()) {
                 $listToReturn->push($second->bottom());
                 $second->delete();
             }
         }
         return $listToReturn;
     }
-    
+
     /**
-    * Does not change object's loaded datastructure. Is a recursive function.
-    */
+     * Does not change object's loaded datastructure.
+     * Is a recursive function.
+     */
     public function mergeSort(DataStructure $dataStructure)
     {
-        if($dataStructure->count()==1){
+        if ($dataStructure->count() == 1) {
             return $dataStructure;
         }
         $array = $this->split($dataStructure);
         $first = $this->mergeSort($array['firstPart']);
         $second = $this->mergeSort($array['secondPart']);
-        return $this->merge($first,$second);
+        return $this->merge($first, $second);
     }
-    
+
     public function bubbleSort()
     {
         $current = $this->dataStructure->bottom;
-        while($current){
+        while ($current) {
             $selectedToCompare = $current->next();
-            while($selectedToCompare){
-                if($current->get()>$selectedToCompare->get()){
+            while ($selectedToCompare) {
+                if ($current->get() > $selectedToCompare->get()) {
                     $temp = $selectedToCompare->get();
-                    //echo $current->get()." and ".$temp." swapped\n";
+                    // echo $current->get()." and ".$temp." swapped\n";
                     $selectedToCompare->set($current->get());
                     $current->set($temp);
                 }
                 $selectedToCompare = $selectedToCompare->next();
             }
-            $current=$current->next();
+            $current = $current->next();
         }
     }
-    
+
     public function selectionSort()
     {
         $current = $this->dataStructure->bottom;
-        while($current){
+        while ($current) {
             $minElement = $current;
             $selectedToCompare = $current->next();
-            while($selectedToCompare){
-                if((int)$minElement->get()>(int)$selectedToCompare->get()){
+            while ($selectedToCompare) {
+                if ((int) $minElement->get() > (int) $selectedToCompare->get()) {
                     $minElement = $selectedToCompare;
                 }
                 $selectedToCompare = $selectedToCompare->next();
@@ -267,22 +268,32 @@ class Sortable
             $tmp = $current->get();
             $current->set($minElement->get());
             $minElement->set($tmp);
-            $current=$current->next();
+            $current = $current->next();
         }
     }
-    
-    public function shellSort(){
-        $gaps = [701, 301, 132, 57, 23, 10, 4, 1];
+
+    public function shellSort()
+    {
+        $gaps = [
+            701,
+            301,
+            132,
+            57,
+            23,
+            10,
+            4,
+            1
+        ];
         $array = $this->dataStructure;
-        foreach ($gaps as $gap){
-            if($gap<count($array)){
-                for($k=0;$k<$gap;$k++){
-                    for($i=1+$k;$i<count($array);$i=$i+$gap){
-                        for($j=$i;$j>=1;$j=$j-$gap){
-                            if($array[$j]<$array[$j-1]){
+        foreach ($gaps as $gap) {
+            if ($gap < count($array)) {
+                for ($k = 0; $k < $gap; $k ++) {
+                    for ($i = 1 + $k; $i < count($array); $i = $i + $gap) {
+                        for ($j = $i; $j >= 1; $j = $j - $gap) {
+                            if ($array[$j] < $array[$j - 1]) {
                                 $tmp = $array[$j];
-                                $array[$j] = $array[$j-1];
-                                $array[$j-1] = $tmp;
+                                $array[$j] = $array[$j - 1];
+                                $array[$j - 1] = $tmp;
                             }
                         }
                     }
@@ -290,39 +301,41 @@ class Sortable
             }
         }
     }
-    
-    public function insertionSortArray(){
+
+    public function insertionSortArray()
+    {
         $array = $this->dataStructure;
-        for($i=1;$i<count($array);$i++){
-            for($j=$i;$j>=1;$j--){
-                if($array[$j]<$array[$j-1]){
+        for ($i = 1; $i < count($array); $i ++) {
+            for ($j = $i; $j >= 1; $j --) {
+                if ($array[$j] < $array[$j - 1]) {
                     $tmp = $array[$j];
-                    $array[$j] = $array[$j-1];
-                    $array[$j-1] = $tmp;
+                    $array[$j] = $array[$j - 1];
+                    $array[$j - 1] = $tmp;
                 }
             }
         }
     }
-    
-    public function insertionSort(){
+
+    public function insertionSort()
+    {
         $current = $this->dataStructure->bottom;
-        while($current){
-            //echo $current->get()."\n";
+        while ($current) {
+            // echo $current->get()."\n";
             $selectedToCompare = $current;
-            while($selectedToCompare){
-                if($selectedToCompare->prev()!=NULL && $selectedToCompare->get()<$selectedToCompare->prev()->get()){
+            while ($selectedToCompare) {
+                if ($selectedToCompare->prev() != NULL && $selectedToCompare->get() < $selectedToCompare->prev()->get()) {
                     $tmp = $selectedToCompare->get();
-                    $selectedToCompare->set($selectedToCompare->prev()->get());
+                    $selectedToCompare->set($selectedToCompare->prev()
+                        ->get());
                     $selectedToCompare->prev()->set($tmp);
                 }
-                //echo "\t".$selectedToCompare->get()."\n";
+                // echo "\t".$selectedToCompare->get()."\n";
                 $selectedToCompare = $selectedToCompare->prev();
             }
-            $current=$current->next();
+            $current = $current->next();
         }
     }
-    
-    public function heapSort(){
-    
-    }
+
+    public function heapSort()
+    {}
 }

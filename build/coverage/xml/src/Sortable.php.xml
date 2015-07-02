@@ -2,46 +2,36 @@
 <phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
   <file name="Sortable.php">
     <totals>
-      <lines total="328" comments="28" code="300" executable="210" executed="162" percent="77.14%"/>
+      <lines total="341" comments="29" code="312" executable="217" executed="170" percent="78.34%"/>
       <methods count="19" tested="10" percent="52.63%"/>
       <functions count="0" tested="0" percent=""/>
       <classes count="1" tested="0" percent="0.00%"/>
       <traits count="0" tested="0" percent=""/>
     </totals>
-    <class name="Sortable" start="5" executable="210" executed="162" crap="120.61">
+    <class name="Sortable" start="4" executable="217" executed="170" crap="112.61">
       <package full="" name="" sub="" category=""/>
       <namespace name="Mtkocak\DataStructures"/>
-      <method name="__construct" signature="__construct(DataStructure $dataStructure)" start="9" end="11" crap="1" executable="2" executed="2" coverage="100"/>
-      <method name="count" signature="count()" start="16" end="31" crap="20" executable="11" executed="0" coverage="0"/>
-      <method name="reverse" signature="reverse()" start="33" end="38" crap="2" executable="1" executed="0" coverage="0"/>
-      <method name="findLastElement" signature="findLastElement()" start="43" end="63" crap="30" executable="14" executed="0" coverage="0"/>
-      <method name="isSorted" signature="isSorted()" start="65" end="67" crap="2" executable="1" executed="0" coverage="0"/>
-      <method name="isUnique" signature="isUnique()" start="69" end="83" crap="20" executable="13" executed="0" coverage="0"/>
-      <method name="bucketSort" signature="bucketSort()" start="85" end="98" crap="3" executable="11" executed="11" coverage="100"/>
-      <method name="quick3Sort" signature="quick3Sort(DataStructure $dataStructure)" start="101" end="103" crap="2" executable="1" executed="0" coverage="0"/>
-      <method name="quickSort" signature="quickSort(DataStructure $dataStructure)" start="105" end="137" crap="5" executable="21" executed="21" coverage="100"/>
-      <method name="split" signature="split(DataStructure $dataStructure)" start="139" end="172" crap="4.05" executable="21" executed="18" coverage="85.714285714286"/>
-      <method name="append" signature="append(DataStructure $first, DataStructure $second)" start="174" end="187" crap="3" executable="11" executed="11" coverage="100"/>
+      <method name="__construct" signature="__construct(DataStructure $dataStructure)" start="9" end="12" crap="1" executable="2" executed="2" coverage="100"/>
+      <method name="count" signature="count()" start="17" end="32" crap="20" executable="11" executed="0" coverage="0"/>
+      <method name="reverse" signature="reverse()" start="34" end="40" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="findLastElement" signature="findLastElement()" start="45" end="63" crap="30" executable="13" executed="0" coverage="0"/>
+      <method name="isSorted" signature="isSorted()" start="65" end="66" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="isUnique" signature="isUnique()" start="68" end="83" crap="20" executable="13" executed="0" coverage="0"/>
+      <method name="bucketSort" signature="bucketSort()" start="85" end="99" crap="3" executable="11" executed="11" coverage="100"/>
+      <method name="quick3Sort" signature="quick3Sort(DataStructure $dataStructure)" start="101" end="102" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="quickSort" signature="quickSort(DataStructure $dataStructure)" start="104" end="136" crap="5" executable="21" executed="21" coverage="100"/>
+      <method name="split" signature="split(DataStructure $dataStructure)" start="138" end="171" crap="4.05" executable="21" executed="18" coverage="85.714285714286"/>
+      <method name="append" signature="append(DataStructure $first, DataStructure $second)" start="173" end="187" crap="3" executable="11" executed="11" coverage="100"/>
       <method name="merge" signature="merge(DataStructure $first, DataStructure $second)" start="192" end="221" crap="8.14" executable="23" executed="20" coverage="86.95652173913"/>
-      <method name="mergeSort" signature="mergeSort(DataStructure $dataStructure)" start="226" end="235" crap="2" executable="6" executed="6" coverage="100"/>
-      <method name="bubbleSort" signature="bubbleSort()" start="237" end="253" crap="4" executable="14" executed="14" coverage="100"/>
-      <method name="selectionSort" signature="selectionSort()" start="255" end="272" crap="4" executable="16" executed="16" coverage="100"/>
-      <method name="shellSort" signature="shellSort()" start="274" end="292" crap="7" executable="18" executed="18" coverage="100"/>
-      <method name="insertionSortArray" signature="insertionSortArray()" start="294" end="305" crap="4" executable="11" executed="11" coverage="100"/>
-      <method name="insertionSort" signature="insertionSort()" start="307" end="323" crap="5" executable="14" executed="14" coverage="100"/>
-      <method name="heapSort" signature="heapSort()" start="325" end="327" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="mergeSort" signature="mergeSort(DataStructure $dataStructure)" start="227" end="236" crap="2" executable="6" executed="6" coverage="100"/>
+      <method name="bubbleSort" signature="bubbleSort()" start="238" end="254" crap="4" executable="14" executed="14" coverage="100"/>
+      <method name="selectionSort" signature="selectionSort()" start="256" end="273" crap="4" executable="16" executed="16" coverage="100"/>
+      <method name="shellSort" signature="shellSort()" start="275" end="303" crap="7" executable="25" executed="25" coverage="100"/>
+      <method name="insertionSortArray" signature="insertionSortArray()" start="305" end="317" crap="4" executable="11" executed="11" coverage="100"/>
+      <method name="insertionSort" signature="insertionSort()" start="319" end="337" crap="5" executable="15" executed="15" coverage="100"/>
+      <method name="heapSort" signature="heapSort()" start="339" end="340" crap="2" executable="1" executed="0" coverage="0"/>
     </class>
     <coverage>
-      <line nr="10">
-        <covered by="SortableTest::testBucketSort"/>
-        <covered by="SortableTest::testBubbleSort"/>
-        <covered by="SortableTest::testSelectionSort"/>
-        <covered by="SortableTest::testShellSort"/>
-        <covered by="SortableTest::testInsertionSort"/>
-        <covered by="SortableTest::testInsertionSortArray"/>
-        <covered by="SortableTest::testMergeSort"/>
-        <covered by="SortableTest::testQuickSort"/>
-      </line>
       <line nr="11">
         <covered by="SortableTest::testBucketSort"/>
         <covered by="SortableTest::testBubbleSort"/>
@@ -52,8 +42,15 @@
         <covered by="SortableTest::testMergeSort"/>
         <covered by="SortableTest::testQuickSort"/>
       </line>
-      <line nr="86">
+      <line nr="12">
         <covered by="SortableTest::testBucketSort"/>
+        <covered by="SortableTest::testBubbleSort"/>
+        <covered by="SortableTest::testSelectionSort"/>
+        <covered by="SortableTest::testShellSort"/>
+        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testMergeSort"/>
+        <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="87">
         <covered by="SortableTest::testBucketSort"/>
@@ -67,7 +64,7 @@
       <line nr="90">
         <covered by="SortableTest::testBucketSort"/>
       </line>
-      <line nr="92">
+      <line nr="91">
         <covered by="SortableTest::testBucketSort"/>
       </line>
       <line nr="93">
@@ -85,28 +82,34 @@
       <line nr="97">
         <covered by="SortableTest::testBucketSort"/>
       </line>
+      <line nr="98">
+        <covered by="SortableTest::testBucketSort"/>
+      </line>
+      <line nr="106">
+        <covered by="SortableTest::testQuickSort"/>
+      </line>
       <line nr="107">
         <covered by="SortableTest::testQuickSort"/>
       </line>
-      <line nr="108">
+      <line nr="109">
         <covered by="SortableTest::testQuickSort"/>
       </line>
-      <line nr="110">
+      <line nr="111">
         <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="112">
         <covered by="SortableTest::testQuickSort"/>
       </line>
-      <line nr="113">
+      <line nr="114">
         <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="115">
         <covered by="SortableTest::testQuickSort"/>
       </line>
-      <line nr="116">
+      <line nr="117">
         <covered by="SortableTest::testQuickSort"/>
       </line>
-      <line nr="118">
+      <line nr="119">
         <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="120">
@@ -130,52 +133,52 @@
       <line nr="126">
         <covered by="SortableTest::testQuickSort"/>
       </line>
-      <line nr="127">
+      <line nr="128">
         <covered by="SortableTest::testQuickSort"/>
       </line>
-      <line nr="129">
+      <line nr="130">
         <covered by="SortableTest::testQuickSort"/>
       </line>
-      <line nr="131">
+      <line nr="132">
         <covered by="SortableTest::testQuickSort"/>
       </line>
       <line nr="133">
         <covered by="SortableTest::testQuickSort"/>
       </line>
-      <line nr="134">
+      <line nr="135">
         <covered by="SortableTest::testQuickSort"/>
       </line>
-      <line nr="136">
-        <covered by="SortableTest::testQuickSort"/>
-      </line>
-      <line nr="141">
+      <line nr="140">
         <covered by="SortableTest::testMergeSort"/>
       </line>
-      <line nr="146">
+      <line nr="145">
+        <covered by="SortableTest::testMergeSort"/>
+      </line>
+      <line nr="147">
         <covered by="SortableTest::testMergeSort"/>
       </line>
       <line nr="148">
         <covered by="SortableTest::testMergeSort"/>
       </line>
-      <line nr="149">
+      <line nr="150">
         <covered by="SortableTest::testMergeSort"/>
       </line>
       <line nr="151">
         <covered by="SortableTest::testMergeSort"/>
       </line>
-      <line nr="152">
+      <line nr="153">
         <covered by="SortableTest::testMergeSort"/>
       </line>
-      <line nr="154">
+      <line nr="155">
         <covered by="SortableTest::testMergeSort"/>
       </line>
-      <line nr="156">
+      <line nr="157">
         <covered by="SortableTest::testMergeSort"/>
       </line>
       <line nr="158">
         <covered by="SortableTest::testMergeSort"/>
       </line>
-      <line nr="159">
+      <line nr="160">
         <covered by="SortableTest::testMergeSort"/>
       </line>
       <line nr="161">
@@ -187,7 +190,7 @@
       <line nr="163">
         <covered by="SortableTest::testMergeSort"/>
       </line>
-      <line nr="164">
+      <line nr="166">
         <covered by="SortableTest::testMergeSort"/>
       </line>
       <line nr="167">
@@ -196,10 +199,7 @@
       <line nr="168">
         <covered by="SortableTest::testMergeSort"/>
       </line>
-      <line nr="169">
-        <covered by="SortableTest::testMergeSort"/>
-      </line>
-      <line nr="171">
+      <line nr="170">
         <covered by="SortableTest::testMergeSort"/>
       </line>
       <line nr="175">
@@ -295,13 +295,10 @@
       <line nr="220">
         <covered by="SortableTest::testMergeSort"/>
       </line>
-      <line nr="228">
-        <covered by="SortableTest::testMergeSort"/>
-      </line>
       <line nr="229">
         <covered by="SortableTest::testMergeSort"/>
       </line>
-      <line nr="231">
+      <line nr="230">
         <covered by="SortableTest::testMergeSort"/>
       </line>
       <line nr="232">
@@ -313,8 +310,8 @@
       <line nr="234">
         <covered by="SortableTest::testMergeSort"/>
       </line>
-      <line nr="239">
-        <covered by="SortableTest::testBubbleSort"/>
+      <line nr="235">
+        <covered by="SortableTest::testMergeSort"/>
       </line>
       <line nr="240">
         <covered by="SortableTest::testBubbleSort"/>
@@ -331,7 +328,7 @@
       <line nr="244">
         <covered by="SortableTest::testBubbleSort"/>
       </line>
-      <line nr="246">
+      <line nr="245">
         <covered by="SortableTest::testBubbleSort"/>
       </line>
       <line nr="247">
@@ -355,8 +352,8 @@
       <line nr="253">
         <covered by="SortableTest::testBubbleSort"/>
       </line>
-      <line nr="257">
-        <covered by="SortableTest::testSelectionSort"/>
+      <line nr="254">
+        <covered by="SortableTest::testBubbleSort"/>
       </line>
       <line nr="258">
         <covered by="SortableTest::testSelectionSort"/>
@@ -403,14 +400,8 @@
       <line nr="272">
         <covered by="SortableTest::testSelectionSort"/>
       </line>
-      <line nr="275">
-        <covered by="SortableTest::testShellSort"/>
-      </line>
-      <line nr="276">
-        <covered by="SortableTest::testShellSort"/>
-      </line>
-      <line nr="277">
-        <covered by="SortableTest::testShellSort"/>
+      <line nr="273">
+        <covered by="SortableTest::testSelectionSort"/>
       </line>
       <line nr="278">
         <covered by="SortableTest::testShellSort"/>
@@ -431,9 +422,6 @@
         <covered by="SortableTest::testShellSort"/>
       </line>
       <line nr="284">
-        <covered by="SortableTest::testShellSort"/>
-      </line>
-      <line nr="285">
         <covered by="SortableTest::testShellSort"/>
       </line>
       <line nr="286">
@@ -457,71 +445,71 @@
       <line nr="292">
         <covered by="SortableTest::testShellSort"/>
       </line>
+      <line nr="293">
+        <covered by="SortableTest::testShellSort"/>
+      </line>
+      <line nr="294">
+        <covered by="SortableTest::testShellSort"/>
+      </line>
       <line nr="295">
-        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testShellSort"/>
       </line>
       <line nr="296">
-        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testShellSort"/>
       </line>
       <line nr="297">
-        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testShellSort"/>
       </line>
       <line nr="298">
-        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testShellSort"/>
       </line>
       <line nr="299">
-        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testShellSort"/>
       </line>
       <line nr="300">
-        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testShellSort"/>
       </line>
       <line nr="301">
-        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testShellSort"/>
       </line>
       <line nr="302">
-        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testShellSort"/>
       </line>
       <line nr="303">
-        <covered by="SortableTest::testInsertionSortArray"/>
+        <covered by="SortableTest::testShellSort"/>
       </line>
-      <line nr="304">
-        <covered by="SortableTest::testInsertionSortArray"/>
-      </line>
-      <line nr="305">
+      <line nr="307">
         <covered by="SortableTest::testInsertionSortArray"/>
       </line>
       <line nr="308">
-        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
       </line>
       <line nr="309">
-        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
+      </line>
+      <line nr="310">
+        <covered by="SortableTest::testInsertionSortArray"/>
       </line>
       <line nr="311">
-        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
       </line>
       <line nr="312">
-        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
       </line>
       <line nr="313">
-        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
       </line>
       <line nr="314">
-        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
       </line>
       <line nr="315">
-        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
       </line>
       <line nr="316">
-        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
       </line>
       <line nr="317">
-        <covered by="SortableTest::testInsertionSort"/>
-      </line>
-      <line nr="319">
-        <covered by="SortableTest::testInsertionSort"/>
-      </line>
-      <line nr="320">
-        <covered by="SortableTest::testInsertionSort"/>
+        <covered by="SortableTest::testInsertionSortArray"/>
       </line>
       <line nr="321">
         <covered by="SortableTest::testInsertionSort"/>
@@ -529,7 +517,43 @@
       <line nr="322">
         <covered by="SortableTest::testInsertionSort"/>
       </line>
-      <line nr="323">
+      <line nr="324">
+        <covered by="SortableTest::testInsertionSort"/>
+      </line>
+      <line nr="325">
+        <covered by="SortableTest::testInsertionSort"/>
+      </line>
+      <line nr="326">
+        <covered by="SortableTest::testInsertionSort"/>
+      </line>
+      <line nr="327">
+        <covered by="SortableTest::testInsertionSort"/>
+      </line>
+      <line nr="328">
+        <covered by="SortableTest::testInsertionSort"/>
+      </line>
+      <line nr="329">
+        <covered by="SortableTest::testInsertionSort"/>
+      </line>
+      <line nr="330">
+        <covered by="SortableTest::testInsertionSort"/>
+      </line>
+      <line nr="331">
+        <covered by="SortableTest::testInsertionSort"/>
+      </line>
+      <line nr="333">
+        <covered by="SortableTest::testInsertionSort"/>
+      </line>
+      <line nr="334">
+        <covered by="SortableTest::testInsertionSort"/>
+      </line>
+      <line nr="335">
+        <covered by="SortableTest::testInsertionSort"/>
+      </line>
+      <line nr="336">
+        <covered by="SortableTest::testInsertionSort"/>
+      </line>
+      <line nr="337">
         <covered by="SortableTest::testInsertionSort"/>
       </line>
     </coverage>

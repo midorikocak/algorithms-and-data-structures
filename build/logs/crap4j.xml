@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2015-06-28 23:43:13</timestamp>
+  <timestamp>2015-07-02 15:24:37</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>108</methodCount>
-    <crapMethodCount>9</crapMethodCount>
-    <crapLoad>64</crapLoad>
-    <totalCrap>912.68</totalCrap>
-    <crapMethodPercent>8.33</crapMethodPercent>
+    <methodCount>109</methodCount>
+    <crapMethodCount>8</crapMethodCount>
+    <crapLoad>58</crapLoad>
+    <totalCrap>886.91</totalCrap>
+    <crapMethodPercent>7.34</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -171,10 +171,10 @@
       <methodName>breadthFirst</methodName>
       <methodSignature>breadthFirst(TreeNodeInterface $node = null)</methodSignature>
       <fullMethod>breadthFirst(TreeNodeInterface $node = null)</fullMethod>
-      <crap>30</crap>
-      <complexity>5</complexity>
-      <coverage>0</coverage>
-      <crapLoad>5</crapLoad>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Mtkocak\DataStructures</package>
@@ -239,19 +239,19 @@
       <package>Mtkocak\DataStructures</package>
       <className>BinaryTreeNode</className>
       <methodName>left</methodName>
-      <methodSignature>left(TreeNodeInterface $node = NULL)</methodSignature>
-      <fullMethod>left(TreeNodeInterface $node = NULL)</fullMethod>
-      <crap>4.59</crap>
-      <complexity>4</complexity>
-      <coverage>66.67</coverage>
+      <methodSignature>left(TreeNodeInterface &amp;$node = NULL)</methodSignature>
+      <fullMethod>left(TreeNodeInterface &amp;$node = NULL)</fullMethod>
+      <crap>3.04</crap>
+      <complexity>3</complexity>
+      <coverage>83.33</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Mtkocak\DataStructures</package>
       <className>BinaryTreeNode</className>
       <methodName>right</methodName>
-      <methodSignature>right(TreeNodeInterface $node = NULL)</methodSignature>
-      <fullMethod>right(TreeNodeInterface $node = NULL)</fullMethod>
+      <methodSignature>right(TreeNodeInterface &amp;$node = NULL)</methodSignature>
+      <fullMethod>right(TreeNodeInterface &amp;$node = NULL)</fullMethod>
       <crap>3.04</crap>
       <complexity>3</complexity>
       <coverage>83.33</coverage>
@@ -670,9 +670,9 @@
       <methodName>enqueue</methodName>
       <methodSignature>enqueue($value)</methodSignature>
       <fullMethod>enqueue($value)</fullMethod>
-      <crap>2.11</crap>
+      <crap>2</crap>
       <complexity>2</complexity>
-      <coverage>70</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -681,9 +681,20 @@
       <methodName>dequeue</methodName>
       <methodSignature>dequeue()</methodSignature>
       <fullMethod>dequeue()</fullMethod>
-      <crap>8.12</crap>
-      <complexity>5</complexity>
-      <coverage>50</coverage>
+      <crap>4.01</crap>
+      <complexity>4</complexity>
+      <coverage>92.86</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Mtkocak\DataStructures</package>
+      <className>Queue</className>
+      <methodName>listAll</methodName>
+      <methodSignature>listAll()</methodSignature>
+      <fullMethod>listAll()</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>

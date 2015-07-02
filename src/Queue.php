@@ -2,9 +2,8 @@
 
 class Queue
 {
-    /* The pointer in a queue always points to last element  */
-    private $head;
-    private $tail;
+    public $head;
+    public $tail;
     
     function __construct(){
         $this->head = NULL;
@@ -18,34 +17,39 @@ class Queue
             $this->head = $newNode;
             $this->tail = $newNode;
         }else{
-            $currentHead = $this->head;
-            $newNode->next($currentHead);
-            $this->head($newNode);
+            $currentTail = $this->tail;
+            $newNode->next($currentTail);
+            $this->tail = $newNode;
         }
     }
     
     public function dequeue(){
-        $nodeToDelete = $this->tail;
-        if(!$this->isEmpty()){
-            $value = $nodeToDelete->get();
-            $current = $this->head;
-            if($current->next()==NULL){
-                $this->tail = NULL;
-                $this->head = NULL;
-                unset($nodeToDelete);
-                return $value;
+        $current = $this->tail;
+        if($current == $this->head){
+            $this->tail = NULL;
+            $this->head = NULL;
+            return $current->get();
+        }
+        while($current){
+            if($current->next() == $this->head){
+                $nodeToDelete = $this->head;
+                $this->head = $current;
+                $current->next = NULL;
+                return $nodeToDelete->get();
             }
-            while($current){
-                // element before last
-                if($current->next()->next()==NULL){
-                    $this->tail = $current;
-                    unset($nodeToDelete);
-                    return $value;
-                }
-                $current = $current->next();
-            }
+            $current = $current->next();
         }
         return false;
+    }
+    
+    public function listAll(){
+        $current = $this->tail;
+        $listToReturn = [];
+        while($current){
+            array_push($listToReturn, $current->get()->get());
+            $current = $current->next();
+        }
+        return $listToReturn;
     }
     
     public function peek(){

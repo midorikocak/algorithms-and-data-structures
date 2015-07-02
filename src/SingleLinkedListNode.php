@@ -4,7 +4,7 @@ class SingleLinkedListNode implements DataStructureNode
 {
     private $data;
     
-    private $next;
+    public $next;
     
     function __construct($data)
     {

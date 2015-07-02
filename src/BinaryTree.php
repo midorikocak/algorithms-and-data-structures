@@ -43,7 +43,7 @@ abstract class BinaryTree implements TreeInterface, Traversable, Searchable
         } else {
             $current = $node->left();
             while ($current) {
-                if($current->right()==NULL){
+                if ($current->right() == NULL) {
                     return $current;
                 }
                 $current = $current->right();
@@ -60,7 +60,7 @@ abstract class BinaryTree implements TreeInterface, Traversable, Searchable
         } else {
             $current = $node->right();
             while ($current) {
-                if($current->left()==NULL){
+                if ($current->left() == NULL) {
                     return $current;
                 }
                 $current = $current->left();
@@ -82,35 +82,29 @@ abstract class BinaryTree implements TreeInterface, Traversable, Searchable
 
     public function breadthFirst(TreeNodeInterface $node = null)
     {
-        if (!isset($node)) {
-            $node = $this->root();
-        }
-        // uses a Queue
         $queue = new Queue();
-        $listArray = [];
-        // first handle element and add to queue the children
-        array_push($listArray, $node->readNode());
-        if ($node->left() != null) {
-            $queue->enqueue($node->left());
-            array_push($listArray, $node->left->get());
-        }
         
-        if ($node->right() != null) {
-            $queue->enqueue($node->right());
-            array_push($listArray, $node->right->get());
-        }
+        $queue->enqueue($this->root);
+        
+        $listToReturn = [];
+        
         while (! $queue->isEmpty()) {
-            $nodeChildren = $queue->dequeue();
-            array_push($listArray, $nodeChildren);
+            $dequeue = $queue->dequeue();
+            if ($dequeue->left != NULL) {
+                $queue->enqueue($dequeue->left);
+            }
+            if ($dequeue->right != NULL) {
+                $queue->enqueue($dequeue->right);
+            }
+            array_push($listToReturn, $dequeue->get());
         }
-        // handle queue elements and dequeue them.
-        return $listArray;
+        return $listToReturn;
     }
     
     // preorder postorder and inorder functions are using function call stack due to being recursive
     public function depthFirsth(TreeNodeInterface $node = null, $mode)
     {
-        if (!isset($node)) {
+        if (! isset($node)) {
             $node = $this->root();
         }
         // uses a Stack
@@ -149,7 +143,7 @@ abstract class BinaryTree implements TreeInterface, Traversable, Searchable
 
     public function inOrder(TreeNodeInterface $node = null)
     {
-        if (!isset($node)) {
+        if (! isset($node)) {
             $node = $this->root();
         }
         $listArray = [];
@@ -170,7 +164,7 @@ abstract class BinaryTree implements TreeInterface, Traversable, Searchable
     
     // first print self, recursive
     {
-        if (!isset($node)) {
+        if (! isset($node)) {
             $node = $this->root();
         }
         $listArray = [];
@@ -189,7 +183,7 @@ abstract class BinaryTree implements TreeInterface, Traversable, Searchable
     public function preOrder(TreeNodeInterface $node = null)
     {
         // first print right, recursive
-        if (!isset($node)) {
+        if (! isset($node)) {
             $node = $this->root();
         }
         $listArray = [];

@@ -2,13 +2,13 @@
 <phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
   <file name="BinaryTree.php">
     <totals>
-      <lines total="207" comments="25" code="182" executable="123" executed="37" percent="30.08%"/>
-      <methods count="10" tested="3" percent="30.00%"/>
+      <lines total="201" comments="19" code="182" executable="118" executed="51" percent="43.22%"/>
+      <methods count="10" tested="4" percent="40.00%"/>
       <functions count="0" tested="0" percent=""/>
       <classes count="1" tested="0" percent="0.00%"/>
       <traits count="0" tested="0" percent=""/>
     </totals>
-    <class name="BinaryTree" start="6" executable="123" executed="37" crap="869.68">
+    <class name="BinaryTree" start="6" executable="118" executed="51" crap="469.76">
       <package full="" name="" sub="" category=""/>
       <namespace name="Mtkocak\DataStructures"/>
       <method name="root" signature="root(TreeNodeInterface $node = NULL)" start="11" end="22" crap="3.03" executable="7" executed="6" coverage="85.714285714286"/>
@@ -19,11 +19,11 @@
       <method name="successor" signature="successor(TreeNodeInterface $node)" start="55" end="70" crap="5.40" executable="9" executed="5" coverage="55.555555555556"/>
       <method name="isEmpty" signature="isEmpty()" start="72" end="79" crap="2" executable="3" executed="3" coverage="100"/>
       <method name="search" signature="search($value)" start="81" end="81" crap="1" executable="0" executed="0" coverage="100"/>
-      <method name="breadthFirst" signature="breadthFirst(TreeNodeInterface $node = null)" start="83" end="108" crap="30" executable="19" executed="0" coverage="0"/>
-      <method name="depthFirsth" signature="depthFirsth(TreeNodeInterface $node = null, $mode)" start="111" end="148" crap="156" executable="32" executed="0" coverage="0"/>
-      <method name="inOrder" signature="inOrder(TreeNodeInterface $node = null)" start="150" end="167" crap="5" executable="14" executed="14" coverage="100"/>
-      <method name="postOrder" signature="postOrder(TreeNodeInterface $node = null)&#10;    &#10;    // first print self, recursive" start="169" end="187" crap="30" executable="14" executed="0" coverage="0"/>
-      <method name="preOrder" signature="preOrder(TreeNodeInterface $node = null)" start="189" end="206" crap="30" executable="14" executed="0" coverage="0"/>
+      <method name="breadthFirst" signature="breadthFirst(TreeNodeInterface $node = null)" start="83" end="102" crap="4" executable="14" executed="14" coverage="100"/>
+      <method name="depthFirsth" signature="depthFirsth(TreeNodeInterface $node = null, $mode)" start="105" end="142" crap="156" executable="32" executed="0" coverage="0"/>
+      <method name="inOrder" signature="inOrder(TreeNodeInterface $node = null)" start="144" end="161" crap="5" executable="14" executed="14" coverage="100"/>
+      <method name="postOrder" signature="postOrder(TreeNodeInterface $node = null)&#10;    &#10;    // first print self, recursive" start="163" end="181" crap="30" executable="14" executed="0" coverage="0"/>
+      <method name="preOrder" signature="preOrder(TreeNodeInterface $node = null)" start="183" end="200" crap="30" executable="14" executed="0" coverage="0"/>
     </class>
     <coverage>
       <line nr="13">
@@ -34,6 +34,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="14">
         <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
@@ -43,6 +44,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="17">
         <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
@@ -52,6 +54,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="19">
         <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
@@ -61,6 +64,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="20">
         <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
@@ -70,6 +74,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="22">
         <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
@@ -79,6 +84,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="26">
         <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
@@ -88,6 +94,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="27">
         <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
@@ -97,6 +104,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="41">
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
@@ -142,6 +150,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="75">
         <covered by="BinarySearchTreeTest::testAddDataWhenEmpty"/>
@@ -151,6 +160,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="77">
         <covered by="BinarySearchTreeTest::testCreateTree"/>
@@ -159,6 +169,103 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="85">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="87">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="89">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="91">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="92">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="93">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="94">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="95">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="96">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="97">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="98">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="99">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="100">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="101">
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="146">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testDeleteOneNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="147">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testDeleteOneNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="148">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testDeleteOneNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="149">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testDeleteOneNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="150">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testDeleteOneNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
+      </line>
+      <line nr="151">
+        <covered by="BinarySearchTreeTest::testCreateTree"/>
+        <covered by="BinarySearchTreeTest::testSearchFound"/>
+        <covered by="BinarySearchTreeTest::testDeleteOneNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
+        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="152">
         <covered by="BinarySearchTreeTest::testCreateTree"/>
@@ -167,6 +274,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="153">
         <covered by="BinarySearchTreeTest::testCreateTree"/>
@@ -175,6 +283,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="154">
         <covered by="BinarySearchTreeTest::testCreateTree"/>
@@ -183,6 +292,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="155">
         <covered by="BinarySearchTreeTest::testCreateTree"/>
@@ -191,6 +301,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="156">
         <covered by="BinarySearchTreeTest::testCreateTree"/>
@@ -199,6 +310,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="157">
         <covered by="BinarySearchTreeTest::testCreateTree"/>
@@ -207,6 +319,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="158">
         <covered by="BinarySearchTreeTest::testCreateTree"/>
@@ -215,14 +328,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
-      </line>
-      <line nr="159">
-        <covered by="BinarySearchTreeTest::testCreateTree"/>
-        <covered by="BinarySearchTreeTest::testSearchFound"/>
-        <covered by="BinarySearchTreeTest::testDeleteOneNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
       <line nr="160">
         <covered by="BinarySearchTreeTest::testCreateTree"/>
@@ -231,46 +337,7 @@
         <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
         <covered by="BinarySearchTreeTest::testSearchNotFound"/>
-      </line>
-      <line nr="161">
-        <covered by="BinarySearchTreeTest::testCreateTree"/>
-        <covered by="BinarySearchTreeTest::testSearchFound"/>
-        <covered by="BinarySearchTreeTest::testDeleteOneNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
-      </line>
-      <line nr="162">
-        <covered by="BinarySearchTreeTest::testCreateTree"/>
-        <covered by="BinarySearchTreeTest::testSearchFound"/>
-        <covered by="BinarySearchTreeTest::testDeleteOneNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
-      </line>
-      <line nr="163">
-        <covered by="BinarySearchTreeTest::testCreateTree"/>
-        <covered by="BinarySearchTreeTest::testSearchFound"/>
-        <covered by="BinarySearchTreeTest::testDeleteOneNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
-      </line>
-      <line nr="164">
-        <covered by="BinarySearchTreeTest::testCreateTree"/>
-        <covered by="BinarySearchTreeTest::testSearchFound"/>
-        <covered by="BinarySearchTreeTest::testDeleteOneNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
-      </line>
-      <line nr="166">
-        <covered by="BinarySearchTreeTest::testCreateTree"/>
-        <covered by="BinarySearchTreeTest::testSearchFound"/>
-        <covered by="BinarySearchTreeTest::testDeleteOneNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testDeleteTwoNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testDeleteNoNodeEmpty"/>
-        <covered by="BinarySearchTreeTest::testSearchNotFound"/>
+        <covered by="BinarySearchTreeTest::testBreadthFirst"/>
       </line>
     </coverage>
   </file>

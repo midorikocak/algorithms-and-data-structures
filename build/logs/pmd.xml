@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<pmd version="@project.version@" timestamp="2015-06-28T23:43:10+02:00">
+<pmd version="@project.version@" timestamp="2015-07-02T15:24:35+02:00">
+  <file name="/Users/mtkocak/Desktop/php-data-structures/src/BasicGraph.php">
+    <violation beginline="6" endline="6" rule="UnusedPrivateField" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedprivatefield" priority="3">
+      Avoid unused private fields such as '$vertices'.
+    </violation>
+    <violation beginline="7" endline="7" rule="UnusedPrivateField" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedprivatefield" priority="3">
+      Avoid unused private fields such as '$edges'.
+    </violation>
+  </file>
+  <file name="/Users/mtkocak/Desktop/php-data-structures/src/BasicVertex.php">
+    <violation beginline="8" endline="8" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3">
+      Avoid unused parameters such as '$graph'.
+    </violation>
+  </file>
   <file name="/Users/mtkocak/Desktop/php-data-structures/src/BinarySearchTree.php">
     <violation beginline="4" endline="159" rule="ExcessiveClassComplexity" ruleset="Code Size Rules" package="Mtkocak\DataStructures" externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveclasscomplexity" class="BinarySearchTree" priority="3">
       The class BinarySearchTree has an overall complexity of 51 which is very high. The configured complexity threshold is 50.
@@ -12,12 +25,12 @@
     </violation>
   </file>
   <file name="/Users/mtkocak/Desktop/php-data-structures/src/BinaryTree.php">
-    <violation beginline="111" endline="148" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="Mtkocak\DataStructures" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="BinaryTree" method="depthFirsth" priority="3">
+    <violation beginline="105" endline="142" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="Mtkocak\DataStructures" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="BinaryTree" method="depthFirsth" priority="3">
       The method depthFirsth() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.
     </violation>
   </file>
   <file name="/Users/mtkocak/Desktop/php-data-structures/src/Sortable.php">
-    <violation beginline="5" endline="328" rule="ExcessiveClassComplexity" ruleset="Code Size Rules" package="Mtkocak\DataStructures" externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveclasscomplexity" class="Sortable" priority="3">
+    <violation beginline="4" endline="341" rule="ExcessiveClassComplexity" ruleset="Code Size Rules" package="Mtkocak\DataStructures" externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveclasscomplexity" class="Sortable" priority="3">
       The class Sortable has an overall complexity of 67 which is very high. The configured complexity threshold is 50.
     </violation>
     <violation beginline="101" endline="101" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3">

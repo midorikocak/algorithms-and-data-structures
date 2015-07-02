@@ -3,14 +3,14 @@
   <Packages>
     <Package name="Mtkocak\DataStructures">
       <Stats>
-        <TotalClasses>19</TotalClasses>
-        <ConcreteClasses>10</ConcreteClasses>
-        <AbstractClasses>9</AbstractClasses>
+        <TotalClasses>26</TotalClasses>
+        <ConcreteClasses>11</ConcreteClasses>
+        <AbstractClasses>15</AbstractClasses>
         <Ca>0</Ca>
         <Ce>1</Ce>
-        <A>0.47368421052632</A>
+        <A>0.57692307692308</A>
         <I>1</I>
-        <D>0.47368421052632</D>
+        <D>0.57692307692308</D>
       </Stats>
       <ConcreteClasses>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/BinarySearchTree.php">BinarySearchTree</Class>
@@ -18,6 +18,7 @@
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/BinaryTreeNode.php">BinaryTreeNode</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DoubleLinkedList.php">DoubleLinkedList</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DoubleLinkedListNode.php">DoubleLinkedListNode</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Heap.php">Heap</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Queue.php">Queue</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/SingleLinkedList.php">SingleLinkedList</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/SingleLinkedListNode.php">SingleLinkedListNode</Class>
@@ -25,15 +26,21 @@
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Stack.php">Stack</Class>
       </ConcreteClasses>
       <AbstractClasses>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/BasicGraph.php">BasicGraph</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/BasicVertex.php">BasicVertex</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/BinaryTree.php">BinaryTree</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DataStructure.php">DataStructure</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DataStructureNode.php">DataStructureNode</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DirectedGraph.php">Graph</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/DirectedVertex.php">Vertex</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Graph.php">Graph</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/LinkedList.php">LinkedList</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Listable.php">Listable</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Searchable.php">Searchable</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Traversable.php">Traversable</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/TreeInterface.php">TreeInterface</Class>
         <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/TreeNodeInterface.php">TreeNodeInterface</Class>
+        <Class sourceFile="/Users/mtkocak/Desktop/php-data-structures/src/Vertex.php">Vertex</Class>
       </AbstractClasses>
       <DependsUpon>
         <Package></Package>

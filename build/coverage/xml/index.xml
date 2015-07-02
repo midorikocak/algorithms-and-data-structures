@@ -9,6 +9,7 @@
       <test name="BinarySearchTreeTest::testDeleteTwoNodeEmpty" size="small" result="0" status="PASSED"/>
       <test name="BinarySearchTreeTest::testDeleteNoNodeEmpty" size="small" result="0" status="PASSED"/>
       <test name="BinarySearchTreeTest::testSearchNotFound" size="small" result="0" status="PASSED"/>
+      <test name="BinarySearchTreeTest::testBreadthFirst" size="small" result="0" status="PASSED"/>
       <test name="DoubleLinkedListTest::testAddData" size="small" result="0" status="PASSED"/>
       <test name="DoubleLinkedListTest::testAddAnotherData" size="small" result="0" status="PASSED"/>
       <test name="DoubleLinkedListTest::testListAll" size="small" result="0" status="PASSED"/>
@@ -30,16 +31,16 @@
     </tests>
     <directory name="/Users/mtkocak/Desktop/php-data-structures">
       <totals>
-        <lines total="1958" comments="227" code="1731" executable="847" executed="485" percent="57.26%"/>
-        <methods count="95" tested="38" percent="40.00%"/>
+        <lines total="1965" comments="219" code="1746" executable="849" executed="513" percent="60.42%"/>
+        <methods count="96" tested="40" percent="41.67%"/>
         <functions count="0" tested="0" percent=""/>
         <classes count="14" tested="2" percent="14.29%"/>
         <traits count="0" tested="0" percent=""/>
       </totals>
       <directory name="src">
         <totals>
-          <lines total="1525" comments="142" code="1383" executable="810" executed="482" percent="59.51%"/>
-          <methods count="88" tested="37" percent="42.05%"/>
+          <lines total="1532" comments="134" code="1398" executable="812" executed="510" percent="62.81%"/>
+          <methods count="89" tested="39" percent="43.82%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="12" tested="1" percent="8.33%"/>
           <traits count="0" tested="0" percent=""/>
@@ -64,8 +65,8 @@
         </file>
         <file name="BinaryTree.php" href="src/BinaryTree.php.xml">
           <totals>
-            <lines total="207" comments="25" code="182" executable="123" executed="37" percent="30.08%"/>
-            <methods count="10" tested="3" percent="30.00%"/>
+            <lines total="201" comments="19" code="182" executable="118" executed="51" percent="43.22%"/>
+            <methods count="10" tested="4" percent="40.00%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="0" percent="0.00%"/>
             <traits count="0" tested="0" percent=""/>
@@ -73,7 +74,7 @@
         </file>
         <file name="BinaryTreeNode.php" href="src/BinaryTreeNode.php.xml">
           <totals>
-            <lines total="59" comments="0" code="59" executable="22" executed="16" percent="72.73%"/>
+            <lines total="55" comments="0" code="55" executable="19" executed="15" percent="78.95%"/>
             <methods count="5" tested="2" percent="40.00%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="0" percent="0.00%"/>
@@ -136,8 +137,8 @@
         </file>
         <file name="Queue.php" href="src/Queue.php.xml">
           <totals>
-            <lines total="63" comments="3" code="60" executable="35" executed="22" percent="62.86%"/>
-            <methods count="5" tested="2" percent="40.00%"/>
+            <lines total="67" comments="0" code="67" executable="38" executed="29" percent="76.32%"/>
+            <methods count="6" tested="3" percent="50.00%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="0" percent="0.00%"/>
             <traits count="0" tested="0" percent=""/>
@@ -172,7 +173,7 @@
         </file>
         <file name="Sortable.php" href="src/Sortable.php.xml">
           <totals>
-            <lines total="328" comments="28" code="300" executable="210" executed="162" percent="77.14%"/>
+            <lines total="341" comments="29" code="312" executable="217" executed="170" percent="78.34%"/>
             <methods count="19" tested="10" percent="52.63%"/>
             <functions count="0" tested="0" percent=""/>
             <classes count="1" tested="0" percent="0.00%"/>
@@ -236,8 +237,8 @@
       </file>
       <file name="BinaryTree.php" href="src/BinaryTree.php.xml">
         <totals>
-          <lines total="207" comments="25" code="182" executable="123" executed="37" percent="30.08%"/>
-          <methods count="10" tested="3" percent="30.00%"/>
+          <lines total="201" comments="19" code="182" executable="118" executed="51" percent="43.22%"/>
+          <methods count="10" tested="4" percent="40.00%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>
           <traits count="0" tested="0" percent=""/>
@@ -245,7 +246,7 @@
       </file>
       <file name="BinaryTreeNode.php" href="src/BinaryTreeNode.php.xml">
         <totals>
-          <lines total="59" comments="0" code="59" executable="22" executed="16" percent="72.73%"/>
+          <lines total="55" comments="0" code="55" executable="19" executed="15" percent="78.95%"/>
           <methods count="5" tested="2" percent="40.00%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>
@@ -308,8 +309,8 @@
       </file>
       <file name="Queue.php" href="src/Queue.php.xml">
         <totals>
-          <lines total="63" comments="3" code="60" executable="35" executed="22" percent="62.86%"/>
-          <methods count="5" tested="2" percent="40.00%"/>
+          <lines total="67" comments="0" code="67" executable="38" executed="29" percent="76.32%"/>
+          <methods count="6" tested="3" percent="50.00%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>
           <traits count="0" tested="0" percent=""/>
@@ -344,7 +345,7 @@
       </file>
       <file name="Sortable.php" href="src/Sortable.php.xml">
         <totals>
-          <lines total="328" comments="28" code="300" executable="210" executed="162" percent="77.14%"/>
+          <lines total="341" comments="29" code="312" executable="217" executed="170" percent="78.34%"/>
           <methods count="19" tested="10" percent="52.63%"/>
           <functions count="0" tested="0" percent=""/>
           <classes count="1" tested="0" percent="0.00%"/>
